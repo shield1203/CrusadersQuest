@@ -17,6 +17,8 @@ public class Intro_FadeInOut : MonoBehaviour
 
     private FadeStep m_fadeStep = FadeStep.IN;
 
+    private bool m_finished = false;
+
     private void Start()
     {
         if (m_images.Length > m_curImageIndex)
@@ -27,18 +29,20 @@ public class Intro_FadeInOut : MonoBehaviour
 
     void Update()
     {
-        if (m_images.Length <= m_curImageIndex)
-        {
-            SceneManager.LoadScene("Title");
-        }
+        if (m_finished) return;
 
-        switch(m_fadeStep)
+        switch (m_fadeStep)
         {
             case FadeStep.IN: FadeIn(); break;
             case FadeStep.IDLE: Delay(Time.deltaTime); break;
             case FadeStep.OUT: FadeOut(); break;
             case FadeStep.DONE: FinishFadeStep(); break;
         }
+    }
+
+    public bool IsFinished()
+    {
+        return m_finished;
     }
 
     void FadeIn()
@@ -76,5 +80,11 @@ public class Intro_FadeInOut : MonoBehaviour
         }
 
         m_fadeStep = FadeStep.IN;
+
+        if (m_images.Length <= m_curImageIndex + 1)
+        {
+            m_finished = true;
+            this.gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        }
     }
 }
