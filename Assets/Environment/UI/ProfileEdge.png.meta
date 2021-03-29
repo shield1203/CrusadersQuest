@@ -1,0 +1,1412 @@
+fileFormatVersion: 2
+guid: cac1c5e89db373641bf90363f2ce984e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5542448558932038140
+    second: ProfileEdge_0
+  - first:
+      213: 5753894273881960083
+    second: ProfileEdge_1
+  - first:
+      213: -375526964678998160
+    second: ProfileEdge_2
+  - first:
+      213: -1654878822198789519
+    second: ProfileEdge_3
+  - first:
+      213: 8510887619199568436
+    second: ProfileEdge_4
+  - first:
+      213: 2217110131268269211
+    second: ProfileEdge_5
+  - first:
+      213: -3604364182653550924
+    second: ProfileEdge_6
+  - first:
+      213: 7953371435326396043
+    second: ProfileEdge_7
+  - first:
+      213: -1313025574932584371
+    second: ProfileEdge_8
+  - first:
+      213: 5464034763671273966
+    second: ProfileEdge_9
+  - first:
+      213: 4058086328833122422
+    second: ProfileEdge_10
+  - first:
+      213: -7090753724343055840
+    second: ProfileEdge_11
+  - first:
+      213: 3124034990953766764
+    second: ProfileEdge_12
+  - first:
+      213: 554815510882487213
+    second: ProfileEdge_13
+  - first:
+      213: 1619126660095627682
+    second: ProfileEdge_14
+  - first:
+      213: -2128428575457029803
+    second: ProfileEdge_15
+  - first:
+      213: 5839954929273058281
+    second: ProfileEdge_16
+  - first:
+      213: -5101974602960003249
+    second: ProfileEdge_17
+  - first:
+      213: -2405375914758053754
+    second: ProfileEdge_18
+  - first:
+      213: 2231725518084501103
+    second: ProfileEdge_19
+  - first:
+      213: 6772524908149672470
+    second: ProfileEdge_20
+  - first:
+      213: 6641036647147577648
+    second: ProfileEdge_21
+  - first:
+      213: -955622051848089020
+    second: ProfileEdge_22
+  - first:
+      213: -6259398731043573779
+    second: ProfileEdge_23
+  - first:
+      213: 3526046979983958242
+    second: ProfileEdge_24
+  - first:
+      213: 523075896357820804
+    second: ProfileEdge_25
+  - first:
+      213: -3753999194378583269
+    second: ProfileEdge_26
+  - first:
+      213: -7803399774794405823
+    second: ProfileEdge_27
+  - first:
+      213: 692579082126031267
+    second: ProfileEdge_28
+  - first:
+      213: 1881047001008589792
+    second: ProfileEdge_29
+  - first:
+      213: 1601516639594823708
+    second: ProfileEdge_30
+  - first:
+      213: 737698344607797522
+    second: ProfileEdge_31
+  - first:
+      213: -2008957462080387592
+    second: ProfileEdge_32
+  - first:
+      213: 4850505115625915028
+    second: ProfileEdge_33
+  - first:
+      213: -5038693882176034730
+    second: ProfileEdge_34
+  - first:
+      213: -4381626924207538900
+    second: ProfileEdge_35
+  - first:
+      213: 1975006465658381014
+    second: ProfileEdge_36
+  - first:
+      213: 5406558872551721398
+    second: ProfileEdge_37
+  - first:
+      213: -9124430159085436860
+    second: ProfileEdge_38
+  - first:
+      213: -3013058768583764168
+    second: ProfileEdge_39
+  - first:
+      213: 5448491007054186913
+    second: ProfileEdge_40
+  - first:
+      213: -4248752370227810171
+    second: ProfileEdge_41
+  - first:
+      213: -9034382254171480980
+    second: ProfileEdge_42
+  - first:
+      213: -6357481090623746952
+    second: ProfileEdge_43
+  - first:
+      213: 8533974772375232244
+    second: ProfileEdge_44
+  - first:
+      213: -7044943763353658961
+    second: ProfileEdge_45
+  - first:
+      213: -9005165706258060355
+    second: ProfileEdge_46
+  - first:
+      213: -4407806697673491208
+    second: ProfileEdge_47
+  - first:
+      213: -3946212230559800098
+    second: ProfileEdge_48
+  - first:
+      213: -3088606440615059253
+    second: ProfileEdge_49
+  - first:
+      213: -101708209355250416
+    second: ProfileEdge_50
+  - first:
+      213: 8582974344963739166
+    second: ProfileEdge_51
+  - first:
+      213: 1122218684684409240
+    second: ProfileEdge_52
+  - first:
+      213: 7845611397561189824
+    second: ProfileEdge_53
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ProfileEdge_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 206
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40eeafa96644513b0800000000000000
+      internalID: -5542448558932038140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 206
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e63ed4b50f9df40800000000000000
+      internalID: 5753894273881960083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_2
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 206
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0774aba173cd9caf0800000000000000
+      internalID: -375526964678998160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_3
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 206
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a3688aa70b809e0800000000000000
+      internalID: -1654878822198789519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a09a1723fbc1670800000000000000
+      internalID: 8510887619199568436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_5
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 176
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b943a2aeae1c4ce10800000000000000
+      internalID: 2217110131268269211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_6
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 176
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be3bc36fd9bafdc0800000000000000
+      internalID: -3604364182653550924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_7
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 176
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b865e518e2d006e60800000000000000
+      internalID: 7953371435326396043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_8
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 176
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48e321423237cde0800000000000000
+      internalID: -1313025574932584371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_9
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 176
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee10309faa624db40800000000000000
+      internalID: 5464034763671273966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_10
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 176
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670a7f1f308315830800000000000000
+      internalID: 4058086328833122422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_11
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 176
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a01ce5e05989d90800000000000000
+      internalID: -7090753724343055840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 146
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f90bdb54dca5b20800000000000000
+      internalID: 3124034990953766764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_13
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 146
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab070284c913b700800000000000000
+      internalID: 554815510882487213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_14
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 146
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a15d5d6e1b487610800000000000000
+      internalID: 1619126660095627682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_15
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 146
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551d71ecc7d4672e0800000000000000
+      internalID: -2128428575457029803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_16
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 146
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e3bc971110bb0150800000000000000
+      internalID: 5839954929273058281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_17
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 146
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f118941252239b0800000000000000
+      internalID: -5101974602960003249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_18
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 146
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680e09989536e9ed0800000000000000
+      internalID: -2405375914758053754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_19
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 146
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ee995d88ea8fe10800000000000000
+      internalID: 2231725518084501103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_20
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 116
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a0fb68587dcfd50800000000000000
+      internalID: 6772524908149672470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_21
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 116
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031259515a3b92c50800000000000000
+      internalID: 6641036647147577648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_22
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 116
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44290149ec2fcb2f0800000000000000
+      internalID: -955622051848089020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_23
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 116
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: defed9094062229a0800000000000000
+      internalID: -6259398731043573779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_24
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 116
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e06847eb090fe030800000000000000
+      internalID: 3526046979983958242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_25
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 116
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4891af0a1c6524700800000000000000
+      internalID: 523075896357820804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_26
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 116
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1346fb4f9d17ebc0800000000000000
+      internalID: -3753999194378583269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_27
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 116
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148240fbf31c4b390800000000000000
+      internalID: -7803399774794405823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_28
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 86
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9fcf871098c9900800000000000000
+      internalID: 692579082126031267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_29
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 86
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb4eecf742da1a10800000000000000
+      internalID: 1881047001008589792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_30
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 86
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c104de406eab93610800000000000000
+      internalID: 1601516639594823708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_31
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 86
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211ddb56cb4dc3a00800000000000000
+      internalID: 737698344607797522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_32
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 86
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f504d705dfbe14e0800000000000000
+      internalID: -2008957462080387592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_33
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 86
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492091e14b4705340800000000000000
+      internalID: 4850505115625915028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_34
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 86
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658a6fc3c96f21ab0800000000000000
+      internalID: -5038693882176034730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_35
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 86
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d725cf6855133c0800000000000000
+      internalID: -4381626924207538900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_36
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 58
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2eaae9ae1a86b10800000000000000
+      internalID: 1975006465658381014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_37
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 56
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b98eaf36a4f70b40800000000000000
+      internalID: 5406558872551721398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_38
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 56
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4400ad51d138f5180800000000000000
+      internalID: -9124430159085436860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_39
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 56
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837503b83077f26d0800000000000000
+      internalID: -3013058768583764168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_40
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 56
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9006d14bdec9b40800000000000000
+      internalID: 5448491007054186913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_41
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 57
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580f8f9ea366905c0800000000000000
+      internalID: -4248752370227810171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_42
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 57
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c140fb43d6f9280800000000000000
+      internalID: -9034382254171480980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_43
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 57
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ccb17a1a0b5c7a0800000000000000
+      internalID: -6357481090623746952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_44
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 29
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe129d27d4ce6670800000000000000
+      internalID: 8533974772375232244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_45
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 28
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa993b219f45b3e90800000000000000
+      internalID: -7044943763353658961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_46
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 28
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb65f66089370380800000000000000
+      internalID: -9005165706258060355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_47
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 28
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc759a792354d2c0800000000000000
+      internalID: -4407806697673491208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_48
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 28
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed46e2d52ec3c39c0800000000000000
+      internalID: -3946212230559800098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_49
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 28
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0e7207ec01325d0800000000000000
+      internalID: -3088606440615059253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_50
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 28
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 015a3a62ce8a69ef0800000000000000
+      internalID: -101708209355250416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_51
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ecad331b9dc1770800000000000000
+      internalID: 8582974344963739166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_52
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 0
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8999beca2fbe29f00800000000000000
+      internalID: 1122218684684409240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProfileEdge_53
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 0
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5046d8ff531ec60800000000000000
+      internalID: 7845611397561189824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
