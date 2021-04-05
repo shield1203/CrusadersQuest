@@ -35,6 +35,8 @@ public class CameraTouchMove : MonoBehaviour
 
     public void OnMouseDrag()
     {
+        if (UIManager.Instance.GetUICount() > 0) return;
+
         if (m_prevPos == Vector2.zero)
         {
             m_prevPos = Input.mousePosition;
@@ -53,6 +55,8 @@ public class CameraTouchMove : MonoBehaviour
 
     public void OnMouseUp()
     {
+        if (UIManager.Instance.GetUICount() > 0) return;
+
         m_rigid.AddForce(Vector2.right * m_acceleration.x * -1, ForceMode2D.Impulse);
         m_prevPos = Vector2.zero;
     }

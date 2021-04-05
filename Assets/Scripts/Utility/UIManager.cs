@@ -6,14 +6,15 @@ using UnityEngine.UI;
 public enum UIPrefab
 {
     LOADING,
-    LOGIN_TYPE
+    LOGIN_TYPE,
+    SOLDIER_LIST,
 }
 
 public class UIManager : MonoBehaviour
 {
     private static UIManager m_instance = null;
 
-    Stack<GameObject> m_ui = new Stack<GameObject>();
+    List<GameObject> m_ui = new List<GameObject>();
 
     List<string> m_uiPrefabPath = new List<string>();
 
@@ -42,29 +43,49 @@ public class UIManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    
+
+    public int GetUICount()
+    {
+        return m_ui.Count;
+    }
+
     void SetUIPrefabPath()
     {
         m_uiPrefabPath.Add("UI/Loading");
         m_uiPrefabPath.Add("UI/LoginTypeUI");
+        m_uiPrefabPath.Add("UI/SoldierListUI");
     }
 
-    public void AddUI(int prefabPathIndex)
+    public void AddUI(UIPrefab uiPrefab)
     {
-        m_ui.Push(Instantiate(Resources.Load(m_uiPrefabPath[prefabPathIndex])) as GameObject);
-        m_ui.Peek().GetComponent<Canvas>().sortingOrder = m_ui.Count;
+        m_ui.Add(Instantiate(Resources.Load(m_uiPrefabPath[(int)uiPrefab])) as GameObject);
+        m_ui[m_ui.Count - 1].GetComponent<Canvas>().sortingOrder = m_ui.Count;
+        m_ui[m_ui.Count - 1].transform.SetParent(this.gameObject.transform);
     }
 
     public void RemoveOneUI()
     {
-        if(m_ui.Count > 0) Destroy(m_ui.Pop());
+        if (m_ui.Count > 0)
+        {
+            Destroy(m_ui[m_ui.Count - 1]);
+            m_ui.RemoveAt(m_ui.Count - 1);
+        }
     }
 
     public void RemoveAllUI()
     {
-        while(m_ui.Count > 0)
+        for(int index = 0; index < m_ui.Count; index++)
         {
-            Destroy(m_ui.Pop());
+            Destroy(m_ui[index]);
+        }
+        m_ui.Clear();
+    }
+
+    public void ActiveUI(bool value)
+    {
+        for (int index = 0; index < m_ui.Count; index++)
+        {
+            m_ui[index].SetActive(value);
         }
     }
 }

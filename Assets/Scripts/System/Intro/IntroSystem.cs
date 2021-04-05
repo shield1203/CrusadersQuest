@@ -32,7 +32,7 @@ public class IntroSystem : MonoBehaviour
             case "Google": break;
             case "Facebook": break;
             case "Guest": break;
-            default: UIManager.Instance.AddUI((int)UIPrefab.LOGIN_TYPE); break;
+            default: UIManager.Instance.AddUI(UIPrefab.LOGIN_TYPE); break;
         }
     }
 }

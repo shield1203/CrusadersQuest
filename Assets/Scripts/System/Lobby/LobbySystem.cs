@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class LobbySystem : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
+    {
+        UIManager.Instance.ActiveUI(true);
+    }
+
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnSoldierListUI()
     {
-        
+        UIManager.Instance.AddUI(UIPrefab.SOLDIER_LIST);
     }
 }
