@@ -21,6 +21,11 @@ public enum SoldierCode
     R_9999,
     R_1,
     GachaRanger_G,
+    Louisilla,
+    GachaRanger_B,
+    Gwihyang,
+    Gwihyang_Reaper,
+    Gwihyang_Yeomla,
 }
 
 public enum SoldierType
@@ -127,25 +132,12 @@ public class SoldierManager : MonoBehaviour
             m_soldierAbility.Add(ability.code, ability);
         }
 
-        //Test
-        TestCode(SoldierCode.Leon_Shine, false);
-        TestCode(SoldierCode.Joan_SteelKnight, false);
-        TestCode(SoldierCode.Leon_Fate, false);
-        TestCode(SoldierCode.Joan_Knight, false);
-        TestCode(SoldierCode.Leon_Predestinate, false);
-        TestCode(SoldierCode.Joan, false);
-        TestCode(SoldierCode.Leon_Famous, false);
-        TestCode(SoldierCode.GachaRanger_R, false);
-        TestCode(SoldierCode.Leon_Expert, false);
         TestCode(SoldierCode.Leon, true);
-        TestCode(SoldierCode.Leon, false);
-        TestCode(SoldierCode.GachaRanger_Y, false);
-        TestCode(SoldierCode.GachaRanger_G, false);
-        TestCode(SoldierCode.GachaRanger_K, false);
-        TestCode(SoldierCode.GachaRanger_K, false);
-        TestCode(SoldierCode.R_9999, false);
-        TestCode(SoldierCode.R_1, false);
-        
+        //Test
+        for (int i = 1; i < 20; i++)
+        {
+            TestCode((SoldierCode)i, false);
+        }
     }
 
     void TestCode(SoldierCode code, bool leader)
