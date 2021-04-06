@@ -18,5 +18,10 @@ public class MultiTargetButton : Button
         {
             graphic.CrossFadeColor(targetColor, instant ? 0f : colors.fadeDuration, true, true);
         }
+
+        foreach (var graphic in GetComponentsInChildren<SpriteRenderer>())
+        {
+            graphic.color = targetColor;
+        }
     }
 }
