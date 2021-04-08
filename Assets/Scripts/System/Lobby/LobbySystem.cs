@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LobbySystem : MonoBehaviour
 {
+
     void Start()
     {
         UIManager.Instance.ActiveUI(true);
