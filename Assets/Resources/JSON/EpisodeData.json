@@ -1,0 +1,380 @@
+[
+  {
+    "episode": 1,
+    "mapName": "숲",
+    "stage": [
+      {
+        "number": 1,
+        "consumption": 1,
+        "name": "불길한 징조",
+        "boss": 1,
+        "bossLevel": 1,
+        "reward": 1
+      },
+      {
+        "number": 2,
+        "consumption": 1,
+        "name": "여신의 힘",
+        "boss": 2,
+        "bossLevel": 2,
+        "reward": 2
+      },
+      {
+        "number": 3,
+        "consumption": 1,
+        "name": "여신을 찾아서",
+        "boss": 3,
+        "bossLevel": 3,
+        "reward": 3
+      },
+      {
+        "number": 4,
+        "consumption": 2,
+        "name": "모험의 시작",
+        "boss": 4,
+        "bossLevel": 3,
+        "reward": 3
+      },
+      {
+        "number": 5,
+        "consumption": 2,
+        "name": "울부짖는 늑대들",
+        "boss": 5,
+        "bossLevel": 4,
+        "reward": 3
+      },
+      {
+        "number": 6,
+        "consumption": 2,
+        "name": "헤매이는 숲",
+        "boss": 6,
+        "bossLevel": 4,
+        "reward": 3
+      }
+    ]
+  },
+  {
+    "episode": 2,
+    "mapName": "사막",
+    "stage": [
+      {
+        "number": 1,
+        "consumption": 3,
+        "name": "달이 비치는 사막",
+        "boss": 1,
+        "bossLevel": 16,
+        "reward": 2
+      },
+      {
+        "number": 2,
+        "consumption": 3,
+        "name": "끈적이는 붕대",
+        "boss": 2,
+        "bossLevel": 17,
+        "reward": 3
+      },
+      {
+        "number": 3,
+        "consumption": 3,
+        "name": "사막의 주민들",
+        "boss": 3,
+        "bossLevel": 18,
+        "reward": 3
+      },
+      {
+        "number": 4,
+        "consumption": 4,
+        "name": "아누비스의 사제단",
+        "boss": 4,
+        "bossLevel": 20,
+        "reward": 3
+      },
+      {
+        "number": 5,
+        "consumption": 4,
+        "name": "모래의 수호자들",
+        "boss": 5,
+        "bossLevel": 21,
+        "reward": 3
+      },
+      {
+        "number": 6,
+        "consumption": 4,
+        "name": "거룩한 개와 신성한 새",
+        "boss": 6,
+        "bossLevel": 22,
+        "reward": 3
+      }
+    ]
+  },
+  {
+    "episode": 3,
+    "mapName": "심해",
+    "stage": [
+      {
+        "number": 1,
+        "consumption": 5,
+        "name": "심해 속으로",
+        "boss": 1,
+        "bossLevel": 31,
+        "reward": 2
+      },
+      {
+        "number": 2,
+        "consumption": 5,
+        "name": "숨막히는 바다",
+        "boss": 2,
+        "bossLevel": 33,
+        "reward": 3
+      },
+      {
+        "number": 3,
+        "consumption": 5,
+        "name": "자릿한 해파리",
+        "boss": 3,
+        "bossLevel": 34,
+        "reward": 3
+      },
+      {
+        "number": 4,
+        "consumption": 6,
+        "name": "수면 아래의 짐승들",
+        "boss": 4,
+        "bossLevel": 37,
+        "reward": 3
+      },
+      {
+        "number": 5,
+        "consumption": 6,
+        "name": "황홀한 인어",
+        "boss": 5,
+        "bossLevel": 41,
+        "reward": 3
+      },
+      {
+        "number": 6,
+        "consumption": 6,
+        "name": "위대한 바다",
+        "boss": 6,
+        "bossLevel": 43,
+        "reward": 3
+      }
+    ]
+  },
+  {
+    "episode": 4,
+    "mapName": "화산",
+    "stage": [
+      {
+        "number": 1,
+        "consumption": 8,
+        "name": "작열하는 땅",
+        "boss": 1,
+        "bossLevel": 56,
+        "reward": 3
+      },
+      {
+        "number": 2,
+        "consumption": 8,
+        "name": "닥쳐오는 괴물들",
+        "boss": 2,
+        "bossLevel": 57,
+        "reward": 3
+      },
+      {
+        "number": 3,
+        "consumption": 8,
+        "name": "암운이 드리울 때",
+        "boss": 3,
+        "bossLevel": 60,
+        "reward": 3
+      },
+      {
+        "number": 4,
+        "consumption": 9,
+        "name": "불타는 악마",
+        "boss": 4,
+        "bossLevel": 62,
+        "reward": 3
+      },
+      {
+        "number": 5,
+        "consumption": 9,
+        "name": "타오르는 나무",
+        "boss": 5,
+        "bossLevel": 64,
+        "reward": 3
+      },
+      {
+        "number": 6,
+        "consumption": 9,
+        "name": "흘러내리는 용암",
+        "boss": 6,
+        "bossLevel": 66,
+        "reward": 3
+      }
+    ]
+  },
+  {
+    "episode": 5,
+    "mapName": "설원",
+    "stage": [
+      {
+        "number": 1,
+        "consumption": 11,
+        "name": "북쪽 설원 - 1",
+        "boss": 1,
+        "bossLevel": 81,
+        "reward": 3
+      },
+      {
+        "number": 2,
+        "consumption": 11,
+        "name": "북쪽 설원 - 2",
+        "boss": 2,
+        "bossLevel": 82,
+        "reward": 3
+      },
+      {
+        "number": 3,
+        "consumption": 11,
+        "name": "북쪽 설원 - 3",
+        "boss": 3,
+        "bossLevel": 83,
+        "reward": 3
+      },
+      {
+        "number": 4,
+        "consumption": 11,
+        "name": "싸늘한 숨결",
+        "boss": 4,
+        "bossLevel": 84,
+        "reward": 3
+      },
+      {
+        "number": 5,
+        "consumption": 12,
+        "name": "눈 속의 비밀",
+        "boss": 5,
+        "bossLevel": 85,
+        "reward": 3
+      },
+      {
+        "number": 6,
+        "consumption": 12,
+        "name": "고대의 기억 - 1",
+        "boss": 6,
+        "bossLevel": 86,
+        "reward": 3
+      }
+    ]
+  },
+  {
+    "episode": 6,
+    "mapName": "전장",
+    "stage": [
+      {
+        "number": 1,
+        "consumption": 16,
+        "name": "전란의 기운",
+        "boss": 1,
+        "bossLevel": 101,
+        "reward": 3
+      },
+      {
+        "number": 2,
+        "consumption": 16,
+        "name": "타오르는 시가지 - 1",
+        "boss": 2,
+        "bossLevel": 82,
+        "reward": 3
+      },
+      {
+        "number": 3,
+        "consumption": 16,
+        "name": "타오르는 시가지 - 2",
+        "boss": 3,
+        "bossLevel": 83,
+        "reward": 3
+      },
+      {
+        "number": 4,
+        "consumption": 17,
+        "name": "충격과 공포 - 1",
+        "boss": 4,
+        "bossLevel": 104,
+        "reward": 3
+      },
+      {
+        "number": 5,
+        "consumption": 17,
+        "name": "충격과 공포 - 2",
+        "boss": 5,
+        "bossLevel": 105,
+        "reward": 3
+      },
+      {
+        "number": 6,
+        "consumption": 17,
+        "name": "도시 공방전 - 1",
+        "boss": 6,
+        "bossLevel": 106,
+        "reward": 3
+      }
+    ]
+  },
+  {
+    "episode": 7,
+    "mapName": "성도",
+    "stage": [
+      {
+        "number": 1,
+        "consumption": 25,
+        "name": "성도 엘란디아",
+        "boss": 1,
+        "bossLevel": 99,
+        "reward": 3
+      },
+      {
+        "number": 2,
+        "consumption": 25,
+        "name": "순백의 사자단",
+        "boss": 2,
+        "bossLevel": 100,
+        "reward": 3
+      },
+      {
+        "number": 3,
+        "consumption": 25,
+        "name": "크로나 용사단",
+        "boss": 3,
+        "bossLevel": 102,
+        "reward": 3
+      },
+      {
+        "number": 4,
+        "consumption": 25,
+        "name": "드러나는 비밀",
+        "boss": 4,
+        "bossLevel": 104,
+        "reward": 3
+      },
+      {
+        "number": 5,
+        "consumption": 25,
+        "name": "사라진 빛 - 1",
+        "boss": 5,
+        "bossLevel": 105,
+        "reward": 3
+      },
+      {
+        "number": 6,
+        "consumption": 26,
+        "name": "사라진 빛 - 2",
+        "boss": 6,
+        "bossLevel": 106,
+        "reward": 3
+      }
+    ]
+  }
+]

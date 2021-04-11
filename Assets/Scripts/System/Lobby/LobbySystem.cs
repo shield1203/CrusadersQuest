@@ -17,6 +17,12 @@ public class LobbySystem : MonoBehaviour
 
     public void OnSoldierListUI()
     {
+        // 서버로부터 솔저 데이터 받아오기
         UIManager.Instance.AddUI(UIPrefab.SOLDIER_LIST);
+    }
+
+    public void OnAdventureUI()
+    {
+        UIManager.Instance.AddUI(UIPrefab.ADVENTURE);
     }
 }

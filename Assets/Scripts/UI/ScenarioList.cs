@@ -29,10 +29,12 @@ public class ScenarioList : MonoBehaviour
         }
     }
 
-    public void OnOpenEpisode()
+    public void OnOpenEpisodeUI()
     {
         this.gameObject.SetActive(false);
-        m_scenarioSlot[m_selectedEpisode].GetComponent<ScenarioSlot>().GetStageListUI().SetActive(true);
+        GameObject episodeUI = m_scenarioSlot[m_selectedEpisode].GetComponent<ScenarioSlot>().GetStageListUI();
+        episodeUI.SetActive(true);
+        episodeUI.GetComponent<StageList>().InitializeEpisode();
     }
 
     public void OnExit()
