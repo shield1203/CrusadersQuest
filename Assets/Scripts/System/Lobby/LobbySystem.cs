@@ -8,11 +8,7 @@ public class LobbySystem : MonoBehaviour
     void Start()
     {
         UIManager.Instance.ActiveUI(true);
-    }
-
-    void Update()
-    {
-        
+        // 유저 데이터 받아오기
     }
 
     public void OnSoldierListUI()
@@ -25,4 +21,6 @@ public class LobbySystem : MonoBehaviour
     {
         UIManager.Instance.AddUI(UIPrefab.ADVENTURE);
     }
+
+    //IEnumerator 
 }

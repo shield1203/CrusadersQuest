@@ -32,7 +32,7 @@ public class HttpSystem : MonoBehaviour
         StartCoroutine(Test());
     }
 
-    IEnumerator Test()
+    public IEnumerator Test()
     {
         string strScheme = "/Test";
         string strURL = m_serverIP + strScheme;
@@ -81,5 +81,10 @@ public class HttpSystem : MonoBehaviour
         {
             Debug.Log(request.downloadHandler.text);
         }
+    }
+
+    public IEnumerator RequestSoldierList(int userId)
+    {
+        yield return null;
     }
 }
