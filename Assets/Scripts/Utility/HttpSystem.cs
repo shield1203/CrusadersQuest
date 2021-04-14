@@ -6,10 +6,19 @@ using UnityEngine.Networking;
 public class HttpSystem : MonoBehaviour
 {
     private const string m_serverIP = "http://203.232.193.169:3000";
-    
+
+    private string m_userId;
+
+    public delegate void Action();
+
+    private void Start()
+    {
+        m_userId = PlayerPrefs.GetInt("UserId").ToString();
+    }
+
     //public void OnGoogleLogin()
     //{
-        
+
     //}
 
     //IEnumerator GoogleLogin()
@@ -83,8 +92,26 @@ public class HttpSystem : MonoBehaviour
         }
     }
 
-    public IEnumerator RequestSoldierList(int userId)
+    public IEnumerator RequestSoldierList(Action action)
     {
-        yield return null;
+        string strScheme = "/soldierList?userId=" + m_userId;
+        string strURL = m_serverIP + strScheme;
+        UnityWebRequest request = UnityWebRequest.Get(strURL);
+
+        UIManager.Instance.AddUI(UIPrefab.LOADING);
+
+        yield return request.SendWebRequest();
+
+        UIManager.Instance.RemoveOneUI();
+
+        if (request.isNetworkError || request.isHttpError)
+        {
+            // 서버연결 문제 UI
+            Debug.Log(request.error);
+        }
+        else
+        {
+            if (action != null) action();
+        }
     }
 }

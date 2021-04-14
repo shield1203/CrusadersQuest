@@ -9,18 +9,22 @@ public class LobbyMenu : MonoBehaviour
 
     public void OnOpenSoldierList(bool isInVillage)
     {
-        StartCoroutine(OpenSoldierList(isInVillage));
+        StartCoroutine(OpenSoldierListUI(isInVillage));
     }
 
-    IEnumerator OpenSoldierList(bool iSInVillage)
+    IEnumerator OpenSoldierListUI(bool iSInVillage)
     {
         if (iSInVillage) yield return StartCoroutine(MoveCameraToObject(transform.position));
 
-        UIManager.Instance.AddUI(UIPrefab.LOADING);
         // 서버로부터 데이터 받아옴
 
         // 성공하든 실패하든 로딩UI 끄고
         // 각자에 맞는 UI출력
+    }
+
+    void asdad()
+    {
+
     }
 
     IEnumerator MoveCameraToObject(Vector3 target)

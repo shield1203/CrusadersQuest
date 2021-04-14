@@ -194,7 +194,6 @@ public class SoldierManager : MonoBehaviour
         }
     }
 
-
     public List<SoldierData> GetSoldierData(SoldierType type)
     {
         if (type == SoldierType.All) return m_soldierData;

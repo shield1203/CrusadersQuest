@@ -7,6 +7,7 @@ public enum UIPrefab
 {
     LOADING,
     LOGIN_TYPE,
+    ERROR,
     SOLDIER_LIST,
     ADVENTURE
 }
@@ -54,6 +55,7 @@ public class UIManager : MonoBehaviour
     {
         m_uiPrefabPath.Add("UI/Loading");
         m_uiPrefabPath.Add("UI/LoginTypeUI");
+        m_uiPrefabPath.Add("UI/ErrorUI");
         m_uiPrefabPath.Add("UI/SoldierListUI");
         m_uiPrefabPath.Add("UI/AdventureUI");
     }
