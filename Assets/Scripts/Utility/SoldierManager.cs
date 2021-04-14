@@ -132,12 +132,12 @@ public class SoldierManager : MonoBehaviour
             m_soldierAbility.Add(ability.code, ability);
         }
 
-        TestCode(SoldierCode.Leon, true);
-        //Test
-        for (int i = 1; i < 20; i++)
-        {
-            TestCode((SoldierCode)i, false);
-        }
+        //TestCode(SoldierCode.Leon, true);
+        ////Test
+        //for (int i = 1; i < 20; i++)
+        //{
+        //    TestCode((SoldierCode)i, false);
+        //}
     }
 
     void TestCode(SoldierCode code, bool leader)
@@ -161,7 +161,7 @@ public class SoldierManager : MonoBehaviour
 
         soldierData.prefabPath = m_soldierAbility[code].prefabPath;
         soldierData.spritePath = m_soldierAbility[code].spritePath;
-
+        
         m_soldierData.Add(soldierData);
     }
 
@@ -170,6 +170,11 @@ public class SoldierManager : MonoBehaviour
         m_soldierData.Clear();
 
         var soldierInfo = JsonHelper.FromJson<SoldierInfo>(strSoldierInfo);
+        foreach (var info in soldierInfo)
+        {
+            Debug.Log(info.code);
+        }
+
         foreach (var info in soldierInfo)
         {
             SoldierData soldierData = new SoldierData();
@@ -191,6 +196,8 @@ public class SoldierManager : MonoBehaviour
 
             soldierData.prefabPath = m_soldierAbility[info.code].prefabPath;
             soldierData.spritePath = m_soldierAbility[info.code].spritePath;
+
+            m_soldierData.Add(soldierData);
         }
     }
 

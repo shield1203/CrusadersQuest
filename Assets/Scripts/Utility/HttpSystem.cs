@@ -9,7 +9,7 @@ public class HttpSystem : MonoBehaviour
 
     private string m_userId;
 
-    public delegate void Action();
+    public delegate void OnDelegate();
 
     private void Start()
     {
@@ -92,7 +92,7 @@ public class HttpSystem : MonoBehaviour
         }
     }
 
-    public IEnumerator RequestSoldierList(Action action)
+    public IEnumerator RequestSoldierListData(OnDelegate action)
     {
         string strScheme = "/soldierList?userId=" + m_userId;
         string strURL = m_serverIP + strScheme;
@@ -106,11 +106,17 @@ public class HttpSystem : MonoBehaviour
 
         if (request.isNetworkError || request.isHttpError)
         {
-            // 서버연결 문제 UI
-            Debug.Log(request.error);
+            UIManager.Instance.AddUI(UIPrefab.ERROR);
+        }
+        else if(request.downloadHandler.text == "fail")
+        {
+            UIManager.Instance.AddUI(UIPrefab.ERROR);
+            // 해당 아이디가 없을 경우(나중에 해당 UI만들던지 따로 처리)
         }
         else
         {
+            SoldierManager.Instance.InitializeSoldierData(request.downloadHandler.text);
+
             if (action != null) action();
         }
     }

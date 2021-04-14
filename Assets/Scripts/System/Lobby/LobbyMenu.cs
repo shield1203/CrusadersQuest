@@ -9,22 +9,14 @@ public class LobbyMenu : MonoBehaviour
 
     public void OnOpenSoldierList(bool isInVillage)
     {
-        StartCoroutine(OpenSoldierListUI(isInVillage));
+        StartCoroutine(InitSoldierListUI(isInVillage));
     }
 
-    IEnumerator OpenSoldierListUI(bool iSInVillage)
+    IEnumerator InitSoldierListUI(bool isInVillage)
     {
-        if (iSInVillage) yield return StartCoroutine(MoveCameraToObject(transform.position));
+        if (isInVillage) yield return StartCoroutine(MoveCameraToObject(transform.position));
 
-        // 서버로부터 데이터 받아옴
-
-        // 성공하든 실패하든 로딩UI 끄고
-        // 각자에 맞는 UI출력
-    }
-
-    void asdad()
-    {
-
+        StartCoroutine(m_httpSystem.RequestSoldierListData(OpenSoldierListUI));
     }
 
     IEnumerator MoveCameraToObject(Vector3 target)
@@ -37,5 +29,10 @@ public class LobbyMenu : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    void OpenSoldierListUI()
+    {
+        UIManager.Instance.AddUI(UIPrefab.SOLDIER_LIST);
     }
 }
