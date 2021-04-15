@@ -35,4 +35,10 @@ public class LobbyMenu : MonoBehaviour
     {
         UIManager.Instance.AddUI(UIPrefab.SOLDIER_LIST);
     }
+
+    //////////
+    public void OnOpenMenuUI(bool isInVillage)
+    {
+        if (isInVillage) StartCoroutine(MoveCameraToObject(transform.position));
+    }
 }
