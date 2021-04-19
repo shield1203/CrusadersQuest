@@ -31,6 +31,24 @@ public class LobbyMenu : MonoBehaviour
         }
     }
 
+    public void OnMoveCameraToPoint(float xPos)
+    {
+        StartCoroutine(MoveCameraToPoint(xPos));
+    }
+
+    IEnumerator MoveCameraToPoint(float xPos)
+    {
+        while (xPos != m_camera.position.x)
+        {
+            Vector3 Point = m_camera.position;
+            Point.x = xPos;
+
+            m_camera.position = Vector3.MoveTowards(m_camera.position, Point, 1.5f);
+
+            yield return null;
+        }
+    }
+
     void OpenSoldierListUI()
     {
         UIManager.Instance.AddUI(UIPrefab.SOLDIER_LIST);

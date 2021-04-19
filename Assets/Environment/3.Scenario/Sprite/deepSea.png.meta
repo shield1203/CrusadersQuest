@@ -1,0 +1,944 @@
+fileFormatVersion: 2
+guid: 207d635a6c299c74bbb3e0b2bb374dc2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6195658430024077369
+    second: deepSea_0
+  - first:
+      213: -7585612408208459787
+    second: deepSea_1
+  - first:
+      213: -8366334834614572339
+    second: deepSea_2
+  - first:
+      213: 7672764514169054650
+    second: deepSea_3
+  - first:
+      213: -6025285311437257700
+    second: deepSea_4
+  - first:
+      213: 8840768363133187340
+    second: deepSea_5
+  - first:
+      213: -4798886668809216369
+    second: deepSea_6
+  - first:
+      213: -2427324146491277073
+    second: deepSea_11
+  - first:
+      213: -6059680292049355964
+    second: deepSea_12
+  - first:
+      213: -3631431831610683976
+    second: deepSea_13
+  - first:
+      213: -7988536492068970494
+    second: deepSea_15
+  - first:
+      213: 1601880245170983442
+    second: deepSea_16
+  - first:
+      213: 6490658365384297911
+    second: deepSea_17
+  - first:
+      213: 3008466565092252315
+    second: deepSea_18
+  - first:
+      213: 1315830293037307386
+    second: deepSea_19
+  - first:
+      213: -8866035387164865357
+    second: deepSea_20
+  - first:
+      213: -2405651046992845874
+    second: deepSea_21
+  - first:
+      213: -1503909421426807869
+    second: deepSea_22
+  - first:
+      213: 3519031493024146199
+    second: deepSea_23
+  - first:
+      213: -4285351251336351307
+    second: deepSea_24
+  - first:
+      213: 5290572925543011730
+    second: deepSea_25
+  - first:
+      213: 4972834687970503080
+    second: deepSea_26
+  - first:
+      213: -3408454631425606189
+    second: deepSea_27
+  - first:
+      213: -8386088650365688426
+    second: deepSea_28
+  - first:
+      213: -421145239247065969
+    second: deepSea_29
+  - first:
+      213: 2104663670608229036
+    second: deepSea_30
+  - first:
+      213: -8486687871091837342
+    second: deepSea_31
+  - first:
+      213: -4305665016636810261
+    second: deepSea_32
+  - first:
+      213: -7728633343863743147
+    second: deepSea_33
+  - first:
+      213: 7270411822106443987
+    second: deepSea_34
+  - first:
+      213: -3106579338149539770
+    second: deepSea_35
+  - first:
+      213: 8208164657891703511
+    second: deepSea_36
+  - first:
+      213: -548468481751375335
+    second: deepSea_37
+  - first:
+      213: -2737509187282507127
+    second: deepSea_38
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 26
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: deepSea_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 708
+        width: 54
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9305d3f14866bf550800000000000000
+      internalID: 6195658430024077369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_1
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 708
+        width: 133
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f770fc74bd7ab690800000000000000
+      internalID: -7585612408208459787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_2
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 673
+        width: 98
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca62de6bcec4eb80800000000000000
+      internalID: -8366334834614572339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_3
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 734
+        width: 103
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5e4407ca22b7a60800000000000000
+      internalID: 7672764514169054650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_4
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 727
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14476dbee2e16ca0800000000000000
+      internalID: -6025285311437257700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 609
+        width: 50
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05b0126cf7b0ba70800000000000000
+      internalID: 8840768363133187340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_6
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 674
+        width: 278
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ed444100ee66db0800000000000000
+      internalID: -4798886668809216369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_11
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 534
+        width: 199
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0c8ad9c89605ed0800000000000000
+      internalID: -2427324146491277073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_12
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 499
+        width: 48
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b76f341e0b7eba0800000000000000
+      internalID: -6059680292049355964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_13
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 527
+        width: 48
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd8cc24dff8a9dc0800000000000000
+      internalID: -3631431831610683976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_15
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 390
+        width: 206
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200ebf2b264032190800000000000000
+      internalID: -7988536492068970494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_16
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 390
+        width: 158
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212d12a88950b3610800000000000000
+      internalID: 1601880245170983442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_17
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 390
+        width: 77
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd0623f463731a50800000000000000
+      internalID: 6490658365384297911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_18
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 484
+        width: 38
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a96f2c66830c920800000000000000
+      internalID: 3008466565092252315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_19
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 390
+        width: 75
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5df211ea4c24210800000000000000
+      internalID: 1315830293037307386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_20
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 291
+        width: 104
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bccef52ac385f480800000000000000
+      internalID: -8866035387164865357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_21
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 291
+        width: 84
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3e1725e196d9ed0800000000000000
+      internalID: -2405651046992845874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_22
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 291
+        width: 79
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cbed79695a012be0800000000000000
+      internalID: -1503909421426807869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_23
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 291
+        width: 61
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713ed1f8f7c16d030800000000000000
+      internalID: 3519031493024146199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_24
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 291
+        width: 89
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b1325eddbf5784c0800000000000000
+      internalID: -4285351251336351307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_25
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 291
+        width: 46
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2955a4d8b04eb6940800000000000000
+      internalID: 5290572925543011730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_26
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 293
+        width: 71
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9e83f2dce030540800000000000000
+      internalID: 4972834687970503080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_27
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 172
+        width: 76
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd77dc429cb2b0d0800000000000000
+      internalID: -3408454631425606189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_28
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 172
+        width: 94
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695a40ccdc0ae9b80800000000000000
+      internalID: -8386088650365688426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_29
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 163
+        width: 78
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ce4dfd2aac72af0800000000000000
+      internalID: -421145239247065969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_30
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 163
+        width: 43
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2f54a1574453d10800000000000000
+      internalID: 2104663670608229036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_31
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 208
+        width: 66
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26674fb785a393a80800000000000000
+      internalID: -8486687871091837342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_32
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 202
+        width: 66
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb5981da743f34c0800000000000000
+      internalID: -4305665016636810261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_33
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 196
+        width: 66
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d13cbfbe06eb490800000000000000
+      internalID: -7728633343863743147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_34
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 173
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0847b2801b5e460800000000000000
+      internalID: 7270411822106443987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_35
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 172
+        width: 5
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64057032d8633e4d0800000000000000
+      internalID: -3106579338149539770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_36
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 13
+        width: 479
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dafc83844249e170800000000000000
+      internalID: 8208164657891703511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_37
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 0
+        width: 201
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91226be52d27368f0800000000000000
+      internalID: -548468481751375335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deepSea_38
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 9
+        width: 180
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a68aae5e9620ad0800000000000000
+      internalID: -2737509187282507127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

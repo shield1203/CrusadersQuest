@@ -131,38 +131,6 @@ public class SoldierManager : MonoBehaviour
         {
             m_soldierAbility.Add(ability.code, ability);
         }
-
-        //TestCode(SoldierCode.Leon, true);
-        ////Test
-        //for (int i = 1; i < 20; i++)
-        //{
-        //    TestCode((SoldierCode)i, false);
-        //}
-    }
-
-    void TestCode(SoldierCode code, bool leader)
-    {
-        SoldierData soldierData = new SoldierData();
-
-        soldierData.leader = leader;
-        soldierData.code = code;
-        soldierData.level = 1;
-        soldierData.exp = 0;
-
-        soldierData.name = m_soldierAbility[code].name;
-        soldierData.type = m_soldierAbility[code].type;
-        soldierData.grade = m_soldierAbility[code].grade;
-        soldierData.startAttackPower = m_soldierAbility[code].startAttackPower;
-        soldierData.maxAttackPower = m_soldierAbility[code].maxAttackPower;
-        soldierData.healthPoint = m_soldierAbility[code].healthPoint;
-        soldierData.fatalHitProbability = m_soldierAbility[code].fatalHitProbability;
-        soldierData.physicalDefensePower = m_soldierAbility[code].physicalDefensePower;
-        soldierData.magicalDefensePower = m_soldierAbility[code].magicalDefensePower;
-
-        soldierData.prefabPath = m_soldierAbility[code].prefabPath;
-        soldierData.spritePath = m_soldierAbility[code].spritePath;
-        
-        m_soldierData.Add(soldierData);
     }
 
     public void InitializeSoldierData(string strSoldierInfo)

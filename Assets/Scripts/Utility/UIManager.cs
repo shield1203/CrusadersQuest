@@ -9,7 +9,8 @@ public enum UIPrefab
     LOGIN_TYPE,
     ERROR,
     SOLDIER_LIST,
-    ADVENTURE
+    ADVENTURE,
+    MONSTER_LIST,
 }
 
 public class UIManager : MonoBehaviour
@@ -58,6 +59,7 @@ public class UIManager : MonoBehaviour
         m_uiPrefabPath.Add("UI/ErrorUI");
         m_uiPrefabPath.Add("UI/SoldierListUI");
         m_uiPrefabPath.Add("UI/AdventureUI");
+        m_uiPrefabPath.Add("UI/MonsterListUI");
     }
 
     public void AddUI(UIPrefab uiPrefab)

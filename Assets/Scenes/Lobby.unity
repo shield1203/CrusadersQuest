@@ -878,6 +878,7 @@ GameObject:
   - component: {fileID: 160228853}
   - component: {fileID: 160228852}
   - component: {fileID: 160228851}
+  - component: {fileID: 160228854}
   m_Layer: 5
   m_Name: bt_soldier
   m_TagString: Untagged
@@ -948,9 +949,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1234586897}
-        m_MethodName: OnSoldierListUI
-        m_Mode: 1
+      - m_Target: {fileID: 160228854}
+        m_MethodName: OnOpenSoldierList
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -997,6 +998,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160228849}
   m_CullTransparentMesh: 0
+--- !u!114 &160228854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160228849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed0c936e06d0274d989f23a950fce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_httpSystem: {fileID: 895397075}
+  m_camera: {fileID: 1864932604}
 --- !u!1 &162306848
 GameObject:
   m_ObjectHideFlags: 0
@@ -9328,6 +9343,7 @@ GameObject:
   - component: {fileID: 1198728572}
   - component: {fileID: 1198728571}
   - component: {fileID: 1198728570}
+  - component: {fileID: 1198728573}
   m_Layer: 5
   m_Name: bt_start
   m_TagString: Untagged
@@ -9397,7 +9413,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1198728571}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1198728573}
+        m_MethodName: OnMoveCameraToPoint
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 32
+          m_FloatArgument: 32.9
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1198728571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9436,6 +9463,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198728568}
   m_CullTransparentMesh: 0
+--- !u!114 &1198728573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198728568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed0c936e06d0274d989f23a950fce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_httpSystem: {fileID: 895397075}
+  m_camera: {fileID: 1864932604}
 --- !u!1 &1234007714
 GameObject:
   m_ObjectHideFlags: 0
@@ -11108,6 +11149,7 @@ GameObject:
   - component: {fileID: 1501361544}
   - component: {fileID: 1501361543}
   - component: {fileID: 1501361542}
+  - component: {fileID: 1501361545}
   m_Layer: 5
   m_Name: bt_village
   m_TagString: Untagged
@@ -11177,7 +11219,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1501361543}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1501361545}
+        m_MethodName: OnMoveCameraToPoint
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1501361543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11216,6 +11269,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501361540}
   m_CullTransparentMesh: 0
+--- !u!114 &1501361545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501361540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed0c936e06d0274d989f23a950fce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_httpSystem: {fileID: 895397075}
+  m_camera: {fileID: 1864932604}
 --- !u!1 &1525090898
 GameObject:
   m_ObjectHideFlags: 0
