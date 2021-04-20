@@ -44,10 +44,8 @@ public class MapToolSystem : MonoBehaviour
     {
         m_mapPath.Add("Map/Forest");
         m_mapPath.Add("Map/Desert");
-
-        // 임시
-        m_mapPath.Add("Map/Forest");
-        m_mapPath.Add("Map/Desert");
+        m_mapPath.Add("Map/DeepSea");
+        m_mapPath.Add("Map/Volcano");
 
         m_map = Instantiate(Resources.Load(m_mapPath[0]) as GameObject);
     }
