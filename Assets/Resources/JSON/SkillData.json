@@ -1,0 +1,44 @@
+[
+  {
+    "code": 0,
+    "name": "성검의 부름",
+    "percent": [ 80, 180, 340 ],
+    "thumbnailPath": "Skill/Call of the Holy Sword_sprite"
+  },
+  {
+    "code": 1,
+    "name": "질풍파",
+    "percent": [ 150, 200, 250 ],
+    "thumbnailPath": "Skill/Stormy Waves_sprite"
+  },
+  {
+    "code": 2,
+    "name": "대지분쇄",
+    "percent": [ 56, 178, 271 ],
+    "thumbnailPath": "Skill/Earth crush_sprite"
+  },
+  {
+    "code": 3,
+    "name": "애로우 스톰",
+    "percent": [ 10, 20, 45 ],
+    "thumbnailPath": "Skill/Arrow Storm_sprite"
+  },
+  {
+    "code": 4,
+    "name": "불안한 샷",
+    "percent": [ 50, 100, 150 ],
+    "thumbnailPath": "Skill/Unstable shot_sprite"
+  },
+  {
+    "code": 5,
+    "name": "환영 제압부",
+    "percent": [ 44, 444, 444 ],
+    "thumbnailPath": "Skill/Soul suppressing amulet_sprite"
+  },
+  {
+    "code": 6,
+    "name": "빛이다냥",
+    "percent": [ 7, 15, 25 ],
+    "thumbnailPath": "Skill/Its light nyang_sprite"
+  }
+]

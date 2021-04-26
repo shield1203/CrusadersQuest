@@ -62,7 +62,12 @@ public class MapToolSystem : MonoBehaviour
     {
         if (UIManager.Instance.GetUICount() > 0)
         {
-            m_placementObject = Instantiate(Resources.Load(MonsterManager.Instance.GetSelectedMonster().prefabPath) as GameObject);
+            Vector3 mouseLocation = Input.mousePosition;
+            mouseLocation = Camera.main.ScreenToWorldPoint(mouseLocation);
+            mouseLocation.z = 0;
+
+            m_placementObject = Instantiate(Resources.Load(MonsterManager.Instance.GetSelectedMonster().prefabPath) as GameObject,
+                mouseLocation, transform.rotation);
         }
     }
 
