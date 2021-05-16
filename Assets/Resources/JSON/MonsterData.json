@@ -4,15 +4,19 @@
     "level": 4,
     "name": "슬라임",
     "attack": 5.2,
+    "attackRange": 3,
+    "speed": 0.015,
     "maxHP": 40.5,
     "thumbnailPath": "Monster/sp_slime",
-    "prefabPath" : "Monster/Slime"
+    "prefabPath": "Monster/Slime/Slime"
   },
   {
     "code": 1,
     "level": 4,
     "name": "고블린 전사",
     "attack": 10.1,
+    "attackRange": 1,
+    "speed": 1,
     "maxHP": 60.5,
     "thumbnailPath": "Monster/sp_goblinWarrior",
     "prefabPath": "Monster/GoblinWarrior"
@@ -22,6 +26,8 @@
     "level": 4,
     "name": "고블린 궁수",
     "attack": 15.2,
+    "attackRange": 1,
+    "speed": 1,
     "maxHP": 64.2,
     "thumbnailPath": "Monster/sp_goblinArcher",
     "prefabPath": "Monster/GoblinArcher"
@@ -31,6 +37,8 @@
     "level": 4,
     "name": "늑대인간",
     "attack": 20.6,
+    "attackRange": 1,
+    "speed": 1,
     "maxHP": 104.5,
     "thumbnailPath": "Monster/sp_werewolf",
     "prefabPath": "Monster/Werewolf"
@@ -40,15 +48,19 @@
     "level": 4,
     "name": "엔트",
     "attack": 20.6,
+    "attackRange": 7.32,
+    "speed": 0.016,
     "maxHP": 170.2,
     "thumbnailPath": "Monster/sp_ent",
-    "prefabPath": "Monster/Ent"
+    "prefabPath": "Monster/Ent/Ent"
   },
   {
     "code": 5,
     "level": 4,
     "name": "오거",
     "attack": 28.2,
+    "attackRange": 1,
+    "speed": 1,
     "maxHP": 173.5,
     "thumbnailPath": "Monster/sp_ogre",
     "prefabPath": "Monster/Ogre"
@@ -58,6 +70,8 @@
     "level": 8,
     "name": "샌드맨",
     "attack": 16.8,
+    "attackRange": 1,
+    "speed": 1,
     "maxHP": 65.5,
     "thumbnailPath": "Monster/sp_sandman",
     "prefabPath": "Monster/Sandman"
@@ -67,6 +81,8 @@
     "level": 8,
     "name": "리자드맨",
     "attack": 30,
+    "attackRange": 1,
+    "speed": 1,
     "maxHP": 170.5,
     "thumbnailPath": "Monster/sp_lizardman",
     "prefabPath": "Monster/Lizardman"
@@ -76,6 +92,8 @@
     "level": 8,
     "name": "아누비스",
     "attack": 40,
+    "attackRange": 1,
+    "speed": 1,
     "maxHP": 220.5,
     "thumbnailPath": "Monster/sp_anubis",
     "prefabPath": "Monster/Anubis"
@@ -85,6 +103,8 @@
     "level": 8,
     "name": "호루스",
     "attack": 50,
+    "attackRange": 1,
+    "speed": 1,
     "maxHP": 230.2,
     "thumbnailPath": "Monster/sp_horus",
     "prefabPath": "Monster/Horus"

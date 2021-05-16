@@ -14,16 +14,56 @@ public class ScenarioSystem : MonoBehaviour
 
     IEnumerator OnCreateBlock;
 
-    IEnumerator[] OnMoveBlock = new IEnumerator[9];
+    IEnumerator[] OnMoveBlock = new IEnumerator[maxBlockCount];
 
     const int maxBlockCount = 9;
+    const int maxBlockChain = 3;
+    const float blockSpeed = 50.0f;    
 
     Random m_random = new Random();
+
+    GameObject m_map;
+
+    List<GameObject> m_soldierUnits = new List<GameObject>();
+    List<GameObject> m_monsterUnits = new List<GameObject>();
 
     void Start()
     {
         OnCreateBlock = CreateBlock();
         StartCoroutine(OnCreateBlock);
+
+        //foreach(SoldierData soldier in SoldierManager.Instance.GetSoldierTeam())
+        //{
+        //    GameObject soldierUnit = Instantiate(Resources.Load(soldier.prefabPath) as GameObject);
+        //    // 위치 추가
+        //    //soldierUnit.GetComponent<UnitBase>().
+
+        //    m_soldierUnits.Add(soldierUnit);
+        //}
+
+        GameObject soldierUnit = Instantiate(Resources.Load("Soldier/leon/Leon") as GameObject);
+        // 위치 추가
+        //soldierUnit.GetComponent<UnitBase>().
+
+        m_soldierUnits.Add(soldierUnit);
+
+        Stage curStage = StageManager.Instance.GetStage();
+        m_map = Instantiate(Resources.Load(curStage.mapPath) as GameObject);
+
+        foreach(MonsterPlacement monster in curStage.monsters)
+        {
+            MonsterData monsterData = MonsterManager.Instance.GetMonsterData(monster.code);
+
+            Vector3 monsterLocation = new Vector3();
+            monsterLocation.x = monster.x;
+            monsterLocation.y = monster.y;
+
+            GameObject monsterUnit = Instantiate(Resources.Load(monsterData.prefabPath) as GameObject,
+                monsterLocation, transform.rotation);
+            monsterUnit.GetComponent<MonsterUnit>().InitializeMonsterUnit(monsterData, m_soldierUnits);
+
+            m_monsterUnits.Add(monsterUnit);
+        }
     }
 
     void Update()
@@ -51,6 +91,7 @@ public class ScenarioSystem : MonoBehaviour
                 block.transform.position = m_blockPosition[maxBlockCount - 1].position;
                 block.GetComponent<SkillBlock>().m_touchDelegate = UseBlock;
                 m_skillBlocks.Add(block);
+
                 // TestCode
                 string thumbnailPath = "Skill/Stormy Waves_sprite";
                 switch(random)
@@ -97,7 +138,7 @@ public class ScenarioSystem : MonoBehaviour
             yield return null;
 
             m_skillBlocks[blockIndex].transform.position = Vector3.MoveTowards(m_skillBlocks[blockIndex].transform.position,
-                m_blockPosition[blockIndex].position, 30.0f);
+                m_blockPosition[blockIndex].position, blockSpeed);
         }
 
         if (!m_skillBlocks[blockIndex].GetComponent<SkillBlock>().IsPrevBlockLinked() && CanBlockLink(blockIndex))
@@ -105,7 +146,7 @@ public class ScenarioSystem : MonoBehaviour
             m_skillBlocks[blockIndex].GetComponent<SkillBlock>().PrevBlockLink();
             m_skillBlocks[blockIndex - 1].GetComponent<SkillBlock>().NextBlockLink();
 
-            if(GetLinkedBlocksIndex(blockIndex).Count == 3)
+            if(GetLinkedBlocksIndex(blockIndex).Count == maxBlockChain)
             {
                 foreach(int index in GetLinkedBlocksIndex(blockIndex))
                 {
@@ -126,7 +167,7 @@ public class ScenarioSystem : MonoBehaviour
                 == m_skillBlocks[blockIndex].GetComponent<SkillBlock>().GetBlockColor())
             {
                 linkCount++;
-                linkCount %= 3; // maxBlockChain
+                linkCount %= maxBlockChain;
             }
             else
             {

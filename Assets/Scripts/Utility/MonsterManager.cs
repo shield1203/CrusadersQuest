@@ -23,7 +23,10 @@ public struct MonsterData
     public int level;
     public string name;
     public float attack;
+    public float attackRange;
+    public float speed;
     public float maxHP;
+
     public string thumbnailPath;
     public string prefabPath;
 }
@@ -71,6 +74,11 @@ public class MonsterManager : MonoBehaviour
     public List<MonsterData> GetMonsterData()
     {
         return m_monsterData;
+    }
+
+    public MonsterData GetMonsterData(MonsterCode code)
+    {
+        return m_monsterData[(int)code];
     }
 
     public void SetSelectedMonster(MonsterData data)

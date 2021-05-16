@@ -47,6 +47,7 @@ public struct SoldierInfo
     public SoldierCode code;
     public int level;
     public float exp;
+    public bool team;
 }
 
 [System.Serializable]
@@ -75,6 +76,7 @@ public struct SoldierData
     public SoldierCode code;
     public int level;
     public float exp;
+    public bool team;
 
     public SoldierType type;
     public int grade;
@@ -96,6 +98,7 @@ public class SoldierManager : MonoBehaviour
 
     public Dictionary<SoldierCode, SoldierAbility> m_soldierAbility = new Dictionary<SoldierCode, SoldierAbility>();
     public List<SoldierData> m_soldierData = new List<SoldierData>();
+    public List<SoldierData> m_soldierTeam = new List<SoldierData>();
 
     public static SoldierManager Instance
     {
@@ -136,13 +139,10 @@ public class SoldierManager : MonoBehaviour
     public void InitializeSoldierData(string strSoldierInfo)
     {
         m_soldierData.Clear();
+        m_soldierTeam.Clear();
 
         var soldierInfo = JsonHelper.FromJson<SoldierInfo>(strSoldierInfo);
-        foreach (var info in soldierInfo)
-        {
-            Debug.Log(info.code);
-        }
-
+        
         foreach (var info in soldierInfo)
         {
             SoldierData soldierData = new SoldierData();
@@ -151,6 +151,7 @@ public class SoldierManager : MonoBehaviour
             soldierData.code = info.code;
             soldierData.level = info.level;
             soldierData.exp = info.exp;
+            soldierData.team = info.team;
 
             soldierData.name = m_soldierAbility[info.code].name;
             soldierData.type = m_soldierAbility[info.code].type;
@@ -166,6 +167,7 @@ public class SoldierManager : MonoBehaviour
             soldierData.spritePath = m_soldierAbility[info.code].spritePath;
 
             m_soldierData.Add(soldierData);
+            if (soldierData.team) m_soldierTeam.Add(soldierData);
         }
     }
 
@@ -191,5 +193,10 @@ public class SoldierManager : MonoBehaviour
         }
 
         return SoldierCode.Leon;
+    }
+
+    public List<SoldierData> GetSoldierTeam()
+    {
+        return m_soldierTeam;
     }
 }

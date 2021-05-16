@@ -10,7 +10,7 @@
     "fatalHitProbability": 11.5,
     "physicalDefensePower": 77,
     "magicalDefensePower": 15,
-    "prefabPath": "",
+    "prefabPath": "Soldier/leon/Leon",
     "spritePath": "Soldier/sp_leon"
   },
   {

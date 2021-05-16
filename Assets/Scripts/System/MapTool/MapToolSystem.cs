@@ -3,20 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
-public struct Stage
-{
-    public string mapPath;
-    public MonsterPlacement[] monsters;
-}
-
-public struct MonsterPlacement
-{
-    public MonsterCode code;
-    public float x;
-    public float y;
-}
-
 public class MapToolSystem : MonoBehaviour
 {
     [SerializeField]
@@ -26,8 +12,6 @@ public class MapToolSystem : MonoBehaviour
     Text m_stageText;
 
     int m_stageNumber = 1;
-
-    List<string> m_mapPath = new List<string>();
 
     GameObject m_map;
 
@@ -42,12 +26,7 @@ public class MapToolSystem : MonoBehaviour
 
     void Start()
     {
-        m_mapPath.Add("Map/Forest");
-        m_mapPath.Add("Map/Desert");
-        m_mapPath.Add("Map/DeepSea");
-        m_mapPath.Add("Map/Volcano");
-
-        m_map = Instantiate(Resources.Load(m_mapPath[0]) as GameObject);
+        m_map = Instantiate(Resources.Load("Map/Forest") as GameObject);
     }
 
     public void AddStageNumber()
@@ -119,7 +98,7 @@ public class MapToolSystem : MonoBehaviour
     {
         if(m_map) Destroy(m_map);
 
-        m_map = Instantiate(Resources.Load(m_mapPath[mapIndex]) as GameObject);
+        m_map = Instantiate(Resources.Load(StageManager.Instance.GetMapPathString(mapIndex)) as GameObject);
         m_map.transform.position = new Vector3(0, 0, 0);
 
         m_episodeText.text = "Episode " + (mapIndex + 1).ToString();
