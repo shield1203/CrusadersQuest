@@ -16,6 +16,8 @@ public class MonsterIdleState : StateMachineBehaviour
     
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (m_unit.GetTargetUnits() == null) return;
+
         if (m_unit.IsDie())
         {
             animator.SetBool("IsDie", true);

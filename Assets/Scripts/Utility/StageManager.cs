@@ -30,6 +30,7 @@ public struct Stage
     public MonsterPlacement[] monsters;
 }
 
+[System.Serializable]
 public struct MonsterPlacement
 {
     public MonsterCode code;

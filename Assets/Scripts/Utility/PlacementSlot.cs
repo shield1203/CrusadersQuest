@@ -16,11 +16,15 @@ public class PlacementSlot : MonoBehaviour
     public delegate void OnRemoveObject(GameObject placementObject);
     public OnRemoveObject onRemove;
 
-    public void InitializePlacementSlot(GameObject placementObject, string name, float xPos, float yPos)
+    public void InitializePlacementSlot(GameObject placementObject, string name)
     {
         m_placementObject = placementObject;
         m_name.text = name;
-        m_pos.text = "x:" + ((int)xPos).ToString() + ", y:" + ((int)yPos).ToString();
+    }
+
+    public void Update()
+    {
+        m_pos.text = "x : " + m_placementObject.transform.position.x.ToString("N2") + ", y : " + m_placementObject.transform.position.y.ToString("N2");
     }
 
     public void OnRemovePlacementObject()

@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class MapToolSystem : MonoBehaviour
 {
     [SerializeField]
-    Text m_episodeText; 
+    Text m_episodeText;
+
+    int m_episodeNumber = 1;
 
     [SerializeField]
     Text m_stageText;
@@ -19,7 +21,7 @@ public class MapToolSystem : MonoBehaviour
 
     GameObject m_placementObject;
 
-    Dictionary<GameObject, MonsterPlacement> m_monsterPlacement = new Dictionary<GameObject, MonsterPlacement>();
+    Dictionary<GameObject, MonsterCode> m_monsterPlacement = new Dictionary<GameObject, MonsterCode>();
 
     [SerializeField]
     GameObject m_placementSlots;
@@ -48,6 +50,7 @@ public class MapToolSystem : MonoBehaviour
             m_placementObject = Instantiate(Resources.Load(MonsterManager.Instance.GetSelectedMonster().prefabPath) as GameObject,
                 mouseLocation, transform.rotation);
         }
+        
     }
 
     public void OnMouseDrag()
@@ -68,18 +71,13 @@ public class MapToolSystem : MonoBehaviour
         {
             if(Input.mousePosition.x <= 822 && Input.mousePosition.x >= 133)
             {
-                MonsterPlacement monsterPlacement;
-                monsterPlacement.code = MonsterManager.Instance.GetSelectedMonster().code;
-                monsterPlacement.x = Input.mousePosition.x;
-                monsterPlacement.y = Input.mousePosition.y;
-
                 GameObject placementSlot = Instantiate(Resources.Load("UI/PlacementSlot") as GameObject);
                 placementSlot.GetComponent<PlacementSlot>().InitializePlacementSlot(m_placementObject, 
-                    MonsterManager.Instance.GetSelectedMonster().name, monsterPlacement.x, monsterPlacement.y);
+                    MonsterManager.Instance.GetSelectedMonster().name);
                 placementSlot.GetComponent<PlacementSlot>().onRemove += RemovePlacementMonster;
                 placementSlot.transform.SetParent(m_placementSlots.transform);
 
-                m_monsterPlacement.Add(m_placementObject, monsterPlacement);
+                m_monsterPlacement.Add(m_placementObject, MonsterManager.Instance.GetSelectedMonster().code);
             }
             else
             {
@@ -98,10 +96,11 @@ public class MapToolSystem : MonoBehaviour
     {
         if(m_map) Destroy(m_map);
 
+        m_episodeNumber = mapIndex + 1;
         m_map = Instantiate(Resources.Load(StageManager.Instance.GetMapPathString(mapIndex)) as GameObject);
         m_map.transform.position = new Vector3(0, 0, 0);
 
-        m_episodeText.text = "Episode " + (mapIndex + 1).ToString();
+        m_episodeText.text = "Episode " + (m_episodeNumber).ToString();
     }
 
     public void OnToggleMonsterListUI()
@@ -118,8 +117,30 @@ public class MapToolSystem : MonoBehaviour
         }
     }
 
-    public void SaveData()
+    public void LoadStageData()
     {
 
+    }
+
+    public void SaveStageData()
+    {
+        string fileName = "/Resources/JSON/Stage" + m_episodeNumber.ToString() + "-" + m_stageNumber.ToString();
+        Stage stageData = new Stage();
+        stageData.mapPath = StageManager.Instance.GetMapPathString(m_episodeNumber - 1);
+        stageData.monsters = new MonsterPlacement[m_monsterPlacement.Count];
+        
+        int index = 0;
+        foreach(KeyValuePair<GameObject, MonsterCode> data in m_monsterPlacement)
+        {
+            stageData.monsters[index].code = data.Value;
+            stageData.monsters[index].x = data.Key.transform.position.x;
+            stageData.monsters[index].y = data.Key.transform.position.y;
+            index++;
+            Debug.Log("s" + index.ToString());
+        }
+
+        JsonHelper.SaveJaon<Stage>(stageData, fileName);
+        Debug.Log(fileName);
+        Debug.Log(stageData.monsters.Length);
     }
 }
