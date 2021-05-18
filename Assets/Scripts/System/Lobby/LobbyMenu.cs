@@ -66,13 +66,13 @@ public class LobbyMenu : MonoBehaviour
         }
     }
 
-    IEnumerator MoveCameraToObject(Vector3 target)
+    IEnumerator MoveCameraToObject(Vector2 target)
     {
         while (target.x != m_camera.position.x)
         {
-            target = new Vector3(target.x, m_camera.position.y, m_camera.position.z);
+            target = new Vector2(target.x, m_camera.position.y);
 
-            m_camera.position = Vector3.MoveTowards(m_camera.position, target, 1f);
+            m_camera.position = Vector2.MoveTowards(m_camera.position, target, 1.5f);
 
             yield return null;
         }
@@ -87,10 +87,10 @@ public class LobbyMenu : MonoBehaviour
     {
         while (xPos != m_camera.position.x)
         {
-            Vector3 Point = m_camera.position;
+            Vector2 Point = m_camera.position;
             Point.x = xPos;
 
-            m_camera.position = Vector3.MoveTowards(m_camera.position, Point, 1.5f);
+            m_camera.position = Vector2.MoveTowards(m_camera.position, Point, 1.5f);
 
             yield return null;
         }

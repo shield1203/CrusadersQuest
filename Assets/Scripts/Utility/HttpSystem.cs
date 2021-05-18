@@ -88,11 +88,12 @@ public class HttpSystem : MonoBehaviour
 
         if (request.isNetworkError || request.isHttpError)
         {
-            Debug.Log(request.error);
+            UIManager.Instance.AddUI(UIPrefab.ERROR);
         }
         else
         {
             Debug.Log(request.downloadHandler.text);
+            // request.downloadHandler.text를 아이디에 저장
         }
     }
 
@@ -122,6 +123,32 @@ public class HttpSystem : MonoBehaviour
             SoldierManager.Instance.InitializeSoldierData(request.downloadHandler.text);
 
             if (action != null) action();
+        }
+    }
+
+    public IEnumerator RequestUpdateTeamData(int soldeirId, int isTeam)
+    {
+        string strScheme = "/UpdateTeam?userId=" + m_userId + "&soldierId=" + soldeirId.ToString() + "&isTeam=" + isTeam.ToString();
+        string strURL = m_serverIP + strScheme;
+        UnityWebRequest request = UnityWebRequest.Get(strURL);
+
+        UIManager.Instance.AddUI(UIPrefab.LOADING);
+
+        yield return request.SendWebRequest();
+
+        UIManager.Instance.RemoveOneUI();
+
+        if (request.isNetworkError || request.isHttpError)
+        {
+            UIManager.Instance.AddUI(UIPrefab.ERROR);
+        }
+        else if (request.downloadHandler.text == "fail")
+        {
+            UIManager.Instance.AddUI(UIPrefab.ERROR); 
+        }
+        else
+        {
+            SoldierManager.Instance.UpdateSoldierTeam(soldeirId, isTeam);
         }
     }
 }

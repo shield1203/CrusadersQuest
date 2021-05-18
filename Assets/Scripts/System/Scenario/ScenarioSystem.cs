@@ -18,7 +18,11 @@ public class ScenarioSystem : MonoBehaviour
 
     const int maxBlockCount = 9;
     const int maxBlockChain = 3;
-    const float blockSpeed = 50.0f;    
+    const float blockSpeed = 50.0f;
+
+    const float soldierUnitInitXPos = -23f;
+    const float soldierUnitInitYPos = -2.35f;
+    const float soldierUnitDistance = 3f;
 
     Random m_random = new Random();
 
@@ -32,29 +36,23 @@ public class ScenarioSystem : MonoBehaviour
         OnCreateBlock = CreateBlock();
         StartCoroutine(OnCreateBlock);
 
-        //foreach(SoldierData soldier in SoldierManager.Instance.GetSoldierTeam())
-        //{
-        //    GameObject soldierUnit = Instantiate(Resources.Load(soldier.prefabPath) as GameObject);
-        //    // 위치 추가
-        //    //soldierUnit.GetComponent<UnitBase>().
-
-        //    m_soldierUnits.Add(soldierUnit);
-        //}
-
-        GameObject soldierUnit = Instantiate(Resources.Load("Soldier/leon/Leon") as GameObject);
-        // 위치 추가
-        //soldierUnit.GetComponent<UnitBase>().
-
-        m_soldierUnits.Add(soldierUnit);
+        List<SoldierData> soldierTeam = SoldierManager.Instance.GetSoldierTeam();
+        for (int index = 0; index < soldierTeam.Count; index++)
+        {
+            GameObject soldierUnit = Instantiate(Resources.Load(soldierTeam[index].prefabPath) as GameObject);
+            soldierUnit.transform.position = new Vector2(soldierUnitInitXPos + (index * soldierUnitDistance), soldierUnitInitYPos);
+            m_soldierUnits.Add(soldierUnit);
+        }
 
         Stage curStage = StageManager.Instance.GetStage();
+        
         m_map = Instantiate(Resources.Load(curStage.mapPath) as GameObject);
 
         foreach(MonsterPlacement monster in curStage.monsters)
         {
             MonsterData monsterData = MonsterManager.Instance.GetMonsterData(monster.code);
 
-            Vector3 monsterLocation = new Vector3();
+            Vector2 monsterLocation = new Vector2();
             monsterLocation.x = monster.x;
             monsterLocation.y = monster.y;
 

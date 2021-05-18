@@ -47,7 +47,7 @@ public struct SoldierInfo
     public SoldierCode code;
     public int level;
     public float exp;
-    public bool team;
+    public int team;
 }
 
 [System.Serializable]
@@ -76,7 +76,7 @@ public struct SoldierData
     public SoldierCode code;
     public int level;
     public float exp;
-    public bool team;
+    public int team;
 
     public SoldierType type;
     public int grade;
@@ -98,7 +98,7 @@ public class SoldierManager : MonoBehaviour
 
     public Dictionary<SoldierCode, SoldierAbility> m_soldierAbility = new Dictionary<SoldierCode, SoldierAbility>();
     public List<SoldierData> m_soldierData = new List<SoldierData>();
-    public List<SoldierData> m_soldierTeam = new List<SoldierData>();
+    public Dictionary<int, SoldierData> m_soldierTeam = new Dictionary<int, SoldierData>();
 
     public static SoldierManager Instance
     {
@@ -167,7 +167,7 @@ public class SoldierManager : MonoBehaviour
             soldierData.spritePath = m_soldierAbility[info.code].spritePath;
 
             m_soldierData.Add(soldierData);
-            if (soldierData.team) m_soldierTeam.Add(soldierData);
+            if (soldierData.team > 0) m_soldierTeam.Add(info.soldier_id, soldierData);
         }
     }
 
@@ -197,6 +197,37 @@ public class SoldierManager : MonoBehaviour
 
     public List<SoldierData> GetSoldierTeam()
     {
-        return m_soldierTeam;
+        List<SoldierData> teamData = new List<SoldierData>();
+        foreach(SoldierData data in m_soldierTeam.Values)
+        {
+            teamData.Add(data);
+        }
+
+        return teamData;
+    }
+
+    
+
+    public void UpdateSoldierTeam(int soldierId, int isTeam)
+    {
+        for(int index = 0; index < m_soldierData.Count; index++)
+        {
+            if(m_soldierData[index].soldier_id == soldierId)
+            {
+                SoldierData soldier = m_soldierData[index];
+                soldier.team = isTeam;
+                m_soldierData[index] = soldier;
+
+                if(isTeam == 1)
+                {
+                    m_soldierTeam.Add(soldierId, soldier);
+                }
+                else
+                {
+                    m_soldierTeam.Remove(soldierId);
+                }
+                break;
+            }
+        }
     }
 }
