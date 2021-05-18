@@ -2,21 +2,68 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum LobbyButton
+{
+    Shop,
+    Contract,
+    Bakery,
+    Facilities,
+    Storage,
+    Equipment,
+    Champion,
+    Soldier,
+    Start,
+    Village,
+    Fishing,
+    Orchard,
+    Adventure,
+    Fight,
+    Dungeon,
+    Suppression,
+}
+
 public class LobbyMenu : MonoBehaviour
 {
-    public HttpSystem m_httpSystem;   
-    public Transform m_camera;
+    [SerializeField]
+    private HttpSystem m_httpSystem;
 
-    public void OnOpenSoldierList(bool isInVillage)
+    [SerializeField]
+    private Transform m_camera;
+
+    [SerializeField]
+    private bool m_inVillage;
+
+    [SerializeField]
+    private LobbyButton m_lobbyButton;
+
+    public void TouchButton()
     {
-        StartCoroutine(InitSoldierListUI(isInVillage));
+        StartCoroutine(ButtonAction(m_inVillage, m_lobbyButton));
     }
 
-    IEnumerator InitSoldierListUI(bool isInVillage)
+    IEnumerator ButtonAction(bool isInVillage, LobbyButton lobbyButton)
     {
         if (isInVillage) yield return StartCoroutine(MoveCameraToObject(transform.position));
 
-        StartCoroutine(m_httpSystem.RequestSoldierListData(OpenSoldierListUI));
+        switch(lobbyButton)
+        {
+            case LobbyButton.Shop: break;
+            case LobbyButton.Contract: break;
+            case LobbyButton.Bakery: break;
+            case LobbyButton.Facilities: break;
+            case LobbyButton.Storage: break;
+            case LobbyButton.Equipment: break;
+            case LobbyButton.Champion: break;
+            case LobbyButton.Soldier: StartCoroutine(m_httpSystem.RequestSoldierListData(OpenSoldierListUI)); break;
+            case LobbyButton.Start: break;
+            case LobbyButton.Village: break;
+            case LobbyButton.Fishing: break;
+            case LobbyButton.Orchard: break;
+            case LobbyButton.Adventure: UIManager.Instance.AddUI(UIPrefab.ADVENTURE); break;
+            case LobbyButton.Fight: break;
+            case LobbyButton.Dungeon: break;
+            case LobbyButton.Suppression: break;
+        }
     }
 
     IEnumerator MoveCameraToObject(Vector3 target)
@@ -52,11 +99,5 @@ public class LobbyMenu : MonoBehaviour
     void OpenSoldierListUI()
     {
         UIManager.Instance.AddUI(UIPrefab.SOLDIER_LIST);
-    }
-
-    //////////
-    public void OnOpenMenuUI(bool isInVillage)
-    {
-        if (isInVillage) StartCoroutine(MoveCameraToObject(transform.position));
     }
 }

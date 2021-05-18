@@ -7,7 +7,7 @@ public class LobbySystem : MonoBehaviour
 
     void Start()
     {
-        UIManager.Instance.ActiveUI(true);
+        //UIManager.Instance.ActiveUI(true);
         // 유저 데이터 받아오기
     }
 
@@ -19,7 +19,7 @@ public class LobbySystem : MonoBehaviour
 
     public void OnAdventureUI()
     {
-        UIManager.Instance.AddUI(UIPrefab.ADVENTURE);
+        //UIManager.Instance.AddUI(UIPrefab.ADVENTURE);
     }
 
     //IEnumerator 

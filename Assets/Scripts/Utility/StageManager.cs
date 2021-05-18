@@ -44,9 +44,9 @@ public class StageManager : MonoBehaviour
 
     private List<EpisodeData> m_episodeData = new List<EpisodeData>();
 
-    private int m_curEpisode;
+    private int m_curEpisode = 1;
 
-    private int m_curStage;
+    private int m_curStage = 1;
 
     private List<string> m_mapPath = new List<string>();
 
@@ -119,32 +119,13 @@ public class StageManager : MonoBehaviour
 
     public Stage GetStage()
     {
-        //List<Stage> stage = new List<Stage>();
-        //string stageMonsterJSON = File.ReadAllText(Application.dataPath + 
-        //    "/Resources/JSON/Stage" + m_curEpisode.ToString() + "-" + m_curStage.ToString() + ".json");
+        Stage curStage = new Stage();
+        string stageMonsterJSON = File.ReadAllText(Application.dataPath + 
+            "/Resources/JSON/Stage" + m_curEpisode.ToString() + "-" + m_curStage.ToString() + ".json");
 
-        //stage = JsonHelper.FromJson<Stage>(stageMonsterJSON);
+        curStage = JsonUtility.FromJson<Stage>(stageMonsterJSON);
 
-        //if(stage.Count > 0) return stage[0];
-
-        //Stage emptyStage = new Stage();
-        //return emptyStage;
-
-        //Test
-        Stage TestStage = new Stage();
-        TestStage.mapPath = "Map/Forest";
-
-        TestStage.monsters = new MonsterPlacement[3];
-        TestStage.monsters[0].code = MonsterCode.Slime;
-        TestStage.monsters[0].x = 16;
-
-        TestStage.monsters[1].code = MonsterCode.Slime;
-        TestStage.monsters[1].x = 18;
-
-        TestStage.monsters[2].code = MonsterCode.Ent;
-        TestStage.monsters[2].x = 23;
-
-        return TestStage;
+        return curStage;
     }
 
     public string GetMapPathString(int mapIndex)

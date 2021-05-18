@@ -950,8 +950,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 160228854}
-        m_MethodName: OnOpenSoldierList
-        m_Mode: 6
+        m_MethodName: TouchButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1012,6 +1012,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_httpSystem: {fileID: 895397075}
   m_camera: {fileID: 1864932604}
+  m_inVillage: 0
+  m_lobbyButton: 7
 --- !u!1 &162306848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,15 +1345,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2077578432}
-        m_MethodName: OnOpenSoldierList
-        m_Mode: 6
+        m_MethodName: TouchButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &169113951
 MonoBehaviour:
@@ -1858,6 +1860,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_httpSystem: {fileID: 895397075}
   m_camera: {fileID: 1864932604}
+  m_inVillage: 1
+  m_lobbyButton: 0
 --- !u!4 &258611783
 Transform:
   m_ObjectHideFlags: 0
@@ -2460,8 +2464,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1234586897}
-        m_MethodName: OnAdventureUI
+      - m_Target: {fileID: 1952255867}
+        m_MethodName: TouchButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3753,6 +3757,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_httpSystem: {fileID: 895397075}
   m_camera: {fileID: 1864932604}
+  m_inVillage: 0
+  m_lobbyButton: 14
 --- !u!4 &475210412
 Transform:
   m_ObjectHideFlags: 0
@@ -3853,15 +3859,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1768207745}
-        m_MethodName: OnOpenMenuUI
-        m_Mode: 6
+        m_MethodName: TouchButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &500644235
 MonoBehaviour:
@@ -3961,6 +3967,7 @@ GameObject:
   - component: {fileID: 509635556}
   - component: {fileID: 509635555}
   - component: {fileID: 509635554}
+  - component: {fileID: 509635557}
   m_Layer: 5
   m_Name: bt_equipment
   m_TagString: Untagged
@@ -4030,7 +4037,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 509635555}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 509635557}
+        m_MethodName: TouchButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &509635555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4069,6 +4087,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509635552}
   m_CullTransparentMesh: 0
+--- !u!114 &509635557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509635552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed0c936e06d0274d989f23a950fce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_httpSystem: {fileID: 895397075}
+  m_camera: {fileID: 1864932604}
+  m_inVillage: 0
+  m_lobbyButton: 5
 --- !u!1 &513672984
 GameObject:
   m_ObjectHideFlags: 0
@@ -4278,15 +4312,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 777411007}
-        m_MethodName: OnOpenMenuUI
-        m_Mode: 6
+        m_MethodName: TouchButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &533856434
 MonoBehaviour:
@@ -4419,6 +4453,7 @@ GameObject:
   - component: {fileID: 555527387}
   - component: {fileID: 555527386}
   - component: {fileID: 555527385}
+  - component: {fileID: 555527388}
   m_Layer: 5
   m_Name: bt_facilities
   m_TagString: Untagged
@@ -4488,7 +4523,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 555527386}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 555527388}
+        m_MethodName: TouchButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &555527386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4527,6 +4573,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555527383}
   m_CullTransparentMesh: 0
+--- !u!114 &555527388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555527383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed0c936e06d0274d989f23a950fce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_httpSystem: {fileID: 895397075}
+  m_camera: {fileID: 1864932604}
+  m_inVillage: 0
+  m_lobbyButton: 3
 --- !u!1 &562672581
 GameObject:
   m_ObjectHideFlags: 0
@@ -5645,6 +5707,7 @@ GameObject:
   - component: {fileID: 754566592}
   - component: {fileID: 754566591}
   - component: {fileID: 754566590}
+  - component: {fileID: 754566593}
   m_Layer: 5
   m_Name: bt_storage
   m_TagString: Untagged
@@ -5714,7 +5777,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 754566591}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 754566593}
+        m_MethodName: TouchButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &754566591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5753,6 +5827,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754566588}
   m_CullTransparentMesh: 0
+--- !u!114 &754566593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754566588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed0c936e06d0274d989f23a950fce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_httpSystem: {fileID: 895397075}
+  m_camera: {fileID: 1864932604}
+  m_inVillage: 0
+  m_lobbyButton: 4
 --- !u!1 &767022074
 GameObject:
   m_ObjectHideFlags: 0
@@ -5834,7 +5924,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 767022077}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1713572460}
+        m_MethodName: TouchButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &767022077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5980,6 +6081,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_httpSystem: {fileID: 895397075}
   m_camera: {fileID: 1864932604}
+  m_inVillage: 1
+  m_lobbyButton: 3
 --- !u!4 &777411008
 Transform:
   m_ObjectHideFlags: 0
@@ -6321,15 +6424,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1030319136}
-        m_MethodName: OnOpenMenuUI
-        m_Mode: 6
+        m_MethodName: TouchButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &827658607
 MonoBehaviour:
@@ -6638,6 +6741,7 @@ GameObject:
   - component: {fileID: 877533259}
   - component: {fileID: 877533258}
   - component: {fileID: 877533257}
+  - component: {fileID: 877533260}
   m_Layer: 5
   m_Name: bt_champion
   m_TagString: Untagged
@@ -6707,7 +6811,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 877533258}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 877533260}
+        m_MethodName: TouchButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &877533258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6746,6 +6861,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877533255}
   m_CullTransparentMesh: 0
+--- !u!114 &877533260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877533255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed0c936e06d0274d989f23a950fce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_httpSystem: {fileID: 895397075}
+  m_camera: {fileID: 1864932604}
+  m_inVillage: 0
+  m_lobbyButton: 6
 --- !u!1 &880826445
 GameObject:
   m_ObjectHideFlags: 0
@@ -6758,6 +6889,7 @@ GameObject:
   - component: {fileID: 880826449}
   - component: {fileID: 880826448}
   - component: {fileID: 880826447}
+  - component: {fileID: 880826450}
   m_Layer: 5
   m_Name: bt_contract
   m_TagString: Untagged
@@ -6827,7 +6959,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 880826448}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 880826450}
+        m_MethodName: TouchButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &880826448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6866,6 +7009,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 880826445}
   m_CullTransparentMesh: 0
+--- !u!114 &880826450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880826445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed0c936e06d0274d989f23a950fce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_httpSystem: {fileID: 895397075}
+  m_camera: {fileID: 1864932604}
+  m_inVillage: 0
+  m_lobbyButton: 1
 --- !u!1 &895397074
 GameObject:
   m_ObjectHideFlags: 0
@@ -7401,6 +7560,7 @@ GameObject:
   - component: {fileID: 950364819}
   - component: {fileID: 950364818}
   - component: {fileID: 950364817}
+  - component: {fileID: 950364820}
   m_Layer: 5
   m_Name: bt_shop
   m_TagString: Untagged
@@ -7470,7 +7630,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 950364818}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 950364820}
+        m_MethodName: TouchButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &950364818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7509,6 +7680,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950364815}
   m_CullTransparentMesh: 0
+--- !u!114 &950364820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950364815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed0c936e06d0274d989f23a950fce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_httpSystem: {fileID: 895397075}
+  m_camera: {fileID: 1864932604}
+  m_inVillage: 0
+  m_lobbyButton: 0
 --- !u!1 &965307431
 GameObject:
   m_ObjectHideFlags: 0
@@ -7892,6 +8079,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_httpSystem: {fileID: 895397075}
   m_camera: {fileID: 1864932604}
+  m_inVillage: 1
+  m_lobbyButton: 3
 --- !u!4 &1012036657
 Transform:
   m_ObjectHideFlags: 0
@@ -8147,6 +8336,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_httpSystem: {fileID: 895397075}
   m_camera: {fileID: 1864932604}
+  m_inVillage: 1
+  m_lobbyButton: 3
 --- !u!4 &1030319138
 Transform:
   m_ObjectHideFlags: 0
@@ -8716,15 +8907,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1012036656}
-        m_MethodName: OnOpenMenuUI
-        m_Mode: 6
+        m_MethodName: TouchButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1047960385
 MonoBehaviour:
@@ -9284,15 +9475,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1404590845}
-        m_MethodName: OnOpenMenuUI
-        m_Mode: 6
+        m_MethodName: TouchButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1193781427
 MonoBehaviour:
@@ -9477,6 +9668,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_httpSystem: {fileID: 895397075}
   m_camera: {fileID: 1864932604}
+  m_inVillage: 0
+  m_lobbyButton: 8
 --- !u!1 &1234007714
 GameObject:
   m_ObjectHideFlags: 0
@@ -10568,6 +10761,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_httpSystem: {fileID: 895397075}
   m_camera: {fileID: 1864932604}
+  m_inVillage: 1
+  m_lobbyButton: 2
 --- !u!4 &1404590846
 Transform:
   m_ObjectHideFlags: 0
@@ -11283,6 +11478,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_httpSystem: {fileID: 895397075}
   m_camera: {fileID: 1864932604}
+  m_inVillage: 0
+  m_lobbyButton: 9
 --- !u!1 &1525090898
 GameObject:
   m_ObjectHideFlags: 0
@@ -12469,15 +12666,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 258611782}
-        m_MethodName: OnOpenMenuUI
-        m_Mode: 6
+        m_MethodName: TouchButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1705843294
 MonoBehaviour:
@@ -12547,6 +12744,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_httpSystem: {fileID: 895397075}
   m_camera: {fileID: 1864932604}
+  m_inVillage: 0
+  m_lobbyButton: 15
 --- !u!4 &1713572461
 Transform:
   m_ObjectHideFlags: 0
@@ -13059,6 +13258,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_httpSystem: {fileID: 895397075}
   m_camera: {fileID: 1864932604}
+  m_inVillage: 1
+  m_lobbyButton: 3
 --- !u!4 &1768207746
 Transform:
   m_ObjectHideFlags: 0
@@ -13811,6 +14012,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_httpSystem: {fileID: 895397075}
   m_camera: {fileID: 1864932604}
+  m_inVillage: 0
+  m_lobbyButton: 13
 --- !u!4 &1814164508
 Transform:
   m_ObjectHideFlags: 0
@@ -13909,7 +14112,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1839102598}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 475210411}
+        m_MethodName: TouchButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1839102598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14546,6 +14760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_soldierData: []
+  m_soldierTeam: []
 --- !u!4 &1897036414
 Transform:
   m_ObjectHideFlags: 0
@@ -14926,6 +15141,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_httpSystem: {fileID: 895397075}
   m_camera: {fileID: 1864932604}
+  m_inVillage: 0
+  m_lobbyButton: 12
 --- !u!4 &1952255868
 Transform:
   m_ObjectHideFlags: 0
@@ -14955,6 +15172,7 @@ GameObject:
   - component: {fileID: 1953375347}
   - component: {fileID: 1953375346}
   - component: {fileID: 1953375345}
+  - component: {fileID: 1953375348}
   m_Layer: 5
   m_Name: bt_bakery
   m_TagString: Untagged
@@ -15024,7 +15242,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1953375346}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1953375348}
+        m_MethodName: TouchButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1953375346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15063,6 +15292,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1953375343}
   m_CullTransparentMesh: 0
+--- !u!114 &1953375348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953375343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed0c936e06d0274d989f23a950fce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_httpSystem: {fileID: 895397075}
+  m_camera: {fileID: 1864932604}
+  m_inVillage: 0
+  m_lobbyButton: 2
 --- !u!1 &1995973684
 GameObject:
   m_ObjectHideFlags: 0
@@ -15228,8 +15473,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1814164507}
-        m_MethodName: OnOpenMenuUI
-        m_Mode: 6
+        m_MethodName: TouchButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -16448,6 +16693,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_httpSystem: {fileID: 895397075}
   m_camera: {fileID: 1864932604}
+  m_inVillage: 1
+  m_lobbyButton: 7
 --- !u!4 &2077578433
 Transform:
   m_ObjectHideFlags: 0
@@ -16749,15 +16996,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2113058968}
-        m_MethodName: OnOpenMenuUI
-        m_Mode: 6
+        m_MethodName: TouchButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2090815830
 MonoBehaviour:
@@ -16827,6 +17074,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_httpSystem: {fileID: 895397075}
   m_camera: {fileID: 1864932604}
+  m_inVillage: 1
+  m_lobbyButton: 5
 --- !u!4 &2113058969
 Transform:
   m_ObjectHideFlags: 0

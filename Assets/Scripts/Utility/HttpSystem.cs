@@ -80,9 +80,13 @@ public class HttpSystem : MonoBehaviour
         string strURL = m_serverIP + strScheme;
         UnityWebRequest request = UnityWebRequest.Get(strURL);
 
+        UIManager.Instance.AddUI(UIPrefab.LOADING);
+
         yield return request.SendWebRequest();
 
-        if(request.isNetworkError || request.isHttpError)
+        UIManager.Instance.RemoveOneUI();
+
+        if (request.isNetworkError || request.isHttpError)
         {
             Debug.Log(request.error);
         }

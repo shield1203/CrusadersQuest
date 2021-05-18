@@ -41,7 +41,7 @@ public class MapToolSystem : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (UIManager.Instance.GetUICount() > 0)
+        if (m_visibleMonsterList)
         {
             Vector3 mouseLocation = Input.mousePosition;
             mouseLocation = Camera.main.ScreenToWorldPoint(mouseLocation);
@@ -50,12 +50,11 @@ public class MapToolSystem : MonoBehaviour
             m_placementObject = Instantiate(Resources.Load(MonsterManager.Instance.GetSelectedMonster().prefabPath) as GameObject,
                 mouseLocation, transform.rotation);
         }
-        
     }
 
     public void OnMouseDrag()
     {
-        if(UIManager.Instance.GetUICount() > 0)
+        if(m_visibleMonsterList)
         {
             Vector3 mouseLocation = Input.mousePosition;
             mouseLocation = Camera.main.ScreenToWorldPoint(mouseLocation);
@@ -67,7 +66,7 @@ public class MapToolSystem : MonoBehaviour
 
     public void OnMouseUp()
     {
-        if (UIManager.Instance.GetUICount() > 0)
+        if (m_visibleMonsterList)
         {
             if(Input.mousePosition.x <= 822 && Input.mousePosition.x >= 133)
             {
@@ -124,6 +123,8 @@ public class MapToolSystem : MonoBehaviour
 
     public void SaveStageData()
     {
+        if (m_visibleMonsterList) OnToggleMonsterListUI();
+
         string fileName = "/Resources/JSON/Stage" + m_episodeNumber.ToString() + "-" + m_stageNumber.ToString();
         Stage stageData = new Stage();
         stageData.mapPath = StageManager.Instance.GetMapPathString(m_episodeNumber - 1);
@@ -136,11 +137,10 @@ public class MapToolSystem : MonoBehaviour
             stageData.monsters[index].x = data.Key.transform.position.x;
             stageData.monsters[index].y = data.Key.transform.position.y;
             index++;
-            Debug.Log("s" + index.ToString());
         }
 
         JsonHelper.SaveJaon<Stage>(stageData, fileName);
-        Debug.Log(fileName);
-        Debug.Log(stageData.monsters.Length);
+
+        UIManager.Instance.AddUI(UIPrefab.MAP_SAVE);
     }
 }
