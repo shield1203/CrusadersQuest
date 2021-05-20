@@ -55,6 +55,7 @@ public struct SoldierAbility
 {
     public SoldierCode code;
     public SoldierType type;
+    public SkillCode skill;
     public int grade;
     public string name;
     public float startAttackPower;
@@ -79,6 +80,7 @@ public struct SoldierData
     public int team;
 
     public SoldierType type;
+    public SkillCode skill;
     public int grade;
     public string name;
     public float startAttackPower;
@@ -155,6 +157,7 @@ public class SoldierManager : MonoBehaviour
 
             soldierData.name = m_soldierAbility[info.code].name;
             soldierData.type = m_soldierAbility[info.code].type;
+            soldierData.skill = m_soldierAbility[info.code].skill;
             soldierData.grade = m_soldierAbility[info.code].grade;
             soldierData.startAttackPower = m_soldierAbility[info.code].startAttackPower;
             soldierData.maxAttackPower = m_soldierAbility[info.code].maxAttackPower;
@@ -205,8 +208,6 @@ public class SoldierManager : MonoBehaviour
 
         return teamData;
     }
-
-    
 
     public void UpdateSoldierTeam(int soldierId, int isTeam)
     {

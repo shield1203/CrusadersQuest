@@ -26,7 +26,7 @@ public class SkillBase : MonoBehaviour
 {
     private SkillData m_data;
 
-    void InitializeSkillData(SkillCode code)
+    public void InitializeSkillData(SkillCode code)
     {
         string skillDataJSON = File.ReadAllText(Application.dataPath + "/Resources/JSON/SkillData.json");
 
@@ -39,13 +39,8 @@ public class SkillBase : MonoBehaviour
         m_data.thumbnailPath = skillData[(int)code].thumbnailPath;
     }
 
-    void Start()
+    public SkillData GetSkillData()
     {
-        
-    }
-
-    void Update()
-    {
-        
+        return m_data;
     }
 }
