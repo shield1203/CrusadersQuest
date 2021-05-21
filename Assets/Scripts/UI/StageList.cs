@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class StageList : MonoBehaviour
 {
     [SerializeField]
+    private HttpSystem m_httpSystem;
+
+    [SerializeField]
     private GameObject m_prevUI;
 
     [SerializeField]
@@ -82,6 +85,11 @@ public class StageList : MonoBehaviour
 
     public void OnPrepare()
     {
+        StartCoroutine(m_httpSystem.RequestSoldierListData(OpenTeamSelectUI));
+    }
 
+    void OpenTeamSelectUI()
+    {
+        UIManager.Instance.AddUI(UIPrefab.TEAM_SELECT);
     }
 }

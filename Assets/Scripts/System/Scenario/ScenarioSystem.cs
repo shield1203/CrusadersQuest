@@ -31,18 +31,23 @@ public class ScenarioSystem : MonoBehaviour
     List<GameObject> m_soldierUnits = new List<GameObject>();
     List<GameObject> m_monsterUnits = new List<GameObject>();
 
+    private void Awake()
+    {
+        UIManager.Instance.ActiveUI(false);
+    }
+
     void Start()
     {
         OnCreateBlock = CreateBlock();
         StartCoroutine(OnCreateBlock);
 
-        List<SoldierData> soldierTeam = SoldierManager.Instance.GetSoldierTeam();
-        for (int index = 0; index < soldierTeam.Count; index++)
-        {
-            GameObject soldierUnit = Instantiate(Resources.Load(soldierTeam[index].prefabPath) as GameObject);
-            soldierUnit.transform.position = new Vector2(soldierUnitInitXPos + (index * soldierUnitDistance), soldierUnitInitYPos);
-            m_soldierUnits.Add(soldierUnit);
-        }
+        //List<SoldierData> soldierTeam = SoldierManager.Instance.GetSoldierTeam();
+        //for (int index = 0; index < soldierTeam.Count; index++)
+        //{
+        //    GameObject soldierUnit = Instantiate(Resources.Load(soldierTeam[index].prefabPath) as GameObject);
+        //    soldierUnit.transform.position = new Vector2(soldierUnitInitXPos + (index * soldierUnitDistance), soldierUnitInitYPos);
+        //    m_soldierUnits.Add(soldierUnit);
+        //}
 
         Stage curStage = StageManager.Instance.GetStage();
         

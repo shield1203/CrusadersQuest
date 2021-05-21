@@ -9,7 +9,7 @@ public class SoldierInfoSlot : MonoBehaviour
 
     private bool m_isSelected = false;
 
-    public delegate void OnButtonAction();
+    public delegate void OnButtonAction(int soldierId, int isTeam);
     public OnButtonAction m_buttonAction = null;
 
     [SerializeField]
@@ -28,7 +28,7 @@ public class SoldierInfoSlot : MonoBehaviour
     private Image m_skillThumbnail;
 
     [SerializeField]
-    private Image[] m_grade;
+    private GameObject[] m_grade;
 
     [SerializeField]
     private Image[] m_type;
@@ -46,12 +46,12 @@ public class SoldierInfoSlot : MonoBehaviour
 
     void SetSoldierData()
     {
-        m_levelText.text = m_soldierData.level.ToString();
+        m_levelText.text = "LV" + m_soldierData.level.ToString();
         m_thumbnail.sprite = Resources.Load<Sprite>(m_soldierData.spritePath);
 
         for (int index = 0; index < m_type.Length; index++)
         {
-            m_grade[index].gameObject.SetActive(index + 1 > m_soldierData.grade);
+            m_grade[index].SetActive(index + 1 == m_soldierData.grade);
         }
 
         for (int index = 0; index < m_type.Length; index++)
@@ -59,7 +59,7 @@ public class SoldierInfoSlot : MonoBehaviour
             m_type[index].gameObject.SetActive(index == (int)m_soldierData.type);
         }
 
-        SkillBase skill = new SkillBase();
+        SkillBase skill = gameObject.GetComponent<SkillBase>();
         skill.InitializeSkillData(m_soldierData.skill);
         m_skillThumbnail.sprite = Resources.Load<Sprite>(skill.GetSkillData().thumbnailPath);
     }
@@ -101,11 +101,10 @@ public class SoldierInfoSlot : MonoBehaviour
 
     public void ToggleSoldier()
     {
-        if (SoldierManager.Instance.GetSoldierTeam().Count > 2 || !m_isSelected) return;
+        if (SoldierManager.Instance.GetSoldierTeam().Count > 2 && !m_isSelected) return;
 
-        int isTeam = m_isSelected ? 1 : 0;
-        SoldierManager.Instance.UpdateSoldierTeam(m_soldierData.soldier_id, isTeam);
+        int isTeam = m_isSelected ? 0 : 1;
 
-        if (m_buttonAction != null) m_buttonAction();
+        if (m_buttonAction != null) m_buttonAction(m_soldierData.soldier_id, isTeam);
     }
 }

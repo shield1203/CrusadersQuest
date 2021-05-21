@@ -9,14 +9,14 @@ public class SoldierTeamSlot : MonoBehaviour
 
     private bool m_isEmpty = true;
 
-    public delegate void OnButtonAction();
+    public delegate void OnButtonAction(int soldierId, int isTeam);
     public OnButtonAction m_buttonAction = null;
 
     [SerializeField]
-    private Text m_grade;
+    private GameObject m_contents;
 
     [SerializeField]
-    private Image m_typeBack;
+    private Text m_grade;
 
     [SerializeField]
     private Image[] m_type;
@@ -37,9 +37,7 @@ public class SoldierTeamSlot : MonoBehaviour
 
     void SetContentVisible()
     {
-        m_grade.gameObject.SetActive(!m_isEmpty);
-        m_typeBack.gameObject.SetActive(!m_isEmpty);
-        m_thumbnail.gameObject.SetActive(!m_isEmpty);
+        m_contents.SetActive(!m_isEmpty);
     }
 
     void SetSoldierData()
@@ -59,8 +57,6 @@ public class SoldierTeamSlot : MonoBehaviour
     {
         if (m_isEmpty) return;
 
-        SoldierManager.Instance.UpdateSoldierTeam(m_soldierData.soldier_id, 0);
-
-        if (m_buttonAction != null) m_buttonAction();
+        if (m_buttonAction != null) m_buttonAction(m_soldierData.soldier_id, 0);
     }
 }

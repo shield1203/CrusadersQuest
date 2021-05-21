@@ -8,6 +8,7 @@ using UnityEngine;
 public struct EpisodeData
 {
     public int episode;
+    public string episodeName;
     public string mapName;
     public StageData[] stage;
 }
@@ -110,6 +111,11 @@ public class StageManager : MonoBehaviour
     public string GetEpisodeMapName(int episode)
     {
         return m_episodeData[episode].mapName;
+    }
+
+    public string GetTitleText()
+    {
+        return m_episodeData[m_curEpisode].episodeName + " > " + m_episodeData[m_curEpisode].stage[m_curStage].name;
     }
 
     public StageData[] GetStageData(int episode)

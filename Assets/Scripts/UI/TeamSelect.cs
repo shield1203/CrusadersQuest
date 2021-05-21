@@ -1,10 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TeamSelect : MonoBehaviour
 {
     private SoldierType m_selectedType = SoldierType.All;
+
+    private HttpSystem m_httpSystem;
+
+    [SerializeField]
+    private Text m_title;
 
     [SerializeField]
     private GameObject[] m_teamSlots;
@@ -20,8 +27,14 @@ public class TeamSelect : MonoBehaviour
 
     private bool m_orderByDescending = true;
 
+    [SerializeField]
+    private Image m_blackBoard;
+
     void Start()
     {
+        m_httpSystem = gameObject.GetComponent<HttpSystem>();
+
+        m_title.text = StageManager.Instance.GetTitleText();
         InitializeSoldierTeam();
         InitializeSoldierList();
     }
@@ -42,7 +55,7 @@ public class TeamSelect : MonoBehaviour
                 soldierData = soldiers[index];
             }
 
-            m_teamSlots[index].GetComponent<SoldierTeamSlot>().InitializeSoldierTeamSlot(soldierData, InitializeSoldierTeam, soldiers.Count > index);
+            m_teamSlots[index].GetComponent<SoldierTeamSlot>().InitializeSoldierTeamSlot(soldierData, OnUpdateSoldierTeamSlot, soldiers.Count <= index);
         }
     }
 
@@ -67,13 +80,20 @@ public class TeamSelect : MonoBehaviour
         for (int index = 0; index < soldierList.Count; index++)
         {
             GameObject soldierSlot = Instantiate(Resources.Load("UI/SoldierInfoSlot") as GameObject);
-            soldierSlot.GetComponent<SoldierInfoSlot>().InitializeSoldierInfoSlot(soldierList[index], UpdateSoldierTeamSlot);
+            soldierSlot.GetComponent<SoldierInfoSlot>().InitializeSoldierInfoSlot(soldierList[index], OnUpdateSoldierTeamSlot);
             soldierSlot.transform.SetParent(m_soldierList.transform);
         }
     }
 
-    void UpdateSoldierTeamSlot()
+    void OnUpdateSoldierTeamSlot(int soldierId, int isTeam)
     {
+        StartCoroutine(UpdateSoldierTeamSlot(soldierId, isTeam));
+    }
+
+    IEnumerator UpdateSoldierTeamSlot(int soldierId, int isTeam)
+    {
+        yield return StartCoroutine(m_httpSystem.RequestUpdateTeamData(soldierId, isTeam));
+
         InitializeSoldierTeam();
 
         foreach (Transform child in m_soldierList.transform)
@@ -154,5 +174,29 @@ public class TeamSelect : MonoBehaviour
             m_selectedType = SoldierType.Priest;
             InitializeSoldierList();
         }
+    }
+
+    // GameStart
+    public void GameStart()
+    {
+        if (SoldierManager.Instance.GetSoldierTeam().Count != 3) return;
+        
+        m_blackBoard.gameObject.SetActive(true);
+        StartCoroutine(FadeOut());
+    }
+
+    IEnumerator FadeOut()
+    {
+        float alphaValue = 0f;
+
+        while(alphaValue < 1)
+        {
+            yield return null;
+
+            alphaValue += 0.005f;
+            m_blackBoard.color = new Color(0, 0, 0, alphaValue);
+        }
+
+        SceneManager.LoadScene("Stage");
     }
 }

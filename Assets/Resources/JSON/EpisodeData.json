@@ -1,6 +1,7 @@
 [
   {
     "episode": 1,
+    "episodeName": "사도의 부활",
     "mapName": "숲",
     "stage": [
       {
@@ -55,6 +56,7 @@
   },
   {
     "episode": 2,
+    "episodeName": "사도의 부활",
     "mapName": "사막",
     "stage": [
       {
@@ -109,6 +111,7 @@
   },
   {
     "episode": 3,
+    "episodeName": "사도의 부활",
     "mapName": "심해",
     "stage": [
       {
@@ -163,6 +166,7 @@
   },
   {
     "episode": 4,
+    "episodeName": "사도의 부활",
     "mapName": "화산",
     "stage": [
       {
@@ -217,6 +221,7 @@
   },
   {
     "episode": 5,
+    "episodeName": "북풍의 기억",
     "mapName": "설원",
     "stage": [
       {
@@ -271,6 +276,7 @@
   },
   {
     "episode": 6,
+    "episodeName": "제국의 군단",
     "mapName": "전장",
     "stage": [
       {
@@ -325,6 +331,7 @@
   },
   {
     "episode": 7,
+    "episodeName": "빛의 계승자",
     "mapName": "성도",
     "stage": [
       {

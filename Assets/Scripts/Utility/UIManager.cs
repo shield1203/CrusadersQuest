@@ -12,6 +12,7 @@ public enum UIPrefab
     SOLDIER_LIST,
     ADVENTURE,
     MONSTER_LIST,
+    TEAM_SELECT,
 }
 
 public class UIManager : MonoBehaviour
@@ -62,6 +63,7 @@ public class UIManager : MonoBehaviour
         m_uiPrefabPath.Add("UI/SoldierListUI");
         m_uiPrefabPath.Add("UI/AdventureUI");
         m_uiPrefabPath.Add("UI/MonsterListUI");
+        m_uiPrefabPath.Add("UI/TeamSelectUI");
     }
 
     public void AddUI(UIPrefab uiPrefab)
