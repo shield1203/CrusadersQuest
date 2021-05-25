@@ -67,8 +67,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1410882859
+  m_SortingLayer: 2
   m_SortingOrder: 4
   m_Sprite: {fileID: -2653930406198132080, guid: 3f2b846f435a3244ca22bfea90b7067e,
     type: 3}
@@ -149,8 +149,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1410882859
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 8087678625892972097, guid: 3f2b846f435a3244ca22bfea90b7067e,
     type: 3}
@@ -231,8 +231,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1410882859
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 3177236649293079532, guid: 3f2b846f435a3244ca22bfea90b7067e,
     type: 3}
@@ -313,8 +313,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1410882859
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 1075645200894283871, guid: 3f2b846f435a3244ca22bfea90b7067e,
     type: 3}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 6889158490927083830}
   m_Layer: 8
   m_Name: Slime
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Monster
+  - Soldier
   layers:
   - Default
   - TransparentFX
@@ -13,9 +15,9 @@ TagManager:
   - UI
   - 
   - 
-  - Unit
+  - Monster
   - 
-  - 
+  - Soldier
   - 
   - 
   - 
@@ -43,6 +45,12 @@ TagManager:
     locked: 0
   - name: Back
     uniqueID: 2434209827
+    locked: 0
+  - name: Monster
+    uniqueID: 2884084437
+    locked: 0
+  - name: Soldier
+    uniqueID: 1666601593
     locked: 0
   - name: Front
     uniqueID: 2666741655

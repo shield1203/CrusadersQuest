@@ -31,6 +31,9 @@ public class ScenarioSystem : MonoBehaviour
     List<GameObject> m_soldierUnits = new List<GameObject>();
     List<GameObject> m_monsterUnits = new List<GameObject>();
 
+    [SerializeField]
+    StageSoldierInfo m_stageSoldierInfo;
+
     private void Awake()
     {
         UIManager.Instance.ActiveUI(false);
@@ -41,13 +44,13 @@ public class ScenarioSystem : MonoBehaviour
         OnCreateBlock = CreateBlock();
         StartCoroutine(OnCreateBlock);
 
-        //List<SoldierData> soldierTeam = SoldierManager.Instance.GetSoldierTeam();
-        //for (int index = 0; index < soldierTeam.Count; index++)
-        //{
-        //    GameObject soldierUnit = Instantiate(Resources.Load(soldierTeam[index].prefabPath) as GameObject);
-        //    soldierUnit.transform.position = new Vector2(soldierUnitInitXPos + (index * soldierUnitDistance), soldierUnitInitYPos);
-        //    m_soldierUnits.Add(soldierUnit);
-        //}
+        List<SoldierData> soldierTeam = SoldierManager.Instance.GetSoldierTeam();
+        for (int index = 0; index < soldierTeam.Count; index++)
+        {
+            GameObject soldierUnit = Instantiate(Resources.Load(soldierTeam[index].prefabPath) as GameObject);
+            soldierUnit.transform.position = new Vector2(soldierUnitInitXPos + (index * soldierUnitDistance), soldierUnitInitYPos);
+            m_soldierUnits.Add(soldierUnit);
+        }
 
         Stage curStage = StageManager.Instance.GetStage();
         
@@ -67,6 +70,13 @@ public class ScenarioSystem : MonoBehaviour
 
             m_monsterUnits.Add(monsterUnit);
         }
+
+        for (int index = 0; index < m_soldierUnits.Count; index++)
+        {
+            m_soldierUnits[index].GetComponent<SoldierUnit>().InitializeSoldierUnit(soldierTeam[index], m_monsterUnits);
+        }
+
+        m_stageSoldierInfo.InitializeStageSoldierInfo(m_soldierUnits);
     }
 
     void Update()
@@ -77,6 +87,16 @@ public class ScenarioSystem : MonoBehaviour
             {
                 OnMoveBlock[index] = MoveBlock(index);
                 StartCoroutine(OnMoveBlock[index]);
+            }
+        }
+
+        for(int index = 0; index < m_soldierUnits.Count; index++)
+        {
+            if(m_soldierUnits[index].transform.position.x > Camera.main.transform.position.x)
+            {
+                Vector3 position = Camera.main.transform.position;
+                position.x = m_soldierUnits[index].transform.position.x;
+                Camera.main.transform.position = position;
             }
         }
     }
@@ -95,14 +115,14 @@ public class ScenarioSystem : MonoBehaviour
                 block.GetComponent<SkillBlock>().m_touchDelegate = UseBlock;
                 m_skillBlocks.Add(block);
 
-                // TestCode
-                string thumbnailPath = "Skill/Stormy Waves_sprite";
-                switch(random)
-                {
-                    case 0: thumbnailPath = "Skill/Stormy Waves_sprite"; break;
-                    case 1: thumbnailPath = "Skill/Call of the Holy Sword_sprite"; break;
-                    case 2: thumbnailPath = "Skill/Its light nyang_sprite"; break;
-                }
+                string thumbnailPath = "Skill/Call of the Holy Sword_sprite";
+
+                //switch (random)
+                //{
+                //    case 0: thumbnailPath = "Skill/Stormy Waves_sprite"; break;
+                //    case 1: thumbnailPath = "Skill/Call of the Holy Sword_sprite"; break;
+                //    case 2: thumbnailPath = "Skill/Its light nyang_sprite"; break;
+                //}
 
                 block.GetComponent<SkillBlock>().InitializeSkillBlock(maxBlockCount, (BlockColor)random, true, thumbnailPath);
             }

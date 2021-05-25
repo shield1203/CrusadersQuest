@@ -12,6 +12,9 @@ public class UnitBase : MonoBehaviour
 
     protected GameObject m_mainTarget;
 
+    protected float m_curHP;
+    
+
     void Start()
     {
         m_animation = GetComponent<Animation>();
@@ -19,7 +22,10 @@ public class UnitBase : MonoBehaviour
 
     public virtual void Attack() { }
 
-    public virtual void TakeDamage() { }
+    public virtual void TakeDamage(float damage) 
+    {
+        m_curHP -= damage;
+    }
 
     public bool IsDie()
     {
