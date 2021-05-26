@@ -16,7 +16,7 @@ public class SoldierUnit : UnitBase
 
     void Update()
     {
-        
+        m_healthGage.fillAmount = GetHPPercent();
     }
 
     public void InitializeSoldierUnit(SoldierData soldierData, List<GameObject> targetUnits)
@@ -58,7 +58,7 @@ public class SoldierUnit : UnitBase
         return distance;
     }
 
-    public virtual void ActiveSkill()
+    public virtual void ActiveSkill(int linkCount)
     {
 
     }

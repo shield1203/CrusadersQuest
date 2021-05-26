@@ -8,7 +8,7 @@ public class MonsterUnit : UnitBase
 
     void Start()
     {
-        
+        m_die = true;
     }
 
     void Update()

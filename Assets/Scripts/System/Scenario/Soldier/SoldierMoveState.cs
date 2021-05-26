@@ -22,8 +22,20 @@ public class SoldierMoveState : StateMachineBehaviour
         if (m_unit.GetTargetUnits() == null || m_unit.IsDie()) return;
 
         Collider2D[] overlapMonsters = Physics2D.OverlapCircleAll(m_transform.position, m_unit.GetAttackRange(), 1 << 8);
-        if (overlapMonsters.Length > 0)
+        GameObject target= null;
+        for(int index = 0; index < overlapMonsters.Length; index++)
         {
+            if(!overlapMonsters[index].gameObject.GetComponent<UnitBase>().IsDie())
+            {
+                target = overlapMonsters[index].gameObject;
+                break;
+            }
+        }
+
+        if (target != null)
+        {
+            m_unit.SetMainTarget(target);
+
             animator.SetBool("IsInRange", true);
             animator.SetBool("IsMove", false);
 

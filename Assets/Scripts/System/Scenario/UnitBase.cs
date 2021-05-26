@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UnitBase : MonoBehaviour
 {
@@ -12,8 +13,11 @@ public class UnitBase : MonoBehaviour
 
     protected GameObject m_mainTarget;
 
+    public GameObject m_healthBar;
+    public Image m_healthGage;
     protected float m_curHP;
-    
+
+    //IEnumerator OnChangeDamageColor;
 
     void Start()
     {
@@ -25,6 +29,13 @@ public class UnitBase : MonoBehaviour
     public virtual void TakeDamage(float damage) 
     {
         m_curHP -= damage;
+
+        //OnChangeDamageColor.
+    }
+
+    IEnumerator ChangeDamageColor()
+    {
+        yield return null;
     }
 
     public bool IsDie()
@@ -50,5 +61,10 @@ public class UnitBase : MonoBehaviour
     public GameObject GetMainTarget()
     {
         return m_mainTarget;
+    }
+
+    public void DisableHPBar()
+    {
+        m_healthBar.SetActive(false);
     }
 }
