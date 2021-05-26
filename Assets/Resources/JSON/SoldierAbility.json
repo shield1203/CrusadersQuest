@@ -12,7 +12,7 @@
     "physicalDefensePower": 77,
     "magicalDefensePower": 15,
     "prefabPath": "Soldier/leon/Leon",
-    "spritePath": "Soldier/sp_leon"
+    "spritePath": "Soldier/leon/sp_leon"
   },
   {
     "code": 1,
@@ -27,7 +27,7 @@
     "physicalDefensePower": 130,
     "magicalDefensePower": 25,
     "prefabPath": "Soldier/leon/Leon",
-    "spritePath": "Soldier/sp_leon"
+    "spritePath": "Soldier/leon/sp_leon"
   },
   {
     "code": 2,
@@ -42,7 +42,7 @@
     "physicalDefensePower": 183,
     "magicalDefensePower": 35,
     "prefabPath": "Soldier/leon/Leon",
-    "spritePath": "Soldier/sp_leon"
+    "spritePath": "Soldier/leon/sp_leon"
   },
   {
     "code": 3,
@@ -101,8 +101,8 @@
     "fatalHitProbability": 10,
     "physicalDefensePower": 146,
     "magicalDefensePower": 29,
-    "prefabPath": "",
-    "spritePath": "Soldier/sp_joan"
+    "prefabPath": "Soldier/joan/Joan",
+    "spritePath": "Soldier/joan/sp_joan"
   },
   {
     "code": 7,
@@ -146,8 +146,8 @@
     "fatalHitProbability": 10,
     "physicalDefensePower": 111,
     "magicalDefensePower": 22,
-    "prefabPath": "",
-    "spritePath": "Soldier/sp_gachaRanger_r"
+    "prefabPath": "Soldier/gachaRangerR/GachaRangerR",
+    "spritePath": "Soldier/gachaRangerR/sp_gachaRangerR"
   },
   {
     "code": 10,

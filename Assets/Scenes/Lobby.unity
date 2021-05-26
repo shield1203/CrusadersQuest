@@ -14760,7 +14760,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_soldierData: []
-  m_soldierTeam: []
 --- !u!4 &1897036414
 Transform:
   m_ObjectHideFlags: 0

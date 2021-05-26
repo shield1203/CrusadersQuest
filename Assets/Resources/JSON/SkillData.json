@@ -3,7 +3,7 @@
     "code": 0,
     "name": "성검의 부름",
     "percent": [ 80, 180, 340 ],
-    "thumbnailPath": "Skill/Call of the Holy Sword_sprite"
+    "thumbnailPath": "Skill/Call of the Holy Sword/Call of the Holy Sword_sprite"
   },
   {
     "code": 1,

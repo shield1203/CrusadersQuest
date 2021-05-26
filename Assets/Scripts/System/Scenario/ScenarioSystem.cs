@@ -47,6 +47,7 @@ public class ScenarioSystem : MonoBehaviour
         List<SoldierData> soldierTeam = SoldierManager.Instance.GetSoldierTeam();
         for (int index = 0; index < soldierTeam.Count; index++)
         {
+            Debug.Log(soldierTeam[index].code.ToString());
             GameObject soldierUnit = Instantiate(Resources.Load(soldierTeam[index].prefabPath) as GameObject);
             soldierUnit.transform.position = new Vector2(soldierUnitInitXPos + (index * soldierUnitDistance), soldierUnitInitYPos);
             m_soldierUnits.Add(soldierUnit);

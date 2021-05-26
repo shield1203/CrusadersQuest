@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoldierUnit : UnitBase
 {
     protected SoldierData m_data;
+    //protected SkillBase
 
     protected bool m_goal = false;
     protected float m_goalPoint;
@@ -22,6 +23,14 @@ public class SoldierUnit : UnitBase
     public void InitializeSoldierUnit(SoldierData soldierData, List<GameObject> targetUnits)
     {
         m_data = soldierData;
+
+        //switch((SkillCode)m_data.skill)
+        //{
+        //    case SkillCode.Call_of_the_Holy_sword: gameObject.AddComponent<Call_Of_The_Holy_Sword>(); break;
+        //    case SkillCode.: gameObject.AddComponent<>(); break;
+        //}
+        gameObject.GetComponent<SkillBase>().InitializeSkillData(m_data.skill);
+
         m_curHP = soldierData.healthPoint;
 
         m_targetUnits = targetUnits;
@@ -56,6 +65,11 @@ public class SoldierUnit : UnitBase
         }
 
         return distance;
+    }
+
+    public string GetSkillThumbnail()
+    {
+        return GetComponent<SkillBase>().GetSkillData().thumbnailPath;
     }
 
     public virtual void ActiveSkill(int linkCount)
