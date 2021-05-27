@@ -6,7 +6,7 @@ public class HolySword : MonoBehaviour
 {
     private const float floorPos = -2.46f;
 
-    private float m_damage;
+    private float m_damage = 10;
     private BoxCollider2D m_collider;
     private Animator m_animation;
 
@@ -38,7 +38,7 @@ public class HolySword : MonoBehaviour
 
     public void CheckOverlapMonster()
     {
-        Collider2D[] overlapMonsters = Physics2D.OverlapBoxAll(gameObject.transform.position, m_collider.size, 0f, 1 << 8);
+        Collider2D[] overlapMonsters = Physics2D.OverlapBoxAll(gameObject.transform.position, m_collider.size, 1f, 1 << 8);
         for(int index = 0; index < overlapMonsters.Length; index++)
         {
             if(!overlapMonsters[index].gameObject.GetComponent<UnitBase>().IsDie())

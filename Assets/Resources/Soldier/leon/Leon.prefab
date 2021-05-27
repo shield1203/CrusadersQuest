@@ -426,6 +426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_healthBar: {fileID: 1924478112776132166}
   m_healthGage: {fileID: 664593999637770327}
+  m_material: {fileID: 2100000, guid: 9be808d40c5b1cb43a5348c4299de70b, type: 2}
 --- !u!95 &657000906225745411
 Animator:
   serializedVersion: 3

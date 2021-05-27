@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1574618813590987364}
   - component: {fileID: 1450638391682600627}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: effect_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3135352035772611909}
   - component: {fileID: 5173600274143679528}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: effect_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,9 +176,9 @@ GameObject:
   - component: {fileID: 2587483468713820654}
   - component: {fileID: 4677684597696415090}
   - component: {fileID: 6545698563373269063}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Call of the Holy Sword_lv1
-  m_TagString: Untagged
+  m_TagString: SkillObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -269,7 +269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7241014752428278615}
   - component: {fileID: 3311798130572619771}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8641586423044409203}
   - component: {fileID: 8772731491947316377}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: effect_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2660658183559300948}
   - component: {fileID: 1208773067448572144}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: effect_flare
   m_TagString: Untagged
   m_Icon: {fileID: 0}

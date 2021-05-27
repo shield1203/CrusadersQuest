@@ -17,12 +17,6 @@ public class MonsterAttackState : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (m_unit.IsDie())
-        {
-            animator.SetBool("IsDie", true);
-            return;
-        }
-
         if (m_mainTarget.GetComponent<UnitBase>().IsDie())
         {
             animator.SetBool("IsInRange", false);

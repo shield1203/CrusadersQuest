@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class CallOfTheHolySword : SkillBase
 {
-    private const float ceilingPos = 6.1f;
+    private const float initXPos = 1.5f;
+    private const float initYPos = 6.1f;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    
 }

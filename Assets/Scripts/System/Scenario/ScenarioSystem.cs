@@ -22,7 +22,7 @@ public class ScenarioSystem : MonoBehaviour
 
     const float soldierUnitInitXPos = -23f;
     const float soldierUnitInitYPos = -2.35f;
-    const float soldierUnitDistance = 3f;
+    const float soldierUnitDistance = 2f;
 
     Random m_random = new Random();
 
@@ -47,7 +47,6 @@ public class ScenarioSystem : MonoBehaviour
         List<SoldierData> soldierTeam = SoldierManager.Instance.GetSoldierTeam();
         for (int index = 0; index < soldierTeam.Count; index++)
         {
-            Debug.Log(soldierTeam[index].code.ToString());
             GameObject soldierUnit = Instantiate(Resources.Load(soldierTeam[index].prefabPath) as GameObject);
             soldierUnit.transform.position = new Vector2(soldierUnitInitXPos + (index * soldierUnitDistance), soldierUnitInitYPos);
             m_soldierUnits.Add(soldierUnit);
@@ -116,15 +115,7 @@ public class ScenarioSystem : MonoBehaviour
                 block.GetComponent<SkillBlock>().m_touchDelegate = UseBlock;
                 m_skillBlocks.Add(block);
 
-                string thumbnailPath = "Skill/Call of the Holy Sword_sprite";
-
-                //switch (random)
-                //{
-                //    case 0: thumbnailPath = "Skill/Stormy Waves_sprite"; break;
-                //    case 1: thumbnailPath = "Skill/Call of the Holy Sword_sprite"; break;
-                //    case 2: thumbnailPath = "Skill/Its light nyang_sprite"; break;
-                //}
-
+                string thumbnailPath = m_soldierUnits[random].GetComponent<SoldierUnit>().GetSkillThumbnail();
                 block.GetComponent<SkillBlock>().InitializeSkillBlock(maxBlockCount, (BlockColor)random, true, thumbnailPath);
             }
         }

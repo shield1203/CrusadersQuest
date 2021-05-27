@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class MonsterUnit : UnitBase
 {
-    MonsterData m_data = new MonsterData();
+    MonsterData m_data;
 
-    void Start()
+    protected override void Start()
     {
-        m_die = true;
+        base.Start();
+        
     }
 
     void Update()
@@ -19,6 +20,10 @@ public class MonsterUnit : UnitBase
     public void InitializeMonsterUnit(MonsterData data, List<GameObject> targetUnits)
     {
         m_data = data;
+
+        m_curHP = data.maxHP;
+        m_maxHP = data.maxHP;
+
         m_targetUnits = targetUnits;
     }
 

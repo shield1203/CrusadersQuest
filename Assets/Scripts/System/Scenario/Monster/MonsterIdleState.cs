@@ -18,12 +18,6 @@ public class MonsterIdleState : StateMachineBehaviour
     {
         if (m_unit.GetTargetUnits() == null) return;
 
-        if (m_unit.IsDie())
-        {
-            animator.SetBool("IsDie", true);
-            return;
-        }
-
         foreach(GameObject soldier in m_unit.GetTargetUnits())
         {
             if (soldier.GetComponent<UnitBase>().IsDie()) continue;

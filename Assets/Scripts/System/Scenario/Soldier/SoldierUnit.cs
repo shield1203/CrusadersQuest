@@ -5,33 +5,42 @@ using UnityEngine;
 public class SoldierUnit : UnitBase
 {
     protected SoldierData m_data;
-    //protected SkillBase
+    protected SkillBase m_skill;
 
     protected bool m_goal = false;
     protected float m_goalPoint;
 
-    void Start()
+    protected override void Start()
     {
-        
+        base.Start();
+
+        Transform head = gameObject.transform.Find("body").Find("head");
+        for (int index = 0; index < head.childCount; index++)
+        {
+            head.GetChild(index).GetComponent<SpriteRenderer>().material = m_material;
+        }
+
     }
 
     void Update()
     {
-        m_healthGage.fillAmount = GetHPPercent();
+        
     }
 
     public void InitializeSoldierUnit(SoldierData soldierData, List<GameObject> targetUnits)
     {
         m_data = soldierData;
 
-        //switch((SkillCode)m_data.skill)
-        //{
-        //    case SkillCode.Call_of_the_Holy_sword: gameObject.AddComponent<Call_Of_The_Holy_Sword>(); break;
-        //    case SkillCode.: gameObject.AddComponent<>(); break;
-        //}
-        gameObject.GetComponent<SkillBase>().InitializeSkillData(m_data.skill);
+        switch ((SkillCode)m_data.skill)
+        {
+            case SkillCode.Call_of_the_Holy_sword: gameObject.AddComponent<CallOfTheHolySword>(); break;
+            case SkillCode.Stormy_Waves: gameObject.AddComponent<CallOfTheHolySword>(); break;
+        }
+        m_skill = gameObject.GetComponent<SkillBase>();
+        m_skill.InitializeSkillData(m_data.skill);
 
         m_curHP = soldierData.healthPoint;
+        m_maxHP = soldierData.healthPoint;
 
         m_targetUnits = targetUnits;
     }
@@ -39,16 +48,6 @@ public class SoldierUnit : UnitBase
     public SoldierData GetSoldierData()
     {
         return m_data;
-    }
-
-    public float GetCurHP()
-    {
-        return m_curHP;
-    }
-
-    public float GetHPPercent()
-    {
-        return m_curHP / m_data.healthPoint;
     }
 
     public float GetAttackRange()
