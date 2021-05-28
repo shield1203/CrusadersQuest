@@ -31,4 +31,18 @@ public class MonsterUnit : UnitBase
     {
         return m_data;
     }
+
+    public override void Attack()
+    {
+        base.Attack();
+    }
+
+    public override void TakeDamage(float damage)
+    {
+        base.TakeDamage(damage);
+
+        GameObject floatingText = Instantiate(Resources.Load("FloatingText/FloatingText") as GameObject);
+        floatingText.transform.position = transform.position;
+        floatingText.GetComponent<FloatingText>().InitializeFloatingText(damage.ToString(), TextColor._white);
+    }
 }

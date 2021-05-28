@@ -19,7 +19,6 @@ public class SoldierUnit : UnitBase
         {
             head.GetChild(index).GetComponent<SpriteRenderer>().material = m_material;
         }
-
     }
 
     void Update()

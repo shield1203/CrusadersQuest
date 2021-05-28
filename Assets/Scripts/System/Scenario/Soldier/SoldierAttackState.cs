@@ -20,7 +20,7 @@ public class SoldierAttackState : StateMachineBehaviour
         Collider2D[] overlapMonsters = Physics2D.OverlapCircleAll(m_transform.position, m_unit.GetAttackRange(), 1 << 8);
         if (overlapMonsters.Length > 0)
         {
-            Random random = new Random();
+            //Random random = new Random();
             int attackType = Random.Range(0, 2);
             animator.SetInteger("AttackType", attackType);
         }

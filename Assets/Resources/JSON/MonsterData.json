@@ -7,7 +7,7 @@
     "attackRange": 2.9,
     "speed": 0.015,
     "maxHP": 40.5,
-    "thumbnailPath": "Monster/sp_slime",
+    "thumbnailPath": "Monster/Slime/sp_slime",
     "prefabPath": "Monster/Slime/Slime"
   },
   {
@@ -18,7 +18,7 @@
     "attackRange": 2.9,
     "speed": 0.0164,
     "maxHP": 60.5,
-    "thumbnailPath": "Monster/sp_goblinWarrior",
+    "thumbnailPath": "Monster/GoblinWarrior/sp_goblinWarrior",
     "prefabPath": "Monster/GoblinWarrior/GoblinWarrior"
   },
   {
@@ -51,7 +51,7 @@
     "attackRange": 7.3,
     "speed": 0.016,
     "maxHP": 170.2,
-    "thumbnailPath": "Monster/sp_ent",
+    "thumbnailPath": "Monster/Ent/sp_ent",
     "prefabPath": "Monster/Ent/Ent"
   },
   {
