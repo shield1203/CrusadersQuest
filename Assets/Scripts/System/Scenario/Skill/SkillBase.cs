@@ -24,8 +24,9 @@ public struct SkillData
 
 public class SkillBase : MonoBehaviour
 {
-    private SkillData m_data;
-    private SoldierData m_soldierData;
+    protected SkillData m_data;
+    protected SoldierData m_soldierData;
+    protected int m_linkCount = 0;
 
     public void InitializeSkillData(SkillCode code, SoldierData data = new SoldierData())
     {
@@ -46,5 +47,10 @@ public class SkillBase : MonoBehaviour
         return m_data;
     }
 
-    virtual public void Action(int linkCount) { }
+    public void SetLinkCount(int linkCount)
+    {
+        m_linkCount = linkCount;
+    }
+
+    public virtual void Action() { }
 }

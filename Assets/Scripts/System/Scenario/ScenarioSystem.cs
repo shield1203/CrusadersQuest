@@ -20,9 +20,10 @@ public class ScenarioSystem : MonoBehaviour
     const int maxBlockChain = 3;
     const float blockSpeed = 50.0f;
 
-    const float soldierUnitInitXPos = -23f;
+    const float soldierUnitInitXPos = -20f;
     const float soldierUnitInitYPos = -2.35f;
     const float soldierUnitDistance = 2f;
+    const float maxCameraXPos = 48.21f;
 
     Random m_random = new Random();
 
@@ -95,7 +96,7 @@ public class ScenarioSystem : MonoBehaviour
             if(m_soldierUnits[index].transform.position.x > Camera.main.transform.position.x)
             {
                 Vector3 position = Camera.main.transform.position;
-                position.x = m_soldierUnits[index].transform.position.x;
+                position.x = Mathf.Clamp(m_soldierUnits[index].transform.position.x, 0, maxCameraXPos);
                 Camera.main.transform.position = position;
             }
         }
@@ -126,7 +127,7 @@ public class ScenarioSystem : MonoBehaviour
         if (m_skillBlocks[index].transform.position.x != m_blockPosition[index].position.x) return;
 
         List<int> linkedBlockIndex = GetLinkedBlocksIndex(index);
-        // 블록수만큼 스킬 
+        m_soldierUnits[(int)m_skillBlocks[index].GetComponent<SkillBlock>().GetBlockColor()].GetComponent<SoldierUnit>().AddSkillLink(linkedBlockIndex.Count);
 
         int minIndex = maxBlockCount;
         foreach(int blockIndex in linkedBlockIndex)

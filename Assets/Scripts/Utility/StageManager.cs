@@ -108,14 +108,19 @@ public class StageManager : MonoBehaviour
         return m_curStage;
     }
 
+    public string GetCurStageName()
+    {
+        return m_episodeData[m_curEpisode - 1].stage[m_curStage - 1].name;
+    }
+
     public string GetEpisodeMapName(int episode)
     {
-        return m_episodeData[episode].mapName;
+        return m_episodeData[episode - 1].mapName;
     }
 
     public string GetTitleText()
     {
-        return m_episodeData[m_curEpisode].episodeName + " > " + m_episodeData[m_curEpisode].stage[m_curStage].name;
+        return m_episodeData[m_curEpisode - 1].episodeName + " > " + m_episodeData[m_curEpisode - 1].stage[m_curStage - 1].name;
     }
 
     public StageData[] GetStageData(int episode)

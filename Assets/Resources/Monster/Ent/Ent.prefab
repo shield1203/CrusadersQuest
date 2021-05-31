@@ -749,6 +749,7 @@ GameObject:
   - component: {fileID: 1160858379439650090}
   - component: {fileID: 1160858379439650091}
   - component: {fileID: 7973307635318386449}
+  - component: {fileID: 898897398448416676}
   m_Layer: 8
   m_Name: Ent
   m_TagString: Monster
@@ -803,7 +804,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1160858379439650090
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -864,6 +865,18 @@ MonoBehaviour:
   m_healthBar: {fileID: 6194346989627165773}
   m_healthGage: {fileID: 5078582471133899356}
   m_material: {fileID: 2100000, guid: 9be808d40c5b1cb43a5348c4299de70b, type: 2}
+--- !u!114 &898897398448416676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7020567796228979365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8b1dedf872ff24cafd494661fb9f70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8112883032328165141
 GameObject:
   m_ObjectHideFlags: 0

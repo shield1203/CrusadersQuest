@@ -74,6 +74,8 @@ public class UnitBase : MonoBehaviour
 
             m_healthGage.fillAmount = GetHPPercent();
         }
+
+        m_healthGage.fillAmount = GetHPPercent();
     }
 
     IEnumerator ChangeDamageColor()

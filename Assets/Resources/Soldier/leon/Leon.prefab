@@ -342,6 +342,8 @@ GameObject:
   - component: {fileID: 2094490253912565667}
   - component: {fileID: 7415065405451859076}
   - component: {fileID: 657000906225745411}
+  - component: {fileID: 2680717945995945064}
+  - component: {fileID: 1788018572909720915}
   m_Layer: 10
   m_Name: Leon
   m_TagString: Soldier
@@ -361,6 +363,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4373341252521366197}
+  - {fileID: 8409869316207999514}
   - {fileID: 7799682847282342405}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -385,7 +388,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &2094490253912565667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -446,6 +449,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2680717945995945064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2524186337246891956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8b1dedf872ff24cafd494661fb9f70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1788018572909720915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2524186337246891956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55c28b9d7b33f947b241fe6365c7a6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2644815094679924449
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,6 +1136,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &8309124595993422172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8409869316207999514}
+  m_Layer: 10
+  m_Name: swing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8409869316207999514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8309124595993422172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.711, y: 1.028, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5266211364011087783}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9077242554268977289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1355,7 @@ PrefabInstance:
     - target: {fileID: 1916963339879535231, guid: 4a89f362c03013741ab95ee97cb0ba71,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1916963339879535231, guid: 4a89f362c03013741ab95ee97cb0ba71,
         type: 3}

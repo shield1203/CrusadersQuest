@@ -8,4 +8,9 @@ public class UIFunction : MonoBehaviour
     {
         UIManager.Instance.RemoveOneUI();
     }
+
+    public void DestroyThisObject()
+    {
+        Destroy(gameObject);
+    }
 }

@@ -6,7 +6,7 @@ public class HolySword : MonoBehaviour
 {
     private const float floorPos = -2.46f;
 
-    private float m_damage = 10;
+    private float m_damage;
     private BoxCollider2D m_collider;
     private Animator m_animation;
 

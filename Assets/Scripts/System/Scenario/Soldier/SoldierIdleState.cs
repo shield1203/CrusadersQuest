@@ -26,7 +26,7 @@ public class SoldierIdleState : StateMachineBehaviour
             int attackType = Random.Range(0, 2);
             animator.SetInteger("AttackType", attackType);
         }
-        else if(m_unit.GetTargetUnits().Count > 0)
+        else if(m_unit.GetTargetUnits().Count > 0 || !m_unit.IsGoal())
         {
             animator.SetBool("IsMove", true);
         }

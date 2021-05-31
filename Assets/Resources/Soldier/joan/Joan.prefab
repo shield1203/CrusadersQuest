@@ -1079,6 +1079,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &5551368397575018830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5873512263267847301}
+  m_Layer: 10
+  m_Name: swing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5873512263267847301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5551368397575018830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.711, y: 1.028, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8486149236552277886}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7727444440816056894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,6 +1122,8 @@ GameObject:
   - component: {fileID: 4462822077364592167}
   - component: {fileID: 6444946361030071920}
   - component: {fileID: 5083090183904330849}
+  - component: {fileID: 4816089822433599143}
+  - component: {fileID: 5989415860454742188}
   m_Layer: 10
   m_Name: Joan
   m_TagString: Soldier
@@ -1111,6 +1143,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4912306439583409527}
+  - {fileID: 5873512263267847301}
   - {fileID: 3527207891512926104}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1135,7 +1168,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &4462822077364592167
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1196,6 +1229,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4816089822433599143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7727444440816056894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8b1dedf872ff24cafd494661fb9f70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5989415860454742188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7727444440816056894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55c28b9d7b33f947b241fe6365c7a6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8410670730123443531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1355,7 @@ PrefabInstance:
     - target: {fileID: 1916963339879535231, guid: 4a89f362c03013741ab95ee97cb0ba71,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1916963339879535231, guid: 4a89f362c03013741ab95ee97cb0ba71,
         type: 3}

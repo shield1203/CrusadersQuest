@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 6889158490927083828}
   - component: {fileID: 6889158490927083825}
   - component: {fileID: 6889158490927083830}
+  - component: {fileID: 1049410530379050669}
   m_Layer: 8
   m_Name: Slime
   m_TagString: Monster
@@ -387,7 +388,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &6889158490927083828
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -448,6 +449,18 @@ MonoBehaviour:
   m_healthBar: {fileID: 6674499939478922327}
   m_healthGage: {fileID: 5705097873457873478}
   m_material: {fileID: 2100000, guid: 9be808d40c5b1cb43a5348c4299de70b, type: 2}
+--- !u!114 &1049410530379050669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3387987545704254640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8b1dedf872ff24cafd494661fb9f70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3508848130144012907
 PrefabInstance:
   m_ObjectHideFlags: 0

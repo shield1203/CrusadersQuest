@@ -35,6 +35,17 @@ public class MonsterUnit : UnitBase
     public override void Attack()
     {
         base.Attack();
+
+        if (m_mainTarget == null) return;
+        AttackBase attack = gameObject.GetComponent<AttackBase>();
+        if (attack != null)
+        {
+
+        }
+        else
+        {
+            m_mainTarget.GetComponent<UnitBase>().TakeDamage(m_data.attack);
+        }
     }
 
     public override void TakeDamage(float damage)
@@ -43,6 +54,10 @@ public class MonsterUnit : UnitBase
 
         GameObject floatingText = Instantiate(Resources.Load("FloatingText/FloatingText") as GameObject);
         floatingText.transform.position = transform.position;
-        floatingText.GetComponent<FloatingText>().InitializeFloatingText(damage.ToString(), TextColor._white);
+        floatingText.GetComponent<FloatingText>().InitializeFloatingText(((int)damage).ToString(), TextColor._white);
+
+        gameObject.GetComponent<EffectSystem>().SpawnEffect(Effect.Hit_mon, 0.20f, "body");
+
+        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(8.5f, 4.1f) * 10);
     }
 }

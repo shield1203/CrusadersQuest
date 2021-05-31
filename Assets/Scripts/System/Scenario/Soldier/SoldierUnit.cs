@@ -7,6 +7,9 @@ public class SoldierUnit : UnitBase
     protected SoldierData m_data;
     protected SkillBase m_skill;
 
+    List<int> m_skillLink = new List<int>();
+    bool m_finishedSkill = true;
+
     protected bool m_goal = false;
     protected float m_goalPoint;
 
@@ -19,6 +22,8 @@ public class SoldierUnit : UnitBase
         {
             head.GetChild(index).GetComponent<SpriteRenderer>().material = m_material;
         }
+
+        StartCoroutine(CheckSkillLink());
     }
 
     void Update()
@@ -30,11 +35,6 @@ public class SoldierUnit : UnitBase
     {
         m_data = soldierData;
 
-        switch ((SkillCode)m_data.skill)
-        {
-            case SkillCode.Call_of_the_Holy_sword: gameObject.AddComponent<CallOfTheHolySword>(); break;
-            case SkillCode.Stormy_Waves: gameObject.AddComponent<CallOfTheHolySword>(); break;
-        }
         m_skill = gameObject.GetComponent<SkillBase>();
         m_skill.InitializeSkillData(m_data.skill);
 
@@ -47,6 +47,25 @@ public class SoldierUnit : UnitBase
     public SoldierData GetSoldierData()
     {
         return m_data;
+    }
+
+    public override void Attack()
+    {
+        base.Attack();
+
+        if (m_mainTarget == null) return;
+
+        float damage = m_data.startAttackPower + ((m_data.maxAttackPower - m_data.startAttackPower) / 10) * (m_data.level % 10);
+
+        AttackBase attack = gameObject.GetComponent<AttackBase>();
+        if(attack != null)
+        {
+
+        }
+        else
+        {
+            m_mainTarget.GetComponent<UnitBase>().TakeDamage(damage);
+        }
     }
 
     public float GetAttackRange()
@@ -65,14 +84,53 @@ public class SoldierUnit : UnitBase
         return distance;
     }
 
+    public override void TakeDamage(float damage)
+    {
+        base.TakeDamage(damage);
+
+        GameObject floatingText = Instantiate(Resources.Load("FloatingText/FloatingText") as GameObject);
+        floatingText.transform.position = transform.position;
+        floatingText.GetComponent<FloatingText>().InitializeFloatingText(((int)damage).ToString(), TextColor._black);
+
+        gameObject.GetComponent<EffectSystem>().SpawnEffect(Effect.Hit_sol, 0.20f, "body");
+
+        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-10.2f, 5.5f) * 10);
+    }
+
     public string GetSkillThumbnail()
     {
         return GetComponent<SkillBase>().GetSkillData().thumbnailPath;
     }
 
-    public virtual void ActiveSkill(int linkCount)
+    public void AddSkillLink(int linkCount)
     {
+        m_skillLink.Add(linkCount);
+    }
 
+    public void FinishedSkill()
+    {
+        m_finishedSkill = true;
+    }
+
+    IEnumerator CheckSkillLink()
+    {
+        while (m_curHP > 0)
+        {
+            yield return null;
+
+            if(m_skillLink.Count > 0 && m_finishedSkill)
+            {
+                if (m_skillLink[0] == 3)
+                {
+                    GetComponent<EffectSystem>().SpawnEffect(Effect.Link3SkillStart, 0.25f, "body");
+                }
+
+                m_animator.SetTrigger("Skill");
+                m_skill.SetLinkCount(m_skillLink[0]);
+                m_skillLink.RemoveAt(0);
+                m_finishedSkill = false;
+            }
+        }
     }
 
     public void SetGoalPoint(float point)
