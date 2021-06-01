@@ -32,6 +32,16 @@ public class SoldierMoveState : StateMachineBehaviour
             }
         }
 
+        bool stageClear = true;
+        for (int index = 0; index < m_unit.GetTargetUnits().Count; index++)
+        {
+            if(!m_unit.GetTargetUnits()[index].GetComponent<UnitBase>().IsDie())
+            {
+                stageClear = false; 
+                break;
+            }
+        }
+
         if (target != null)
         {
             m_unit.SetMainTarget(target);
@@ -43,9 +53,9 @@ public class SoldierMoveState : StateMachineBehaviour
             int attackType = Random.Range(0, 2);
             animator.SetInteger("AttackType", attackType);
         }
-        else if(m_unit.GetTargetUnits().Count == 0)
+        else if(stageClear)
         {
-            Vector2 goalPoint = new Vector2(m_unit.GetGoalPoint(), 0);
+            Vector2 goalPoint = new Vector2(m_unit.GetGoalPoint(), m_transform.position.y);
             m_transform.position = Vector2.MoveTowards(m_transform.position, goalPoint, soldierSpeed);
 
             if(m_transform.position.x == m_unit.GetGoalPoint())

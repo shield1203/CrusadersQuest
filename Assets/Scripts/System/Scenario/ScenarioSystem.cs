@@ -35,6 +35,9 @@ public class ScenarioSystem : MonoBehaviour
     [SerializeField]
     StageSoldierInfo m_stageSoldierInfo;
 
+    bool m_stageClear = false;
+    bool m_gameOver = false;
+
     private void Awake()
     {
         UIManager.Instance.ActiveUI(false);
@@ -82,6 +85,8 @@ public class ScenarioSystem : MonoBehaviour
 
     void Update()
     {
+        if (m_stageClear || m_gameOver) return;
+
         for(int index = 0; index < m_skillBlocks.Count; index++)
         {
             if(m_skillBlocks[index].GetComponent<SkillBlock>().GetBlockIndex() != index)
@@ -100,6 +105,15 @@ public class ScenarioSystem : MonoBehaviour
                 Camera.main.transform.position = position;
             }
         }
+
+        if(CheckStageClear())
+        {
+            m_stageClear = true;
+            StopCoroutine(OnCreateBlock);
+            StartCoroutine(StageClear());
+        }
+
+        m_gameOver = CheckGameOver();
     }
 
     IEnumerator CreateBlock()
@@ -127,7 +141,10 @@ public class ScenarioSystem : MonoBehaviour
         if (m_skillBlocks[index].transform.position.x != m_blockPosition[index].position.x) return;
 
         List<int> linkedBlockIndex = GetLinkedBlocksIndex(index);
-        m_soldierUnits[(int)m_skillBlocks[index].GetComponent<SkillBlock>().GetBlockColor()].GetComponent<SoldierUnit>().AddSkillLink(linkedBlockIndex.Count);
+        if(!m_gameOver && !m_stageClear)
+        {
+            m_soldierUnits[(int)m_skillBlocks[index].GetComponent<SkillBlock>().GetBlockColor()].GetComponent<SoldierUnit>().AddSkillLink(linkedBlockIndex.Count);
+        }
 
         int minIndex = maxBlockCount;
         foreach(int blockIndex in linkedBlockIndex)
@@ -215,6 +232,67 @@ public class ScenarioSystem : MonoBehaviour
         }
 
         return linkedBlockIndex;
+    }
+
+    bool CheckGameOver()
+    {
+        bool isGameOver = true;
+        for (int index = 0; index < m_soldierUnits.Count; index++)
+        {
+            if (!m_soldierUnits[index].GetComponent<UnitBase>().IsDie())
+            {
+                isGameOver = false;
+                break;
+            }
+        }
+
+        return isGameOver;
+    }
+
+    bool CheckStageClear()
+    {
+        bool isStageClear = true;
+        for (int index = 0; index < m_monsterUnits.Count; index++)
+        {
+            if (!m_monsterUnits[index].GetComponent<UnitBase>().IsDie())
+            {
+                isStageClear = false;
+                break;
+            }
+        }
+
+        return isStageClear;
+    }
+
+    IEnumerator StageClear()
+    {
+        float goalPosition = Camera.main.transform.position.x - 3.2f;
+
+        for (int index = 0; index < m_soldierUnits.Count; index++)
+        {
+            m_soldierUnits[index].GetComponent<SoldierUnit>().SetGoalPoint(goalPosition + (index * 3.2f));
+        }
+
+        bool isGoal = false;
+        while (!isGoal)
+        {
+            yield return null;
+
+            isGoal = true;
+            for (int index = 0; index < m_soldierUnits.Count; index++)
+            {
+                if (!m_soldierUnits[index].GetComponent<SoldierUnit>().IsGoal())
+                {
+                    isGoal = false;
+                    break;
+                }
+            }
+        }
+
+        GameObject stageClearUI = Instantiate(Resources.Load("UI/StageClear") as GameObject);
+
+        yield return new WaitForSeconds(4.25f);
+        // 게임결과 창으로 이동
     }
 
     void OnFinishedStage()

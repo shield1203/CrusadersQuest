@@ -38,6 +38,8 @@ public class UnitBase : MonoBehaviour
 
     public virtual void TakeDamage(float damage) 
     {
+        if (m_die) return;       
+
         m_curHP = Mathf.Clamp(m_curHP - damage, 0, m_maxHP);
         if (m_curHP == 0)
         {
