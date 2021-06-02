@@ -179,10 +179,17 @@ public class TeamSelect : MonoBehaviour
     // GameStart
     public void GameStart()
     {
-        if (SoldierManager.Instance.GetSoldierTeam().Count != 3) return;
-        
-        m_blackBoard.gameObject.SetActive(true);
-        StartCoroutine(FadeOut());
+        if(SceneManager.GetActiveScene().name == "Lobby")
+        {
+            if (SoldierManager.Instance.GetSoldierTeam().Count != 3) return;
+
+            m_blackBoard.gameObject.SetActive(true);
+            StartCoroutine(FadeOut());
+        }
+        else if(SceneManager.GetActiveScene().name == "Result")
+        {
+            UIManager.Instance.ActiveUI(false);
+        }
     }
 
     IEnumerator FadeOut()

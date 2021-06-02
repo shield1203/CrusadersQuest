@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class StageList : MonoBehaviour
 {
@@ -79,8 +80,15 @@ public class StageList : MonoBehaviour
 
     public void OnExit()
     {
-        this.gameObject.SetActive(false);
-        m_prevUI.SetActive(true);
+        if (SceneManager.GetActiveScene().name == "Lobby")
+        {
+            this.gameObject.SetActive(false);
+            m_prevUI.SetActive(true);
+        }
+        else if (SceneManager.GetActiveScene().name == "Result")
+        {
+            UIManager.Instance.ActiveUI(false);
+        }
     }
 
     public void OnPrepare()
