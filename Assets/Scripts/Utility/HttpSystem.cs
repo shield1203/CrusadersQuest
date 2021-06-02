@@ -36,39 +36,6 @@ public class HttpSystem : MonoBehaviour
     //    yield return null;
     //}
 
-    public void OnTest()
-    {
-        StartCoroutine(Test());
-    }
-
-    public IEnumerator Test()
-    {
-        string strScheme = "/Test";
-        string strURL = m_serverIP + strScheme;
-        Debug.Log(strURL);
-        UnityWebRequest request = UnityWebRequest.Get(strURL);
-
-        yield return request.SendWebRequest();
-
-        if (request.isNetworkError || request.isHttpError)
-        {
-            Debug.Log(request.error);
-        }
-        else
-        {
-            Debug.Log(request.downloadHandler.text);
-            
-            if(PlayerPrefs.GetString("Login") == "true")
-            {
-                Debug.Log("Good");
-            }
-            else
-            {
-                Debug.Log("Fail");
-            }
-        }
-    }
-
     public void OnGuestLogin(int userId)
     {
         StartCoroutine(GuestLogin(userId));
@@ -97,9 +64,37 @@ public class HttpSystem : MonoBehaviour
         }
     }
 
+    public IEnumerator RequestUserData(OnDelegate action)
+    {
+        string strScheme = "/UserData?userId=" + m_userId;
+        string strURL = m_serverIP + strScheme;
+        UnityWebRequest request = UnityWebRequest.Get(strURL);
+
+        UIManager.Instance.AddUI(UIPrefab.LOADING);
+
+        yield return request.SendWebRequest();
+
+        UIManager.Instance.RemoveOneUI();
+
+        if (request.isNetworkError || request.isHttpError)
+        {
+            UIManager.Instance.AddUI(UIPrefab.ERROR);
+        }
+        else if (request.downloadHandler.text == "fail")
+        {
+            UIManager.Instance.AddUI(UIPrefab.ERROR);
+        }
+        else
+        {
+            UserDataManager.Instance.InitializeUserData(request.downloadHandler.text);
+
+            if (action != null) action();
+        }
+    }
+
     public IEnumerator RequestSoldierListData(OnDelegate action)
     {
-        string strScheme = "/soldierList?userId=" + m_userId;
+        string strScheme = "/SoldierList?userId=" + m_userId;
         string strURL = m_serverIP + strScheme;
         UnityWebRequest request = UnityWebRequest.Get(strURL);
 
@@ -116,7 +111,6 @@ public class HttpSystem : MonoBehaviour
         else if(request.downloadHandler.text == "fail")
         {
             UIManager.Instance.AddUI(UIPrefab.ERROR);
-            // 해당 아이디가 없을 경우(나중에 해당 UI만들던지 따로 처리)
         }
         else
         {

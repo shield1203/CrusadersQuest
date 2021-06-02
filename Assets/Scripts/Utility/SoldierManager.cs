@@ -98,9 +98,9 @@ public class SoldierManager : MonoBehaviour
 {
     private static SoldierManager m_instance = null;
 
-    public Dictionary<SoldierCode, SoldierAbility> m_soldierAbility = new Dictionary<SoldierCode, SoldierAbility>();
-    public List<SoldierData> m_soldierData = new List<SoldierData>();
-    public Dictionary<int, SoldierData> m_soldierTeam = new Dictionary<int, SoldierData>();
+    private Dictionary<SoldierCode, SoldierAbility> m_soldierAbility = new Dictionary<SoldierCode, SoldierAbility>();
+    private List<SoldierData> m_soldierData = new List<SoldierData>();
+    private Dictionary<int, SoldierData> m_soldierTeam = new Dictionary<int, SoldierData>();
 
     public static SoldierManager Instance
     {
