@@ -56,6 +56,7 @@ public class MonsterManager : MonoBehaviour
         if (null == m_instance)
         {
             m_instance = this;
+            LoadData();
             DontDestroyOnLoad(this.gameObject);
         }
         else
@@ -64,7 +65,7 @@ public class MonsterManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void LoadData()
     {
         string monsterDataJSON = File.ReadAllText(Application.dataPath + "/Resources/JSON/MonsterData.json");
         m_monsterData = JsonHelper.FromJson<MonsterData>(monsterDataJSON);

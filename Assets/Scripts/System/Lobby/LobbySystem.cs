@@ -41,7 +41,7 @@ public class LobbySystem : MonoBehaviour
         UserData userData = UserDataManager.Instance.GetUserData();
 
         m_level.text = "LV " + userData.lv.ToString();
-        // exp
+        m_exp.fillAmount = userData.exp;
         m_name.text = userData.name;
         m_honor.text = string.Format("{0:#,###}", userData.honor);
         m_diamond.text = string.Format("{0:#,###}", userData.diamond);

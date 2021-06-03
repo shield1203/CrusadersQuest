@@ -145,4 +145,32 @@ public class HttpSystem : MonoBehaviour
             SoldierManager.Instance.UpdateSoldierTeam(soldeirId, isTeam);
         }
     }
+
+    public IEnumerator RequestUpdateUserExp(float exp)
+    {
+        UserData userData = UserDataManager.Instance.AddUserExp(exp);
+
+        string strScheme = "/UpdateUserExp?userId=" + m_userId + "&lv=" + userData.lv.ToString() + "&exp=" + userData.exp.ToString();
+        string strURL = m_serverIP + strScheme;
+        UnityWebRequest request = UnityWebRequest.Get(strURL);
+
+        UIManager.Instance.AddUI(UIPrefab.LOADING);
+
+        yield return request.SendWebRequest();
+
+        UIManager.Instance.RemoveOneUI();
+
+        if (request.isNetworkError || request.isHttpError)
+        {
+            UIManager.Instance.AddUI(UIPrefab.ERROR);
+        }
+        else if (request.downloadHandler.text == "fail")
+        {
+            UIManager.Instance.AddUI(UIPrefab.ERROR);
+        }
+        else
+        {
+            UserDataManager.Instance.InitializeUserData(userData);
+        }
+    }
 }

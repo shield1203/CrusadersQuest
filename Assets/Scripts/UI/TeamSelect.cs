@@ -205,6 +205,5 @@ public class TeamSelect : MonoBehaviour
         }
 
         SceneManager.LoadScene("Stage");
-        UIManager.Instance.RemoveOneUI();
     }
 }

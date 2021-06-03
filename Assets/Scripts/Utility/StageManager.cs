@@ -22,6 +22,8 @@ public struct StageData
     public SoldierCode boss;
     public int bossLevel;
     public int reward;
+    public int userExp;
+    public int soldierExp;
 }
 
 [System.Serializable]
@@ -46,10 +48,11 @@ public class StageManager : MonoBehaviour
     private List<EpisodeData> m_episodeData = new List<EpisodeData>();
 
     private int m_curEpisode = 1;
-
     private int m_curStage = 1;
 
     private List<string> m_mapPath = new List<string>();
+
+    private bool m_clear = false;
 
     public static StageManager Instance
     {
@@ -128,6 +131,11 @@ public class StageManager : MonoBehaviour
         return m_episodeData[episode - 1].stage;
     }
 
+    public StageData GetCurStageData()
+    {
+        return m_episodeData[m_curEpisode].stage[m_curStage];
+    }
+
     public Stage GetStage()
     {
         Stage curStage = new Stage();
@@ -142,5 +150,15 @@ public class StageManager : MonoBehaviour
     public string GetMapPathString(int mapIndex)
     {
         return m_mapPath[mapIndex];
+    }
+
+    public void SetClear(bool value)
+    {
+        m_clear = value;
+    }
+
+    public bool IsClear()
+    {
+        return m_clear;
     }
 }

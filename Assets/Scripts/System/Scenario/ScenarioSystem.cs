@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScenarioSystem : MonoBehaviour
 {
@@ -81,6 +82,8 @@ public class ScenarioSystem : MonoBehaviour
         }
 
         m_stageSoldierInfo.InitializeStageSoldierInfo(m_soldierUnits);
+
+        StageManager.Instance.SetClear(false);
     }
 
     void Update()
@@ -109,6 +112,8 @@ public class ScenarioSystem : MonoBehaviour
         if(CheckStageClear())
         {
             m_stageClear = true;
+            StageManager.Instance.SetClear(true);
+
             StopCoroutine(OnCreateBlock);
             StartCoroutine(StageClear());
         }
@@ -266,11 +271,11 @@ public class ScenarioSystem : MonoBehaviour
 
     IEnumerator StageClear()
     {
-        float goalPosition = Camera.main.transform.position.x - 3.2f;
+        float goalPosition = Camera.main.transform.position.x - 3.23f;
 
         for (int index = 0; index < m_soldierUnits.Count; index++)
         {
-            m_soldierUnits[index].GetComponent<SoldierUnit>().SetGoalPoint(goalPosition + (index * 3.2f));
+            m_soldierUnits[index].GetComponent<SoldierUnit>().SetGoalPoint(goalPosition + (index * 3.23f));
         }
 
         bool isGoal = false;
@@ -292,7 +297,8 @@ public class ScenarioSystem : MonoBehaviour
         GameObject stageClearUI = Instantiate(Resources.Load("UI/StageClear") as GameObject);
 
         yield return new WaitForSeconds(4.25f);
-        // 게임결과 창으로 이동
+
+        SceneManager.LoadScene("Result");
     }
 
     void OnFinishedStage()

@@ -10,7 +10,9 @@
         "name": "불길한 징조",
         "boss": 1,
         "bossLevel": 1,
-        "reward": 1
+        "reward": 1,
+        "userExp": 30,
+        "soldierExp" : 126
       },
       {
         "number": 2,
@@ -18,7 +20,9 @@
         "name": "여신의 힘",
         "boss": 2,
         "bossLevel": 2,
-        "reward": 2
+        "reward": 2,
+        "userExp": 30,
+        "soldierExp": 171
       },
       {
         "number": 3,
@@ -26,23 +30,29 @@
         "name": "여신을 찾아서",
         "boss": 3,
         "bossLevel": 3,
-        "reward": 3
+        "reward": 3,
+        "userExp": 30,
+        "soldierExp": 204
       },
       {
         "number": 4,
-        "consumption": 2,
+        "consumption": 1,
         "name": "모험의 시작",
         "boss": 4,
         "bossLevel": 3,
-        "reward": 3
+        "reward": 3,
+        "userExp": 30,
+        "soldierExp": 234
       },
       {
         "number": 5,
-        "consumption": 2,
+        "consumption": 1,
         "name": "울부짖는 늑대들",
         "boss": 5,
         "bossLevel": 4,
-        "reward": 3
+        "reward": 3,
+        "userExp": 30,
+        "soldierExp": 227
       },
       {
         "number": 6,
@@ -50,7 +60,9 @@
         "name": "헤매이는 숲",
         "boss": 6,
         "bossLevel": 4,
-        "reward": 3
+        "reward": 3,
+        "userExp": 60,
+        "soldierExp": 332
       }
     ]
   },
@@ -61,51 +73,63 @@
     "stage": [
       {
         "number": 1,
-        "consumption": 3,
+        "consumption": 2,
         "name": "달이 비치는 사막",
         "boss": 1,
         "bossLevel": 16,
-        "reward": 2
+        "reward": 2,
+        "userExp": 90,
+        "soldierExp": 406
       },
       {
         "number": 2,
-        "consumption": 3,
+        "consumption": 2,
         "name": "끈적이는 붕대",
         "boss": 2,
         "bossLevel": 17,
-        "reward": 3
+        "reward": 3,
+        "userExp": 90,
+        "soldierExp": 447
       },
       {
         "number": 3,
-        "consumption": 3,
+        "consumption": 2,
         "name": "사막의 주민들",
         "boss": 3,
         "bossLevel": 18,
-        "reward": 3
+        "reward": 3,
+        "userExp": 90,
+        "soldierExp": 473
       },
       {
         "number": 4,
-        "consumption": 4,
+        "consumption": 2,
         "name": "아누비스의 사제단",
         "boss": 4,
         "bossLevel": 20,
-        "reward": 3
+        "reward": 3,
+        "userExp": 90,
+        "soldierExp": 479
       },
       {
         "number": 5,
-        "consumption": 4,
+        "consumption": 2,
         "name": "모래의 수호자들",
         "boss": 5,
         "bossLevel": 21,
-        "reward": 3
+        "reward": 3,
+        "userExp": 90,
+        "soldierExp": 540
       },
       {
         "number": 6,
-        "consumption": 4,
+        "consumption": 2,
         "name": "거룩한 개와 신성한 새",
         "boss": 6,
         "bossLevel": 22,
-        "reward": 3
+        "reward": 3,
+        "userExp": 90,
+        "soldierExp": 530
       }
     ]
   },
@@ -116,35 +140,43 @@
     "stage": [
       {
         "number": 1,
-        "consumption": 5,
+        "consumption": 3,
         "name": "심해 속으로",
         "boss": 1,
         "bossLevel": 31,
-        "reward": 2
+        "reward": 2,
+        "userExp": 180,
+        "soldierExp": 735
       },
       {
         "number": 2,
-        "consumption": 5,
+        "consumption": 3,
         "name": "숨막히는 바다",
         "boss": 2,
         "bossLevel": 33,
-        "reward": 3
+        "reward": 3,
+        "userExp": 180,
+        "soldierExp": 762
       },
       {
         "number": 3,
-        "consumption": 5,
+        "consumption": 3,
         "name": "자릿한 해파리",
         "boss": 3,
         "bossLevel": 34,
-        "reward": 3
+        "reward": 3,
+        "userExp": 180,
+        "soldierExp": 821
       },
       {
         "number": 4,
-        "consumption": 6,
+        "consumption": 3,
         "name": "수면 아래의 짐승들",
         "boss": 4,
         "bossLevel": 37,
-        "reward": 3
+        "reward": 3,
+        "userExp": 180,
+        "soldierExp": 882
       },
       {
         "number": 5,
@@ -152,7 +184,9 @@
         "name": "황홀한 인어",
         "boss": 5,
         "bossLevel": 41,
-        "reward": 3
+        "reward": 3,
+        "userExp": 180,
+        "soldierExp": 912
       },
       {
         "number": 6,
@@ -160,7 +194,9 @@
         "name": "위대한 바다",
         "boss": 6,
         "bossLevel": 43,
-        "reward": 3
+        "reward": 3,
+        "userExp": 180,
+        "soldierExp": 906
       }
     ]
   },
@@ -171,51 +207,63 @@
     "stage": [
       {
         "number": 1,
-        "consumption": 8,
+        "consumption": 4,
         "name": "작열하는 땅",
         "boss": 1,
         "bossLevel": 56,
-        "reward": 3
+        "reward": 3,
+        "userExp": 300,
+        "soldierExp": 1572
       },
       {
         "number": 2,
-        "consumption": 8,
+        "consumption": 4,
         "name": "닥쳐오는 괴물들",
         "boss": 2,
         "bossLevel": 57,
-        "reward": 3
+        "reward": 3,
+        "userExp": 300,
+        "soldierExp": 1572
       },
       {
         "number": 3,
-        "consumption": 8,
+        "consumption": 4,
         "name": "암운이 드리울 때",
         "boss": 3,
         "bossLevel": 60,
-        "reward": 3
+        "reward": 3,
+        "userExp": 300,
+        "soldierExp": 1760
       },
       {
         "number": 4,
-        "consumption": 9,
+        "consumption": 4,
         "name": "불타는 악마",
         "boss": 4,
         "bossLevel": 62,
-        "reward": 3
+        "reward": 3,
+        "userExp": 300,
+        "soldierExp": 1857
       },
       {
         "number": 5,
-        "consumption": 9,
+        "consumption": 4,
         "name": "타오르는 나무",
         "boss": 5,
         "bossLevel": 64,
-        "reward": 3
+        "reward": 3,
+        "userExp": 300,
+        "soldierExp": 1596
       },
       {
         "number": 6,
-        "consumption": 9,
+        "consumption": 4,
         "name": "흘러내리는 용암",
         "boss": 6,
         "bossLevel": 66,
-        "reward": 3
+        "reward": 3,
+        "userExp": 300,
+        "soldierExp": 1692
       }
     ]
   },
@@ -230,7 +278,9 @@
         "name": "북쪽 설원 - 1",
         "boss": 1,
         "bossLevel": 81,
-        "reward": 3
+        "reward": 3,
+        "userExp": 1100,
+        "soldierExp": 5565
       },
       {
         "number": 2,
@@ -238,7 +288,9 @@
         "name": "북쪽 설원 - 2",
         "boss": 2,
         "bossLevel": 82,
-        "reward": 3
+        "reward": 3,
+        "userExp": 1100,
+        "soldierExp": 7105
       },
       {
         "number": 3,
@@ -246,7 +298,9 @@
         "name": "북쪽 설원 - 3",
         "boss": 3,
         "bossLevel": 83,
-        "reward": 3
+        "reward": 3,
+        "userExp": 1100,
+        "soldierExp": 7359
       },
       {
         "number": 4,
@@ -254,23 +308,29 @@
         "name": "싸늘한 숨결",
         "boss": 4,
         "bossLevel": 84,
-        "reward": 3
+        "reward": 3,
+        "userExp": 1100,
+        "soldierExp": 7714
       },
       {
         "number": 5,
-        "consumption": 12,
+        "consumption": 11,
         "name": "눈 속의 비밀",
         "boss": 5,
         "bossLevel": 85,
-        "reward": 3
+        "reward": 3,
+        "userExp": 1100,
+        "soldierExp": 4258
       },
       {
         "number": 6,
-        "consumption": 12,
+        "consumption": 11,
         "name": "고대의 기억 - 1",
         "boss": 6,
         "bossLevel": 86,
-        "reward": 3
+        "reward": 3,
+        "userExp": 1100,
+        "soldierExp": 4197
       }
     ]
   },
@@ -285,7 +345,9 @@
         "name": "전란의 기운",
         "boss": 1,
         "bossLevel": 101,
-        "reward": 3
+        "reward": 3,
+        "userExp": 3200,
+        "soldierExp": 27478
       },
       {
         "number": 2,
@@ -293,7 +355,9 @@
         "name": "타오르는 시가지 - 1",
         "boss": 2,
         "bossLevel": 82,
-        "reward": 3
+        "reward": 3,
+        "userExp": 3200,
+        "soldierExp": 32920
       },
       {
         "number": 3,
@@ -301,31 +365,39 @@
         "name": "타오르는 시가지 - 2",
         "boss": 3,
         "bossLevel": 83,
-        "reward": 3
+        "reward": 3,
+        "userExp": 3200,
+        "soldierExp": 32920
       },
       {
         "number": 4,
-        "consumption": 17,
+        "consumption": 16,
         "name": "충격과 공포 - 1",
         "boss": 4,
         "bossLevel": 104,
-        "reward": 3
+        "reward": 3,
+        "userExp": 3200,
+        "soldierExp": 34280
       },
       {
         "number": 5,
-        "consumption": 17,
+        "consumption": 16,
         "name": "충격과 공포 - 2",
         "boss": 5,
         "bossLevel": 105,
-        "reward": 3
+        "reward": 3,
+        "userExp": 3200,
+        "soldierExp": 35640
       },
       {
         "number": 6,
-        "consumption": 17,
+        "consumption": 16,
         "name": "도시 공방전 - 1",
         "boss": 6,
         "bossLevel": 106,
-        "reward": 3
+        "reward": 3,
+        "userExp": 3200,
+        "soldierExp": 35653
       }
     ]
   },
@@ -340,7 +412,9 @@
         "name": "성도 엘란디아",
         "boss": 1,
         "bossLevel": 99,
-        "reward": 3
+        "reward": 3,
+        "userExp": 7000,
+        "soldierExp": 55000
       },
       {
         "number": 2,
@@ -348,7 +422,9 @@
         "name": "순백의 사자단",
         "boss": 2,
         "bossLevel": 100,
-        "reward": 3
+        "reward": 3,
+        "userExp": 7000,
+        "soldierExp": 55000
       },
       {
         "number": 3,
@@ -356,7 +432,9 @@
         "name": "크로나 용사단",
         "boss": 3,
         "bossLevel": 102,
-        "reward": 3
+        "reward": 3,
+        "userExp": 7000,
+        "soldierExp": 55000
       },
       {
         "number": 4,
@@ -364,7 +442,9 @@
         "name": "드러나는 비밀",
         "boss": 4,
         "bossLevel": 104,
-        "reward": 3
+        "reward": 3,
+        "userExp": 7000,
+        "soldierExp": 60000
       },
       {
         "number": 5,
@@ -372,7 +452,9 @@
         "name": "사라진 빛 - 1",
         "boss": 5,
         "bossLevel": 105,
-        "reward": 3
+        "reward": 3,
+        "userExp": 7000,
+        "soldierExp": 55000
       },
       {
         "number": 6,
@@ -380,7 +462,9 @@
         "name": "사라진 빛 - 2",
         "boss": 6,
         "bossLevel": 106,
-        "reward": 3
+        "reward": 3,
+        "userExp": 7000,
+        "soldierExp": 70000
       }
     ]
   }

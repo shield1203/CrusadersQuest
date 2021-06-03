@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using Newtonsoft.Json.Linq;
 using UnityEngine;
 
 public enum SoldierCode
@@ -99,6 +98,7 @@ public class SoldierManager : MonoBehaviour
     private static SoldierManager m_instance = null;
 
     private Dictionary<SoldierCode, SoldierAbility> m_soldierAbility = new Dictionary<SoldierCode, SoldierAbility>();
+    private Dictionary<int, float> m_soldierExpData = new Dictionary<int, float>();
     private List<SoldierData> m_soldierData = new List<SoldierData>();
     private Dictionary<int, SoldierData> m_soldierTeam = new Dictionary<int, SoldierData>();
 
@@ -119,6 +119,7 @@ public class SoldierManager : MonoBehaviour
         if (null == m_instance)
         {
             m_instance = this;
+            LoadData();
             DontDestroyOnLoad(this.gameObject);
         }
         else
@@ -127,14 +128,22 @@ public class SoldierManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void LoadData()
     {
         string soldierAbilityJSON = File.ReadAllText(Application.dataPath + "/Resources/JSON/SoldierAbility.json");
 
         List<SoldierAbility> soldierAbilities = JsonHelper.FromJson<SoldierAbility>(soldierAbilityJSON);
-        foreach(SoldierAbility ability in soldierAbilities)
+        foreach (SoldierAbility ability in soldierAbilities)
         {
             m_soldierAbility.Add(ability.code, ability);
+        }
+
+        string soldierExpJSON = File.ReadAllText(Application.dataPath + "/Resources/JSON/SoldierExpData.json");
+
+        List<ExpData> soldierExp = JsonHelper.FromJson<ExpData>(soldierExpJSON);
+        foreach (ExpData expData in soldierExp)
+        {
+            m_soldierExpData.Add(expData.level, expData.maxExp);
         }
     }
 
@@ -230,5 +239,10 @@ public class SoldierManager : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public float GetMapExp(int level)
+    {
+        return m_soldierExpData[level];
     }
 }
