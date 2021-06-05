@@ -116,6 +116,7 @@ public class UserDataManager : MonoBehaviour
             {
                 curExp = 0;
                 addResult.exp = 0;
+                break;
             }
         }
 

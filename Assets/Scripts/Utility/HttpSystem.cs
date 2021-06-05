@@ -7,7 +7,7 @@ public class HttpSystem : MonoBehaviour
 {
     private const string m_serverIP = "http://203.232.193.169:3000";
 
-    private string m_userId;
+    static private string m_userId;
 
     public delegate void OnDelegate();
 
@@ -146,7 +146,7 @@ public class HttpSystem : MonoBehaviour
         }
     }
 
-    public IEnumerator RequestUpdateUserExp(float exp)
+    public IEnumerator RequestUpdateUserExp(float exp, OnDelegate action)
     {
         UserData userData = UserDataManager.Instance.AddUserExp(exp);
 
@@ -171,6 +171,34 @@ public class HttpSystem : MonoBehaviour
         else
         {
             UserDataManager.Instance.InitializeUserData(userData);
+
+            if (action != null) action();
+        }
+    }
+
+    public IEnumerator RequestUpdateSoldierExp(SoldierData soldierData, float exp, OnDelegate action)
+    {
+        SoldierData data = SoldierManager.Instance.AddSoldierExp(soldierData, exp);
+
+        string strScheme = "/UpdateSoldierExp?userId=" + m_userId + "&soldierId=" + data.soldier_id.ToString() 
+            + "&lv=" + data.level.ToString() + "&exp=" + data.exp.ToString();
+        string strURL = m_serverIP + strScheme;
+        UnityWebRequest request = UnityWebRequest.Get(strURL);
+
+        yield return request.SendWebRequest();
+
+
+        if (request.isNetworkError || request.isHttpError)
+        {
+            UIManager.Instance.AddUI(UIPrefab.ERROR);
+        }
+        else if (request.downloadHandler.text == "fail")
+        {
+            UIManager.Instance.AddUI(UIPrefab.ERROR);
+        }
+        else
+        {
+            if (action != null) action();
         }
     }
 }

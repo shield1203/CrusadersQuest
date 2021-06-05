@@ -15,7 +15,8 @@ public class CutTitleAnimation : MonoBehaviour
         }
         else
         {
-            // Play Title BGM
+            TitleSystem titleSystem = FindObjectOfType(typeof(TitleSystem)) as TitleSystem;
+            titleSystem.CutTitle();
         }
 
         this.gameObject.SetActive(false);

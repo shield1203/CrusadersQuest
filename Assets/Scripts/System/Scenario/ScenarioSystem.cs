@@ -46,6 +46,8 @@ public class ScenarioSystem : MonoBehaviour
 
     void Start()
     {
+        SoundSystem.Instance.StartBGM(BGM.Stage);
+
         OnCreateBlock = CreateBlock();
         StartCoroutine(OnCreateBlock);
 
@@ -88,8 +90,6 @@ public class ScenarioSystem : MonoBehaviour
 
     void Update()
     {
-        if (m_stageClear || m_gameOver) return;
-
         for(int index = 0; index < m_skillBlocks.Count; index++)
         {
             if(m_skillBlocks[index].GetComponent<SkillBlock>().GetBlockIndex() != index)
@@ -99,7 +99,9 @@ public class ScenarioSystem : MonoBehaviour
             }
         }
 
-        for(int index = 0; index < m_soldierUnits.Count; index++)
+        if (m_stageClear || m_gameOver) return;
+
+        for (int index = 0; index < m_soldierUnits.Count; index++)
         {
             if(m_soldierUnits[index].transform.position.x > Camera.main.transform.position.x)
             {
@@ -109,8 +111,11 @@ public class ScenarioSystem : MonoBehaviour
             }
         }
 
-        if(CheckStageClear())
+        if (CheckStageClear())
         {
+            SoundSystem.Instance.StopBGM();
+            SoundSystem.Instance.PlaySound(Sound.Victory);
+
             m_stageClear = true;
             StageManager.Instance.SetClear(true);
 

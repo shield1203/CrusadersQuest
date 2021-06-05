@@ -20,7 +20,6 @@ public class UIManager : MonoBehaviour
     private static UIManager m_instance = null;
 
     List<GameObject> m_ui = new List<GameObject>();
-
     List<string> m_uiPrefabPath = new List<string>();
 
     public static UIManager Instance

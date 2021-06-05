@@ -64,8 +64,8 @@ public class StageSoldierInfo : MonoBehaviour
         {
             m_hpBar[index].value = m_soldierUnits[index].GetComponent<SoldierUnit>().GetHPPercent();
             m_hpValue[index].text = m_soldierUnits[index].GetComponent<SoldierUnit>().GetCurHP().ToString();
-            // 피해량
-            // 회복량
+            m_damage[index].text = ((int)m_soldierUnits[index].GetComponent<SoldierUnit>().m_totalDamage).ToString();
+            m_heal[index].text = ((int)m_soldierUnits[index].GetComponent<SoldierUnit>().m_totalHeal).ToString();
         }
     }
 }

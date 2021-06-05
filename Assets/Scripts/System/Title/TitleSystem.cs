@@ -5,21 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class TitleSystem : MonoBehaviour
 {
-    [SerializeField]
-    GameObject m_;
+    private bool m_ready = false;
 
-    void Start()
+    public void CutTitle()
     {
-        
-    }
+        SoundSystem.Instance.StartBGM(BGM.Title);
 
-    void Update()
-    {
-        
+        m_ready = true;
     }
 
     public void OnLoadLobbyScene()
     {
-        SceneManager.LoadScene("Lobby");
+        if(m_ready) SceneManager.LoadScene("Lobby");
     }
 }

@@ -41,6 +41,7 @@ public class TeamSelect : MonoBehaviour
 
     public void ExitUI()
     {
+        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
         UIManager.Instance.RemoveOneUI();
     }
 
@@ -104,6 +105,8 @@ public class TeamSelect : MonoBehaviour
 
     public void ToggleOrder()
     {
+        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+
         m_orderByDescending = !m_orderByDescending;
 
         m_orderByDescendingButton.SetActive(m_orderByDescending);
@@ -117,6 +120,8 @@ public class TeamSelect : MonoBehaviour
     {
         if (value)
         {
+            SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+
             m_selectedType = SoldierType.All;
             InitializeSoldierList();
         }
@@ -126,6 +131,8 @@ public class TeamSelect : MonoBehaviour
     {
         if (value)
         {
+            SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+
             m_selectedType = SoldierType.Warrior;
             InitializeSoldierList();
         }
@@ -135,6 +142,8 @@ public class TeamSelect : MonoBehaviour
     {
         if (value)
         {
+            SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+
             m_selectedType = SoldierType.Paladin;
             InitializeSoldierList();
         }
@@ -144,6 +153,8 @@ public class TeamSelect : MonoBehaviour
     {
         if (value)
         {
+            SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+
             m_selectedType = SoldierType.Archer;
             InitializeSoldierList();
         }
@@ -153,6 +164,8 @@ public class TeamSelect : MonoBehaviour
     {
         if (value)
         {
+            SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+
             m_selectedType = SoldierType.Hunter;
             InitializeSoldierList();
         }
@@ -162,6 +175,8 @@ public class TeamSelect : MonoBehaviour
     {
         if (value)
         {
+            SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+
             m_selectedType = SoldierType.Wizard;
             InitializeSoldierList();
         }
@@ -171,6 +186,8 @@ public class TeamSelect : MonoBehaviour
     {
         if (value)
         {
+            SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+
             m_selectedType = SoldierType.Priest;
             InitializeSoldierList();
         }
@@ -182,6 +199,9 @@ public class TeamSelect : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "Lobby")
         {
             if (SoldierManager.Instance.GetSoldierTeam().Count != 3) return;
+
+            SoundSystem.Instance.StopBGM();
+            SoundSystem.Instance.PlaySound(Sound.GameStart);
 
             m_blackBoard.gameObject.SetActive(true);
             StartCoroutine(FadeOut());

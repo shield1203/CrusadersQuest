@@ -32,6 +32,7 @@ public class SoldierList : MonoBehaviour
 
     public void ExitUI()
     {
+        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
         UIManager.Instance.RemoveOneUI();
     }
 
@@ -134,6 +135,8 @@ public class SoldierList : MonoBehaviour
 
     public void ToggleOrder()
     {
+        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+
         m_orderByDescending = !m_orderByDescending;
 
         m_orderByDescendingButton.SetActive(m_orderByDescending);

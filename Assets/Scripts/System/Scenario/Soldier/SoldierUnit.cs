@@ -13,6 +13,9 @@ public class SoldierUnit : UnitBase
     protected bool m_goal = false;
     protected float m_goalPoint;
 
+    public float m_totalDamage = 0;
+    public float m_totalHeal = 0;
+
     protected override void Start()
     {
         base.Start();
@@ -64,6 +67,7 @@ public class SoldierUnit : UnitBase
         }
         else
         {
+            m_totalDamage += damage;
             m_mainTarget.GetComponent<UnitBase>().TakeDamage(damage);
         }
     }

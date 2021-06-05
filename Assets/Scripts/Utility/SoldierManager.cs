@@ -241,8 +241,31 @@ public class SoldierManager : MonoBehaviour
         }
     }
 
-    public float GetMapExp(int level)
+    public float GetMaxExp(int level)
     {
         return m_soldierExpData[level];
+    }
+
+    public SoldierData AddSoldierExp(SoldierData soldierData, float exp)
+    {
+        if (soldierData.level >= soldierData.grade * 10) return soldierData;
+
+        float curExp = (soldierData.exp * GetMaxExp(soldierData.level)) + exp;
+        while (curExp >= GetMaxExp(soldierData.level))
+        {
+            curExp -= GetMaxExp(soldierData.level);
+            soldierData.level++;
+
+            if (soldierData.level >= soldierData.grade * 10)
+            {
+                curExp = 0;
+                soldierData.exp = 0;
+                break;
+            }
+        }
+
+        soldierData.exp = curExp / GetMaxExp(soldierData.level);
+
+        return soldierData;
     }
 }

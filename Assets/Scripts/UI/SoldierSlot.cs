@@ -62,4 +62,9 @@ public class SoldierSlot : MonoBehaviour
             m_type[index].SetActive((int)type == index);
         }
     }
+
+    public void OnTouch()
+    {
+        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+    }
 }

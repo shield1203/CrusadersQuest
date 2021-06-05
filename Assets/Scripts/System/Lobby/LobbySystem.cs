@@ -31,6 +31,8 @@ public class LobbySystem : MonoBehaviour
 
     void Start()
     {
+        SoundSystem.Instance.StartBGM(BGM.Lobby);
+
         UIManager.Instance.ActiveUI(true);
 
         StartCoroutine(m_httpSystem.RequestUserData(SetUserData));

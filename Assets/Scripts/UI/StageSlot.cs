@@ -67,6 +67,8 @@ public class StageSlot : MonoBehaviour
 
     public void OnSelectStage()
     {
+        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+
         if (StageManager.Instance.GetCurStage() != m_stageData.number)
         {
             StageManager.Instance.SetCurStage(m_stageData.number);

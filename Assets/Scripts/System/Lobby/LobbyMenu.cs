@@ -38,6 +38,7 @@ public class LobbyMenu : MonoBehaviour
 
     public void TouchButton()
     {
+        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
         StartCoroutine(ButtonAction(m_inVillage, m_lobbyButton));
     }
 
@@ -80,6 +81,7 @@ public class LobbyMenu : MonoBehaviour
 
     public void OnMoveCameraToPoint(float xPos)
     {
+        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
         StartCoroutine(MoveCameraToPoint(xPos));
     }
 

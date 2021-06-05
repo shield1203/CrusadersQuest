@@ -18,6 +18,8 @@ public class ScenarioList : MonoBehaviour
 
     public void OnSelecteEpisode(int episodeIndex)
     {
+        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+
         if (m_selectedEpisode == episodeIndex) return;
 
         m_selectedEpisode = episodeIndex;
@@ -31,6 +33,8 @@ public class ScenarioList : MonoBehaviour
 
     public void OnOpenEpisodeUI()
     {
+        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+
         this.gameObject.SetActive(false);
         GameObject episodeUI = m_scenarioSlot[m_selectedEpisode].GetComponent<ScenarioSlot>().GetStageListUI();
         episodeUI.SetActive(true);
@@ -39,6 +43,8 @@ public class ScenarioList : MonoBehaviour
 
     public void OnExit()
     {
+        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+
         this.gameObject.SetActive(false);
         m_prevUI.SetActive(true);
     }
