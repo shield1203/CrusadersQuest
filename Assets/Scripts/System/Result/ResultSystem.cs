@@ -58,23 +58,25 @@ public class ResultSystem : MonoBehaviour
             GameObject soldierUnit = Instantiate(Resources.Load(m_prevSoldierTeam[index].prefabPath) as GameObject);
             soldierUnit.transform.position = new Vector2(unitInitXPos + (index * unitDistance), unitInitYPos);
 
-            m_soldierName[index].text = m_prevSoldierTeam[index].name;
+            SetSoldierExpData(index);
         }
 
-        if (StageManager.Instance.IsClear())
-        {
-            StartCoroutine(m_httpSystem.RequestUpdateUserExp(stageData.userExp));
-            StartCoroutine(ProgressUserExpBar());
-
-            // 용사 유닛 경험치 
-        }
+        if (StageManager.Instance.IsClear()) StartCoroutine(UpdateGameResult(stageData));
     }
-    
-    void Update()
+
+    IEnumerator UpdateGameResult(StageData stageData)
     {
-        
+        yield return StartCoroutine(m_httpSystem.RequestUpdateUserExp(stageData.userExp, UpdateUserExp));
+
+        for (int index = 0; index < m_prevSoldierTeam.Count; index++)
+        {
+            yield return StartCoroutine(m_httpSystem.RequestUpdateSoldierExp(m_prevSoldierTeam[index], stageData.soldierExp, null));
+        }
+
+        yield return StartCoroutine(m_httpSystem.RequestSoldierListData(UpdateSoldierExp));
     }
 
+    // UserExp
     void SetUserExpData()
     {
         m_userLevel.text = "LV" + m_prevUserData.lv.ToString();
@@ -83,29 +85,97 @@ public class ResultSystem : MonoBehaviour
         m_userExp.text = ((int)curExp).ToString() + "/" + ((int)UserDataManager.Instance.GetMaxExp(m_prevUserData.lv)).ToString();
     }
 
-    IEnumerator ProgressUserExpBar()
+    void UpdateUserExp()
     {
-        while(true)
+        StartCoroutine(ProgressUserExpBar(UserDataManager.Instance.GetUserData()));
+    }
+
+    IEnumerator ProgressUserExpBar(UserData userData)
+    {
+        bool progress = userData.lv >= m_prevUserData.lv;
+        if(progress && userData.lv == m_prevUserData.lv && userData.exp <= m_prevUserData.exp)
+        {
+            progress = false;
+        }
+
+        while (progress)
         {
             yield return null;
 
-            UserData userData = UserDataManager.Instance.GetUserData();
             if (m_prevUserData.lv == userData.lv && m_prevUserData.exp < userData.exp)
             {
                 m_prevUserData.exp += 0.01f;
+
+                if (m_prevUserData.exp >= userData.exp) progress = false;
             }
             else if (m_prevUserData.lv < userData.lv)
             {
                 m_prevUserData.exp += 0.01f;
 
-                if (m_prevUserData.exp >= UserDataManager.Instance.GetMaxExp(m_prevUserData.lv))
+                float curExp = m_prevUserData.exp * UserDataManager.Instance.GetMaxExp(m_prevUserData.lv);
+                if (curExp >= UserDataManager.Instance.GetMaxExp(m_prevUserData.lv))
                 {
+                    SoundSystem.Instance.PlaySound(Sound.LevelUp);
+
                     m_prevUserData.lv++;
                     m_prevUserData.exp = 0;
                 }
             }
 
             SetUserExpData();
+        }
+    }
+
+    // UnitExp
+    void SetSoldierExpData(int index)
+    {
+        m_soldierName[index].text = m_prevSoldierTeam[index].name;
+        m_soldierLevel[index].text ="LV" + m_prevSoldierTeam[index].level.ToString() + "/" + ((int)(m_prevSoldierTeam[index].grade * 10)).ToString();
+        m_soldierExpGage[index].fillAmount = m_prevSoldierTeam[index].exp;
+        float curExp = m_prevSoldierTeam[index].exp * SoldierManager.Instance.GetMaxExp(m_prevSoldierTeam[index].level);
+        m_soldierExp[index].text = ((int)curExp).ToString() + "/" + ((int)SoldierManager.Instance.GetMaxExp(m_prevSoldierTeam[index].level)).ToString();
+    }
+
+    void UpdateSoldierExp()
+    {
+        for(int index = 0; index < m_prevSoldierTeam.Count; index++)
+        {
+            StartCoroutine(ProgressSoldierExpBar(index));
+        }
+    }
+
+    IEnumerator ProgressSoldierExpBar(int index)
+    {
+        SoldierData soldier = SoldierManager.Instance.GetSoldierTeam()[index];
+        bool progress = true;
+
+        while (progress)
+        {
+            yield return null;
+
+            SoldierData soldierData = m_prevSoldierTeam[index];
+            if (m_prevSoldierTeam[index].level == soldier.level && m_prevSoldierTeam[index].exp < soldier.exp)
+            {
+                soldierData.exp += 0.01f;
+
+                if (soldierData.exp >= soldier.exp) progress = false;
+            }
+            else if (m_prevSoldierTeam[index].level < soldier.level)
+            {
+                soldierData.exp += 0.01f;
+
+                float curExp = soldierData.exp * SoldierManager.Instance.GetMaxExp(soldierData.level);
+                if (curExp >= SoldierManager.Instance.GetMaxExp(soldierData.level))
+                {
+                    SoundSystem.Instance.PlaySound(Sound.LevelUp);
+
+                    soldierData.level++;
+                    soldierData.exp = 0;
+                }
+            }
+
+            m_prevSoldierTeam[index] = soldierData;
+            SetSoldierExpData(index);
         }
     }
 
