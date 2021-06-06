@@ -9,13 +9,13 @@ public class AdventureList : MonoBehaviour
 
     public void OnExit()
     {
-        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
         UIManager.Instance.RemoveOneUI();
     }
 
     public void OnOpenScenarioUI()
     {
-        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
 
         this.gameObject.SetActive(false);
         m_scenarioUI.SetActive(true);
@@ -23,11 +23,11 @@ public class AdventureList : MonoBehaviour
 
     public void OnOpenApocryphaUI()
     {
-        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
     }
 
     public void OnOpenPracticeUI()
     {
-        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
     }
 }

@@ -44,13 +44,15 @@ public class MonsterUnit : UnitBase
         }
         else
         {
-            m_mainTarget.GetComponent<UnitBase>().TakeDamage(m_data.attack);
+            SoundSystem.Instance.PlaySound(Sound.normal_attack);
+
+            m_mainTarget.GetComponent<UnitBase>().TakeDamage(m_data.attack, Sound.hit_normal);
         }
     }
 
-    public override void TakeDamage(float damage)
+    public override void TakeDamage(float damage, Sound sound)
     {
-        base.TakeDamage(damage);
+        base.TakeDamage(damage, sound);
 
         GameObject floatingText = Instantiate(Resources.Load("FloatingText/FloatingText") as GameObject);
         floatingText.transform.position = transform.position;

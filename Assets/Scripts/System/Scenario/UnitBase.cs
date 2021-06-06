@@ -36,9 +36,9 @@ public class UnitBase : MonoBehaviour
 
     public virtual void Attack() { }
 
-    public virtual void TakeDamage(float damage) 
+    public virtual void TakeDamage(float damage, Sound hit) 
     {
-        if (m_die) return;       
+        if (m_die) return;
 
         m_curHP = Mathf.Clamp(m_curHP - damage, 0, m_maxHP);
         if (m_curHP == 0)
@@ -48,6 +48,8 @@ public class UnitBase : MonoBehaviour
         }
         else
         {
+            SoundSystem.Instance.PlaySound(hit);
+
             m_material.SetFloat("_Intensity", maxIntencity);
         }
     }

@@ -55,7 +55,7 @@ public class SoldierTeamSlot : MonoBehaviour
 
     public void RemoveFromTeam()
     {
-        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
 
         if (m_isEmpty) return;
 

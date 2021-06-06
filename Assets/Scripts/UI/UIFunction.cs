@@ -11,6 +11,8 @@ public class UIFunction : MonoBehaviour
 
     public void DestroyThisObject()
     {
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
+
         Destroy(gameObject);
     }
 }

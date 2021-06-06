@@ -41,7 +41,7 @@ public class TeamSelect : MonoBehaviour
 
     public void ExitUI()
     {
-        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
         UIManager.Instance.RemoveOneUI();
     }
 
@@ -105,7 +105,7 @@ public class TeamSelect : MonoBehaviour
 
     public void ToggleOrder()
     {
-        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
 
         m_orderByDescending = !m_orderByDescending;
 
@@ -120,7 +120,7 @@ public class TeamSelect : MonoBehaviour
     {
         if (value)
         {
-            SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+            SoundSystem.Instance.PlaySound(Sound.button_touch);
 
             m_selectedType = SoldierType.All;
             InitializeSoldierList();
@@ -131,7 +131,7 @@ public class TeamSelect : MonoBehaviour
     {
         if (value)
         {
-            SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+            SoundSystem.Instance.PlaySound(Sound.button_touch);
 
             m_selectedType = SoldierType.Warrior;
             InitializeSoldierList();
@@ -142,7 +142,7 @@ public class TeamSelect : MonoBehaviour
     {
         if (value)
         {
-            SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+            SoundSystem.Instance.PlaySound(Sound.button_touch);
 
             m_selectedType = SoldierType.Paladin;
             InitializeSoldierList();
@@ -153,7 +153,7 @@ public class TeamSelect : MonoBehaviour
     {
         if (value)
         {
-            SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+            SoundSystem.Instance.PlaySound(Sound.button_touch);
 
             m_selectedType = SoldierType.Archer;
             InitializeSoldierList();
@@ -164,7 +164,7 @@ public class TeamSelect : MonoBehaviour
     {
         if (value)
         {
-            SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+            SoundSystem.Instance.PlaySound(Sound.button_touch);
 
             m_selectedType = SoldierType.Hunter;
             InitializeSoldierList();
@@ -175,7 +175,7 @@ public class TeamSelect : MonoBehaviour
     {
         if (value)
         {
-            SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+            SoundSystem.Instance.PlaySound(Sound.button_touch);
 
             m_selectedType = SoldierType.Wizard;
             InitializeSoldierList();
@@ -186,7 +186,7 @@ public class TeamSelect : MonoBehaviour
     {
         if (value)
         {
-            SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+            SoundSystem.Instance.PlaySound(Sound.button_touch);
 
             m_selectedType = SoldierType.Priest;
             InitializeSoldierList();
@@ -201,7 +201,7 @@ public class TeamSelect : MonoBehaviour
             if (SoldierManager.Instance.GetSoldierTeam().Count != 3) return;
 
             SoundSystem.Instance.StopBGM();
-            SoundSystem.Instance.PlaySound(Sound.GameStart);
+            SoundSystem.Instance.PlaySound(Sound.game_start);
 
             m_blackBoard.gameObject.SetActive(true);
             StartCoroutine(FadeOut());

@@ -101,7 +101,7 @@ public class SoldierInfoSlot : MonoBehaviour
 
     public void ToggleSoldier()
     {
-        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
 
         if (SoldierManager.Instance.GetSoldierTeam().Count > 2 && !m_isSelected) return;
 

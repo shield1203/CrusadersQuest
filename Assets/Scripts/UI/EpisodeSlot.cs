@@ -34,7 +34,7 @@ public class EpisodeSlot : MonoBehaviour
 
     public void OnSelectEpisode()
     {
-        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
 
         if (StageManager.Instance.GetCurEpisode() != m_episode)
         {

@@ -9,7 +9,7 @@
     "code": 1,
     "name": "질풍파",
     "percent": [ 150, 200, 250 ],
-    "thumbnailPath": "Skill/Stormy Waves_sprite"
+    "thumbnailPath": "Skill/Stormy Wave/Stormy Waves_sprite"
   },
   {
     "code": 2,

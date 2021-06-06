@@ -9,7 +9,7 @@ public class TitleSystem : MonoBehaviour
 
     public void CutTitle()
     {
-        SoundSystem.Instance.StartBGM(BGM.Title);
+        SoundSystem.Instance.StartBGM(BGM.title);
 
         m_ready = true;
     }

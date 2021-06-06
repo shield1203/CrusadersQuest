@@ -115,7 +115,7 @@ public class ResultSystem : MonoBehaviour
                 float curExp = m_prevUserData.exp * UserDataManager.Instance.GetMaxExp(m_prevUserData.lv);
                 if (curExp >= UserDataManager.Instance.GetMaxExp(m_prevUserData.lv))
                 {
-                    SoundSystem.Instance.PlaySound(Sound.LevelUp);
+                    SoundSystem.Instance.PlaySound(Sound.levelup);
 
                     m_prevUserData.lv++;
                     m_prevUserData.exp = 0;
@@ -167,7 +167,7 @@ public class ResultSystem : MonoBehaviour
                 float curExp = soldierData.exp * SoldierManager.Instance.GetMaxExp(soldierData.level);
                 if (curExp >= SoldierManager.Instance.GetMaxExp(soldierData.level))
                 {
-                    SoundSystem.Instance.PlaySound(Sound.LevelUp);
+                    SoundSystem.Instance.PlaySound(Sound.levelup);
 
                     soldierData.level++;
                     soldierData.exp = 0;

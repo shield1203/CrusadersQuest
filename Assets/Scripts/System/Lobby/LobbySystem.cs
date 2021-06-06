@@ -31,7 +31,7 @@ public class LobbySystem : MonoBehaviour
 
     void Start()
     {
-        SoundSystem.Instance.StartBGM(BGM.Lobby);
+        SoundSystem.Instance.StartBGM(BGM.lobby_thema, false);
 
         UIManager.Instance.ActiveUI(true);
 

@@ -67,8 +67,10 @@ public class SoldierUnit : UnitBase
         }
         else
         {
+            SoundSystem.Instance.PlaySound(Sound.normal_attack);
+
             m_totalDamage += damage;
-            m_mainTarget.GetComponent<UnitBase>().TakeDamage(damage);
+            m_mainTarget.GetComponent<UnitBase>().TakeDamage(damage, Sound.hit_normal);
         }
     }
 
@@ -88,9 +90,11 @@ public class SoldierUnit : UnitBase
         return distance;
     }
 
-    public override void TakeDamage(float damage)
+    public override void TakeDamage(float damage, Sound sound)
     {
-        base.TakeDamage(damage);
+        if (m_die) return;
+
+        base.TakeDamage(damage, sound);
 
         GameObject floatingText = Instantiate(Resources.Load("FloatingText/FloatingText") as GameObject);
         floatingText.transform.position = transform.position;
@@ -99,6 +103,8 @@ public class SoldierUnit : UnitBase
         gameObject.GetComponent<EffectSystem>().SpawnEffect(Effect.Hit_sol, 0.20f, "body");
 
         gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-10.2f, 5.5f) * 10);
+
+        if (m_die) SoundSystem.Instance.PlaySound(Sound.soldier_die);
     }
 
     public string GetSkillThumbnail()

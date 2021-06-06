@@ -17,6 +17,8 @@ public class HolySword : MonoBehaviour
 
     void Start()
     {
+        SoundSystem.Instance.PlaySound(Sound.justice);
+
         m_collider = GetComponent<BoxCollider2D>();
         m_animation = GetComponent<Animator>();
 
@@ -34,6 +36,8 @@ public class HolySword : MonoBehaviour
 
         m_animation.SetTrigger("SkillActive");
         CheckOverlapMonster();
+
+        SoundSystem.Instance.PlaySound(Sound.hit_splash);
     }
 
     public void CheckOverlapMonster()
@@ -43,7 +47,7 @@ public class HolySword : MonoBehaviour
         {
             if(!overlapMonsters[index].gameObject.GetComponent<UnitBase>().IsDie())
             {
-                overlapMonsters[index].gameObject.GetComponent<UnitBase>().TakeDamage(m_damage);
+                overlapMonsters[index].gameObject.GetComponent<UnitBase>().TakeDamage(m_damage, Sound.hit_normal);
             }
         }
     }

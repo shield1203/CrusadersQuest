@@ -46,7 +46,7 @@ public class ScenarioSystem : MonoBehaviour
 
     void Start()
     {
-        SoundSystem.Instance.StartBGM(BGM.Stage);
+        SoundSystem.Instance.StartBGM(BGM.stage_thema);
 
         OnCreateBlock = CreateBlock();
         StartCoroutine(OnCreateBlock);
@@ -114,7 +114,7 @@ public class ScenarioSystem : MonoBehaviour
         if (CheckStageClear())
         {
             SoundSystem.Instance.StopBGM();
-            SoundSystem.Instance.PlaySound(Sound.Victory);
+            SoundSystem.Instance.PlaySound(Sound.victory);
 
             m_stageClear = true;
             StageManager.Instance.SetClear(true);

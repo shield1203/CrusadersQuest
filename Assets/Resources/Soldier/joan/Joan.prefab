@@ -1123,7 +1123,7 @@ GameObject:
   - component: {fileID: 6444946361030071920}
   - component: {fileID: 5083090183904330849}
   - component: {fileID: 4816089822433599143}
-  - component: {fileID: 5989415860454742188}
+  - component: {fileID: 5331160788899207951}
   m_Layer: 10
   m_Name: Joan
   m_TagString: Soldier
@@ -1210,6 +1210,8 @@ MonoBehaviour:
   m_healthBar: {fileID: 5077875099179459547}
   m_healthGage: {fileID: 6193643981292586442}
   m_material: {fileID: 2100000, guid: 9be808d40c5b1cb43a5348c4299de70b, type: 2}
+  m_totalDamage: 0
+  m_totalHeal: 0
 --- !u!95 &5083090183904330849
 Animator:
   serializedVersion: 3
@@ -1241,7 +1243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c8b1dedf872ff24cafd494661fb9f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5989415860454742188
+--- !u!114 &5331160788899207951
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1250,7 +1252,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7727444440816056894}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d55c28b9d7b33f947b241fe6365c7a6b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2589b0f6da90a7345852893cab80c492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8410670730123443531

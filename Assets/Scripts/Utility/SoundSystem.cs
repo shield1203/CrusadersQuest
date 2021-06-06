@@ -4,17 +4,33 @@ using UnityEngine;
 
 public enum BGM
 {
-    Title,
-    Lobby,
-    Stage,
+    title,
+    lobby_thema,
+    stage_thema,
 }
 
 public enum Sound
 {
-    Button_Touch,
-    GameStart,
-    Victory,
-    LevelUp,
+    button_touch,
+    menu_goddess,
+    menu_message,
+    menu_party,
+    menu_quest,
+    menu_shop,
+    menu_skillrune,
+    menu_weapon,
+    game_start,
+    victory,
+    levelup,
+    normal_attack,
+    hit_gun,
+    hit_magic,
+    hit_normal,
+    hit_splash,
+    justice,
+    swordwave,
+    coin,
+    soldier_die,
 }
 
 public class SoundSystem : MonoBehaviour
@@ -22,11 +38,6 @@ public class SoundSystem : MonoBehaviour
     private static SoundSystem m_instance = null;
 
     private AudioSource m_audioSource;
-
-    private List<AudioClip> m_bgm_intro = new List<AudioClip>();
-    private List<AudioClip> m_bgm = new List<AudioClip>();
-
-    private List<AudioClip> m_sound = new List<AudioClip>();
 
     public static SoundSystem Instance
     {
@@ -46,7 +57,6 @@ public class SoundSystem : MonoBehaviour
         {
             m_instance = this;
             m_audioSource = gameObject.GetComponent<AudioSource>();
-            LoadData();
             DontDestroyOnLoad(this.gameObject);
         }
         else
@@ -60,49 +70,32 @@ public class SoundSystem : MonoBehaviour
         this.transform.position = Camera.main.transform.position;
     }
 
-    void LoadData()
-    {
-        List<string> bgmPath = new List<string>();
-        bgmPath.Add("Audio/BGM/title");
-        bgmPath.Add("Audio/BGM/lobby_thema");
-        bgmPath.Add("Audio/BGM/stage_thema");
-        foreach (string path in bgmPath)
-        {
-            AudioClip introAudioClip = Resources.Load(path + "_intro") as AudioClip;
-            m_bgm_intro.Add(introAudioClip);
-            AudioClip bgmAudioClip = Resources.Load(path) as AudioClip;
-            m_bgm.Add(bgmAudioClip);
-        }
-
-        List<string> soundPath = new List<string>();
-        soundPath.Add("Audio/button_touch");
-        soundPath.Add("Audio/game_start"); 
-        soundPath.Add("Audio/victory");
-        soundPath.Add("Audio/levelup");
-        foreach (string path in soundPath)
-        {
-            AudioClip audioClip = Resources.Load(path) as AudioClip;
-            m_sound.Add(audioClip);
-        }
-    }
-
-    public void StartBGM(BGM bgm)
+    public void StartBGM(BGM bgm, bool intro = true)
     {
         m_audioSource.Stop();
 
-        StartCoroutine(PlayBGM(bgm));
+        StartCoroutine(PlayBGM(bgm, intro));
     }
 
-    IEnumerator PlayBGM(BGM bgm)
+    IEnumerator PlayBGM(BGM bgm, bool intro)
     {
-        m_audioSource.loop = false;
-        m_audioSource.clip = m_bgm_intro[(int)bgm];
-        m_audioSource.Play();
+        AudioClip bgmAudioClip;
 
-        yield return new WaitForSeconds(m_bgm_intro[(int)bgm].length);
+        if (intro)
+        {
+            bgmAudioClip = Resources.Load("Audio/BGM/" + bgm.ToString() + "_intro") as AudioClip;
+
+            m_audioSource.loop = false;
+            m_audioSource.clip = bgmAudioClip;
+            m_audioSource.Play();
+
+            yield return new WaitForSeconds(bgmAudioClip.length);
+        }
+
+        bgmAudioClip = Resources.Load("Audio/BGM/" + bgm.ToString()) as AudioClip;
 
         m_audioSource.loop = true;
-        m_audioSource.clip = m_bgm[(int)bgm];
+        m_audioSource.clip = bgmAudioClip;
         m_audioSource.Play();
     }
 
@@ -113,6 +106,7 @@ public class SoundSystem : MonoBehaviour
 
     public void PlaySound(Sound sound)
     {
-        AudioSource.PlayClipAtPoint(m_sound[(int)sound], Camera.main.transform.position);
+        AudioClip audioClip = Resources.Load("Audio/" + sound.ToString()) as AudioClip;
+        AudioSource.PlayClipAtPoint(audioClip, Camera.main.transform.position);
     }
 }

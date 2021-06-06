@@ -56,7 +56,7 @@ public class MonsterSlot : MonoBehaviour
 
     public void OnSelecMonster()
     {
-        SoundSystem.Instance.PlaySound(Sound.Button_Touch);
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
         MonsterManager.Instance.SetSelectedMonster(m_monsterData);
     }
 }
