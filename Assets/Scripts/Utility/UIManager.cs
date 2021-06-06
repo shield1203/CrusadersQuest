@@ -97,4 +97,12 @@ public class UIManager : MonoBehaviour
             m_ui[index].SetActive(value);
         }
     }
+
+    public void ActiveLastUI(bool value)
+    {
+        if (m_ui.Count > 0)
+        {
+            m_ui[m_ui.Count - 1].SetActive(value);
+        }
+    }
 }

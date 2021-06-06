@@ -196,20 +196,13 @@ public class TeamSelect : MonoBehaviour
     // GameStart
     public void GameStart()
     {
-        if(SceneManager.GetActiveScene().name == "Lobby")
-        {
-            if (SoldierManager.Instance.GetSoldierTeam().Count != 3) return;
+        if (SoldierManager.Instance.GetSoldierTeam().Count != 3) return;
 
-            SoundSystem.Instance.StopBGM();
-            SoundSystem.Instance.PlaySound(Sound.game_start);
+        SoundSystem.Instance.StopBGM();
+        SoundSystem.Instance.PlaySound(Sound.game_start);
 
-            m_blackBoard.gameObject.SetActive(true);
-            StartCoroutine(FadeOut());
-        }
-        else if(SceneManager.GetActiveScene().name == "Result")
-        {
-            UIManager.Instance.ActiveUI(false);
-        }
+        m_blackBoard.gameObject.SetActive(true);
+        StartCoroutine(FadeOut());
     }
 
     IEnumerator FadeOut()

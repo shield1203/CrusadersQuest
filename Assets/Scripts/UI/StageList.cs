@@ -80,6 +80,8 @@ public class StageList : MonoBehaviour
 
     public void OnExit()
     {
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
+
         if (SceneManager.GetActiveScene().name == "Lobby")
         {
             this.gameObject.SetActive(false);
@@ -98,6 +100,7 @@ public class StageList : MonoBehaviour
 
     void OpenTeamSelectUI()
     {
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
         UIManager.Instance.AddUI(UIPrefab.TEAM_SELECT);
     }
 }

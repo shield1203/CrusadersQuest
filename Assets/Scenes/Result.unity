@@ -2446,7 +2446,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 2056854437659128492, guid: 924e8a6679f2f07438dcbb37653ae056,
+    m_PressedSprite: {fileID: -3543046012729118277, guid: 924e8a6679f2f07438dcbb37653ae056,
       type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -2460,7 +2460,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1065345739}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 203216622}
+        m_MethodName: ReStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1065345739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3280,7 +3291,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1417215455}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 203216622}
+        m_MethodName: StageSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1417215455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3692,7 +3714,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 2056854437659128492, guid: 924e8a6679f2f07438dcbb37653ae056,
+    m_PressedSprite: {fileID: -3543046012729118277, guid: 924e8a6679f2f07438dcbb37653ae056,
       type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -3706,7 +3728,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1514609130}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 203216622}
+        m_MethodName: NextStage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1514609130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5399,7 +5432,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 2056854437659128492, guid: 924e8a6679f2f07438dcbb37653ae056,
+    m_PressedSprite: {fileID: 320277658082984741, guid: 924e8a6679f2f07438dcbb37653ae056,
       type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -5413,7 +5446,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1906755638}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 203216622}
+        m_MethodName: TeamSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1906755638
 MonoBehaviour:
   m_ObjectHideFlags: 0

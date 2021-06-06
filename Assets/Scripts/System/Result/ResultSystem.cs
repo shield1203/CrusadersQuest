@@ -46,6 +46,8 @@ public class ResultSystem : MonoBehaviour
 
     void Start()
     {
+        UIManager.Instance.RemoveOneUI();
+
         StageData stageData = StageManager.Instance.GetCurStageData();
         m_stageName.text = stageData.name;
 
@@ -181,21 +183,37 @@ public class ResultSystem : MonoBehaviour
 
     public void StageSelect()
     {
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
+        UIManager.Instance.ActiveLastUI(true);
+    }
 
+    public void TeamSelect()
+    {
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
+        UIManager.Instance.AddUI(UIPrefab.TEAM_SELECT);
     }
 
     public void ReStart()
     {
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
         SceneManager.LoadScene("Stage");
     }
 
     public void NextStage()
     {
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
 
+        if (StageManager.Instance.GetCurStage() < 6)
+        {
+            StageManager.Instance.SetCurStage(StageManager.Instance.GetCurStage() + 1);
+            SceneManager.LoadScene("Stage");
+        }
     }
 
     public void BackLobby()
     {
+        SoundSystem.Instance.PlaySound(Sound.button_touch);
+
         UIManager.Instance.RemoveAllUI();
         SceneManager.LoadScene("Lobby");
     }
