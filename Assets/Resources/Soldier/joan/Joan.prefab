@@ -1210,6 +1210,7 @@ MonoBehaviour:
   m_healthBar: {fileID: 5077875099179459547}
   m_healthGage: {fileID: 6193643981292586442}
   m_material: {fileID: 2100000, guid: 9be808d40c5b1cb43a5348c4299de70b, type: 2}
+  m_projectile: {fileID: 0}
   m_totalDamage: 0
   m_totalHeal: 0
 --- !u!95 &5083090183904330849

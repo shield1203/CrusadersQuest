@@ -20,6 +20,8 @@ public class UnitBase : MonoBehaviour
     public Material m_material;
     const float maxIntencity = 1.76f;
 
+    public GameObject m_projectile;
+
     protected virtual void Start()
     {
         m_animator = GetComponent<Animator>();

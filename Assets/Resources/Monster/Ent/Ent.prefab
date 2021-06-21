@@ -865,6 +865,8 @@ MonoBehaviour:
   m_healthBar: {fileID: 6194346989627165773}
   m_healthGage: {fileID: 5078582471133899356}
   m_material: {fileID: 2100000, guid: 9be808d40c5b1cb43a5348c4299de70b, type: 2}
+  m_projectile: {fileID: 7669326721366979263, guid: c8a6d5afaabb98a4abcea400355e94da,
+    type: 3}
 --- !u!114 &898897398448416676
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -430,6 +430,8 @@ MonoBehaviour:
   m_healthBar: {fileID: 1924478112776132166}
   m_healthGage: {fileID: 664593999637770327}
   m_material: {fileID: 2100000, guid: 9be808d40c5b1cb43a5348c4299de70b, type: 2}
+  m_totalDamage: 0
+  m_totalHeal: 0
 --- !u!95 &657000906225745411
 Animator:
   serializedVersion: 3
@@ -1449,6 +1451,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3406153317336705727, guid: 4a89f362c03013741ab95ee97cb0ba71,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406153317336705727, guid: 4a89f362c03013741ab95ee97cb0ba71,
+        type: 3}
       propertyPath: m_SortingLayerID
       value: -1628225641
       objectReference: {fileID: 0}
@@ -1456,6 +1463,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HealthBar_soldier
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787137843620933180, guid: 4a89f362c03013741ab95ee97cb0ba71,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a89f362c03013741ab95ee97cb0ba71, type: 3}

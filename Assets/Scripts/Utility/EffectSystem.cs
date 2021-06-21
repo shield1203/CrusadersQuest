@@ -9,6 +9,7 @@ public enum Effect
     Swing_mon,
     Hit_sol,
     Hit_mon,
+    Explosion,
 }
 
 public class EffectSystem : MonoBehaviour

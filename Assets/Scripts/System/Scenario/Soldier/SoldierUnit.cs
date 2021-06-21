@@ -60,8 +60,7 @@ public class SoldierUnit : UnitBase
 
         float damage = m_data.startAttackPower + ((m_data.maxAttackPower - m_data.startAttackPower) / 10) * (m_data.level % 10);
 
-        AttackBase attack = gameObject.GetComponent<AttackBase>();
-        if(attack != null)
+        if(m_projectile != null)
         {
 
         }

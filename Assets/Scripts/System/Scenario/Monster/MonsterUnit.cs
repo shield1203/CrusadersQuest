@@ -37,8 +37,8 @@ public class MonsterUnit : UnitBase
         base.Attack();
 
         if (m_mainTarget == null) return;
-        AttackBase attack = gameObject.GetComponent<AttackBase>();
-        if (attack != null)
+
+        if (m_projectile != null)
         {
 
         }
