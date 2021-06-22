@@ -40,7 +40,9 @@ public class MonsterUnit : UnitBase
 
         if (m_projectile != null)
         {
-
+            Transform muzzle = gameObject.transform.Find("muzzle");
+            GameObject projectile = Instantiate(m_projectile, muzzle.transform.position, new Quaternion());
+            projectile.GetComponent<ProjectileBase>().InitializeProjectile(m_data.attack, m_mainTarget.transform.position);
         }
         else
         {

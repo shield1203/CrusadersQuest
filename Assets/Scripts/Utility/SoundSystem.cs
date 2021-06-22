@@ -31,6 +31,7 @@ public enum Sound
     swordwave,
     coin,
     soldier_die,
+    explosion,
 }
 
 public class SoundSystem : MonoBehaviour
