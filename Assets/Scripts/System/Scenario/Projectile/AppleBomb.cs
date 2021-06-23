@@ -5,15 +5,12 @@ using UnityEngine;
 public class AppleBomb : ProjectileBase
 {
     private bool m_explosion = false;
-    private Vector2 m_startPosition;
-    private float m_speed = 2.8f;
-    private float m_heightArc = 2.82f;
+    private const float m_heightArc = 2.82f;
 
     public override void InitializeProjectile(float damage, Vector2 targetPosition = new Vector2())
     {
         base.InitializeProjectile(damage, targetPosition);
-
-        m_startPosition = gameObject.transform.position;
+        m_speed = 2.8f;
     }
 
     void Update()
@@ -38,25 +35,13 @@ public class AppleBomb : ProjectileBase
         {
             m_explosion = true;
             effectTransform.gameObject.SetActive(false);
-            
-            CheckOverlapSoldier();
-            
+
+            CheckOverlapUnit(UnitType.Soldier, Sound.hit_normal);
+
             gameObject.GetComponent<EffectSystem>().SpawnEffect(Effect.Explosion, 1);
             SoundSystem.Instance.PlaySound(Sound.explosion);
 
             Destroy(gameObject, 1);
-        }
-    }
-
-    private void CheckOverlapSoldier()
-    {
-        Collider2D[] overlapMonsters = Physics2D.OverlapBoxAll(gameObject.transform.position, m_collider.size, 1f, 1 << 10);
-        for (int index = 0; index < overlapMonsters.Length; index++)
-        {
-            if (!overlapMonsters[index].gameObject.GetComponent<UnitBase>().IsDie())
-            {
-                overlapMonsters[index].gameObject.GetComponent<UnitBase>().TakeDamage(m_damage, Sound.hit_normal);
-            }
         }
     }
 }
