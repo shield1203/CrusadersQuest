@@ -56,8 +56,8 @@
     "fatalHitProbability": 11.5,
     "physicalDefensePower": 235,
     "magicalDefensePower": 45,
-    "prefabPath": "",
-    "spritePath": "Soldier/sp_leon_predestinate"
+    "prefabPath": "Soldier/leon_predestinate/Leon_predestinate",
+    "spritePath": "Soldier/leon_predestinate/sp_leon_predestinate"
   },
   {
     "code": 4,

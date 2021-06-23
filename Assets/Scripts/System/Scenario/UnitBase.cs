@@ -12,8 +12,6 @@ public class UnitBase : MonoBehaviour
     protected List<GameObject> m_targetUnits;
     protected GameObject m_mainTarget;
 
-    public GameObject m_healthBar;
-    public Image m_healthGage;
     protected float m_curHP = 1.0f;
     protected float m_maxHP;
 
@@ -32,7 +30,6 @@ public class UnitBase : MonoBehaviour
             unitSprite.material = m_material;
         }
 
-        StartCoroutine(SetCurHealthPoint());
         StartCoroutine(ChangeDamageColor());
     }
 
@@ -70,18 +67,6 @@ public class UnitBase : MonoBehaviour
     public float GetHPPercent()
     {
         return m_curHP / m_maxHP;
-    }
-
-    IEnumerator SetCurHealthPoint()
-    {
-        while (m_curHP > 0)
-        {
-            yield return null;
-
-            m_healthGage.fillAmount = GetHPPercent();
-        }
-
-        m_healthGage.fillAmount = GetHPPercent();
     }
 
     IEnumerator ChangeDamageColor()

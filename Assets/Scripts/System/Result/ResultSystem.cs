@@ -59,7 +59,7 @@ public class ResultSystem : MonoBehaviour
         {
             GameObject soldierUnit = Instantiate(Resources.Load(m_prevSoldierTeam[index].prefabPath) as GameObject);
             soldierUnit.transform.position = new Vector2(unitInitXPos + (index * unitDistance), unitInitYPos);
-            soldierUnit.GetComponent<SoldierUnit>().m_healthBar.GetComponent<Canvas>().enabled = false;
+            soldierUnit.transform.Find("HealthBar_soldier").GetComponent<Canvas>().enabled = false;
 
             SetSoldierExpData(index);
         }

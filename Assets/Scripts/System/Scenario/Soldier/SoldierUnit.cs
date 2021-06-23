@@ -13,8 +13,8 @@ public class SoldierUnit : UnitBase
     protected bool m_goal = false;
     protected float m_goalPoint;
 
-    public float m_totalDamage = 0;
-    public float m_totalHeal = 0;
+    protected float m_totalDamage = 0;
+    protected float m_totalHeal = 0;
 
     protected override void Start()
     {
@@ -27,11 +27,6 @@ public class SoldierUnit : UnitBase
         }
 
         StartCoroutine(CheckSkillLink());
-    }
-
-    void Update()
-    {
-        
     }
 
     public void InitializeSoldierUnit(SoldierData soldierData, List<GameObject> targetUnits)
@@ -160,5 +155,15 @@ public class SoldierUnit : UnitBase
     public bool IsGoal()
     {
         return m_goal;
+    }
+
+    public float GetTotalDamage() 
+    {
+        return m_totalDamage;
+    }
+
+    public float GetTotalHeal()
+    {
+        return m_totalHeal;
     }
 }

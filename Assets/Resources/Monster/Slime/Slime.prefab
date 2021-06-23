@@ -339,8 +339,8 @@ GameObject:
   - component: {fileID: 4843503906986754698}
   - component: {fileID: 6889158490927083831}
   - component: {fileID: 6889158490927083828}
-  - component: {fileID: 6889158490927083825}
   - component: {fileID: 6889158490927083830}
+  - component: {fileID: 6889158490927083825}
   - component: {fileID: 1049410530379050669}
   m_Layer: 8
   m_Name: Slime
@@ -415,6 +415,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.56, y: 1.18}
   m_EdgeRadius: 0
+--- !u!114 &6889158490927083830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3387987545704254640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2499ec8768e3237469ab9e274da9fd49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_material: {fileID: 2100000, guid: 9be808d40c5b1cb43a5348c4299de70b, type: 2}
+  m_projectile: {fileID: 0}
 --- !u!95 &6889158490927083825
 Animator:
   serializedVersion: 3
@@ -434,21 +448,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6889158490927083830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3387987545704254640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2499ec8768e3237469ab9e274da9fd49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_healthBar: {fileID: 6674499939478922327}
-  m_healthGage: {fileID: 5705097873457873478}
-  m_material: {fileID: 2100000, guid: 9be808d40c5b1cb43a5348c4299de70b, type: 2}
 --- !u!114 &1049410530379050669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -585,27 +584,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6715e20e13dc6cd49b1d27282d9eac3a, type: 3}
---- !u!1 &6674499939478922327 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7787137843620933180, guid: 6715e20e13dc6cd49b1d27282d9eac3a,
-    type: 3}
-  m_PrefabInstance: {fileID: 3508848130144012907}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3038666173004666900 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1916963339879535231, guid: 6715e20e13dc6cd49b1d27282d9eac3a,
     type: 3}
   m_PrefabInstance: {fileID: 3508848130144012907}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5705097873457873478 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9195640710178277421, guid: 6715e20e13dc6cd49b1d27282d9eac3a,
-    type: 3}
-  m_PrefabInstance: {fileID: 3508848130144012907}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

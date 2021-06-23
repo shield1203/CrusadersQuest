@@ -32,6 +32,11 @@ public enum Sound
     coin,
     soldier_die,
     explosion,
+    gun_shot0,
+    gun_shot1,
+    arrow_shot,
+    arrow_rain_start,
+    arrow_rain,
 }
 
 public class SoundSystem : MonoBehaviour
