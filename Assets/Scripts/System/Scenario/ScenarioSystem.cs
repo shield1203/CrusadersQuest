@@ -123,7 +123,15 @@ public class ScenarioSystem : MonoBehaviour
             StartCoroutine(StageClear());
         }
 
-        m_gameOver = CheckGameOver();
+        if(CheckGameOver())
+        {
+            SoundSystem.Instance.StopBGM();
+
+            m_gameOver = true;
+
+            StopCoroutine(OnCreateBlock);
+            StartCoroutine(GameOver());
+        }
     }
 
     IEnumerator CreateBlock()
@@ -259,6 +267,16 @@ public class ScenarioSystem : MonoBehaviour
         return isGameOver;
     }
 
+    IEnumerator GameOver()
+    {
+        GameObject stageClearUI = Instantiate(Resources.Load("UI/GameOver") as GameObject);
+
+        yield return new WaitForSeconds(4.25f);
+
+        SceneManager.LoadScene("Lobby");
+        UIManager.Instance.RemoveOneUI();
+    }
+
     bool CheckStageClear()
     {
         bool isStageClear = true;
@@ -304,6 +322,7 @@ public class ScenarioSystem : MonoBehaviour
         yield return new WaitForSeconds(4.25f);
 
         SceneManager.LoadScene("Result");
+        UIManager.Instance.RemoveOneUI();
     }
 
     void OnFinishedStage()

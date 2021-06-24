@@ -78,9 +78,9 @@ public class SoldierUnit : UnitBase
         {
             case SoldierType.Warrior: distance = 0.55f; break;
             case SoldierType.Paladin: distance = 0.5f; break;
-            case SoldierType.Archer: distance = 7.35f; break;
+            case SoldierType.Archer: distance = 7.5f; break;
             case SoldierType.Hunter: distance = 6.35f; break;
-            case SoldierType.Wizard: distance = 7.2f; break;
+            case SoldierType.Wizard: distance = 6.8f; break;
             case SoldierType.Priest: distance = 6.9f; break;
         }
 

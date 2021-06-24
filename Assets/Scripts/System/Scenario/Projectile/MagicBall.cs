@@ -14,7 +14,6 @@ public class MagicBall : ProjectileBase
 
     private void Start()
     {
-        InitializeProjectile(0);
         SoundSystem.Instance.PlaySound(Sound.normal_attack);
     }
 

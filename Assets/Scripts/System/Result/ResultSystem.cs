@@ -46,8 +46,6 @@ public class ResultSystem : MonoBehaviour
 
     void Start()
     {
-        UIManager.Instance.RemoveOneUI();
-
         StageData stageData = StageManager.Instance.GetCurStageData();
         m_stageName.text = stageData.name;
 
