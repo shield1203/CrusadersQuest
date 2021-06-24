@@ -57,7 +57,9 @@ public class SoldierUnit : UnitBase
 
         if(m_projectile != null)
         {
-
+            Transform muzzle = gameObject.transform.Find("muzzle");
+            GameObject projectile = Instantiate(m_projectile, muzzle.transform.position, new Quaternion());
+            projectile.GetComponent<ProjectileBase>().InitializeProjectile(damage / 5, m_mainTarget.transform.position);
         }
         else
         {
@@ -77,6 +79,7 @@ public class SoldierUnit : UnitBase
             case SoldierType.Warrior: distance = 0.55f; break;
             case SoldierType.Paladin: distance = 0.5f; break;
             case SoldierType.Archer: distance = 7.35f; break;
+            case SoldierType.Hunter: distance = 6.35f; break;
             case SoldierType.Wizard: distance = 7.2f; break;
             case SoldierType.Priest: distance = 6.9f; break;
         }

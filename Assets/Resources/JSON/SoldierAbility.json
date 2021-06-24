@@ -236,8 +236,8 @@
     "fatalHitProbability": 20,
     "physicalDefensePower": 103,
     "magicalDefensePower": 59,
-    "prefabPath": "",
-    "spritePath": "Soldier/sp_louisilla"
+    "prefabPath": "Soldier/louisilla/Louisilla",
+    "spritePath": "Soldier/louisilla/sp_louisilla"
   },
   {
     "code": 16,

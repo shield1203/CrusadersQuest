@@ -14,7 +14,6 @@ public class Bullet : ProjectileBase
 
     private void Start()
     {
-        InitializeProjectile(0);
         SoundSystem.Instance.PlaySound(Sound.gun_shot0);
     }
 
@@ -25,7 +24,7 @@ public class Bullet : ProjectileBase
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Monster")
+        if (collision.gameObject.tag == "Monster" && !collision.gameObject.GetComponent<UnitBase>().IsDie())
         {
             collision.gameObject.GetComponent<MonsterUnit>().TakeDamage(m_damage, Sound.hit_gun);
             Destroy(gameObject);
