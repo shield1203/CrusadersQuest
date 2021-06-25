@@ -655,6 +655,7 @@ GameObject:
   - component: {fileID: 6165385463569787608}
   - component: {fileID: 6165385463569787611}
   - component: {fileID: 6165385463569787610}
+  - component: {fileID: 3514756312228123724}
   m_Layer: 5
   m_Name: LoginTypeUI
   m_TagString: Untagged
@@ -743,6 +744,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3514756312228123724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6165385463569787589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad37bb6e2f536b4d94946657034864d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6165385463794162262
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,7 +846,6 @@ GameObject:
   - component: {fileID: 6165385463851026816}
   - component: {fileID: 6165385463851026819}
   - component: {fileID: 6165385463851026818}
-  - component: {fileID: 9021574605858486935}
   m_Layer: 5
   m_Name: btGuest
   m_TagString: Untagged
@@ -942,8 +954,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9021574605858486935}
-        m_MethodName: GuestLogin
+      - m_Target: {fileID: 3514756312228123724}
+        m_MethodName: OnSignInGeust
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -953,18 +965,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &9021574605858486935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6165385463851026828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36eba88d10a68134c8e7d211ad108881, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6165385464002142869
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class HttpSystem : MonoBehaviour
 {
@@ -14,6 +15,29 @@ public class HttpSystem : MonoBehaviour
     private void Start()
     {
         m_userId = PlayerPrefs.GetInt("UserId").ToString();
+    }
+
+    public void OnCheckServerOpen()
+    {
+        StartCoroutine(CheckServerOpen());
+    }
+
+    IEnumerator CheckServerOpen()
+    {
+        string strScheme = "/";
+        string strURL = m_serverIP + strScheme;
+        UnityWebRequest request = UnityWebRequest.Get(strURL);
+
+        UIManager.Instance.AddUI(UIPrefab.LOADING);
+
+        yield return request.SendWebRequest();
+
+        UIManager.Instance.RemoveOneUI();
+
+        if (request.isNetworkError || request.isHttpError)
+        {
+            UIManager.Instance.AddUI(UIPrefab.ERROR);
+        }
     }
 
     //public void OnGoogleLogin()
@@ -36,14 +60,14 @@ public class HttpSystem : MonoBehaviour
     //    yield return null;
     //}
 
-    public void OnGuestLogin(int userId)
+    public void OnSignInGeust()
     {
-        StartCoroutine(GuestLogin(userId));
+        StartCoroutine(SignInGeust());
     }
 
-    IEnumerator GuestLogin(int userId)
+    IEnumerator SignInGeust()
     {
-        string strScheme = "/GuestLogin?userId=" + userId.ToString();
+        string strScheme = "/SignInGuest";
         string strURL = m_serverIP + strScheme;
         UnityWebRequest request = UnityWebRequest.Get(strURL);
 
@@ -59,8 +83,11 @@ public class HttpSystem : MonoBehaviour
         }
         else
         {
-            Debug.Log(request.downloadHandler.text);
-            // request.downloadHandler.text를 아이디에 저장
+            PlayerPrefs.SetString("LoginType", "Guest");
+            PlayerPrefs.SetInt("UserId", int.Parse(request.downloadHandler.text));
+
+            UIManager.Instance.RemoveAllUI();
+            SceneManager.LoadScene("Title");
         }
     }
 

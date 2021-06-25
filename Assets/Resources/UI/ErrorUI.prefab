@@ -635,7 +635,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2286336223531695792}
-        m_MethodName: RemoveFromUIManager
+        m_MethodName: BackIntro
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

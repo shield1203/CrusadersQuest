@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIFunction : MonoBehaviour
 {
@@ -14,5 +15,10 @@ public class UIFunction : MonoBehaviour
         SoundSystem.Instance.PlaySound(Sound.button_touch);
 
         Destroy(gameObject);
+    }
+
+    public void BackIntro()
+    {
+        SceneManager.LoadScene("Intro");
     }
 }

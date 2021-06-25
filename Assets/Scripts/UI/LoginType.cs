@@ -14,10 +14,4 @@ public class LoginType : MonoBehaviour
     {
 
     }
-
-    public void GuestLogin()
-    {
-        UIManager.Instance.RemoveAllUI();
-        SceneManager.LoadScene("Title");
-    }
 }
