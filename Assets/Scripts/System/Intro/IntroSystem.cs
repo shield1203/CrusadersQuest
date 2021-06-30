@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IntroSystem : MonoBehaviour
 {
@@ -38,9 +39,9 @@ public class IntroSystem : MonoBehaviour
         string strLoginType = PlayerPrefs.GetString("LoginType");
         switch(strLoginType)
         {
-            case "Google": break;
-            case "Facebook": break;
-            case "Guest": break;
+            case "Google": SceneManager.LoadScene("Title"); break;
+            case "Facebook": SceneManager.LoadScene("Title"); break;
+            case "Guest": SceneManager.LoadScene("Title"); break;
             default: UIManager.Instance.AddUI(UIPrefab.LOGIN_TYPE); break;
         }
     }

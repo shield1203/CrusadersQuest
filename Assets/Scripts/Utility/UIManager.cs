@@ -14,6 +14,7 @@ public enum UIPrefab
     ADVENTURE,
     MONSTER_LIST,
     TEAM_SELECT,
+    UPDATE_NAME,
 }
 
 public class UIManager : MonoBehaviour
@@ -65,6 +66,7 @@ public class UIManager : MonoBehaviour
         m_uiPrefabPath.Add("UI/AdventureUI");
         m_uiPrefabPath.Add("UI/MonsterListUI");
         m_uiPrefabPath.Add("UI/TeamSelectUI");
+        m_uiPrefabPath.Add("UI/UpdateNameUI");
     }
 
     public void AddUI(UIPrefab uiPrefab)

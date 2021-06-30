@@ -119,6 +119,32 @@ public class HttpSystem : MonoBehaviour
         }
     }
 
+    public IEnumerator RequestUpdateName(string name, OnDelegate action)
+    {
+        string strScheme = "/UpdateName?userId=" + m_userId + "&name=" + name;
+        string strURL = m_serverIP + strScheme;
+        UnityWebRequest request = UnityWebRequest.Get(strURL);
+
+        UIManager.Instance.AddUI(UIPrefab.LOADING);
+
+        yield return request.SendWebRequest();
+
+        UIManager.Instance.RemoveOneUI();
+
+        if (request.isNetworkError || request.isHttpError)
+        {
+            UIManager.Instance.AddUI(UIPrefab.ERROR);
+        }
+        else if (request.downloadHandler.text == "fail")
+        {
+            UIManager.Instance.AddUI(UIPrefab.ERROR);
+        }
+        else
+        {
+            if (action != null) action();
+        }
+    }
+
     public IEnumerator RequestSoldierListData(OnDelegate action)
     {
         string strScheme = "/SoldierList?userId=" + m_userId;

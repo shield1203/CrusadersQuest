@@ -49,5 +49,10 @@ public class LobbySystem : MonoBehaviour
         m_diamond.text = string.Format("{0:#,###}", userData.diamond);
         m_gold.text = string.Format("{0:#,###}", userData.gold);
         m_meat.text = string.Format("{0:#,###}", userData.meat);
+
+        if (userData.name == "NO_NAME")
+        {
+            UIManager.Instance.AddUI(UIPrefab.UPDATE_NAME);
+        }
     }
 }

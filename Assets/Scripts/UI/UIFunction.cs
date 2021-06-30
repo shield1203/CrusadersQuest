@@ -19,6 +19,8 @@ public class UIFunction : MonoBehaviour
 
     public void BackIntro()
     {
+        UIManager.Instance.RemoveOneUI();
+
         SceneManager.LoadScene("Intro");
     }
 }
